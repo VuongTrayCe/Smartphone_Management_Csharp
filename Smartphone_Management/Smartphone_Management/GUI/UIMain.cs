@@ -137,7 +137,7 @@ namespace Smartphone_Management
         {
             ActivateButton(sender, corlor);
             showSubMenu(null);
-            openChildForm(new Form1());
+            //openChildForm(new Form1());
 
         }
 
