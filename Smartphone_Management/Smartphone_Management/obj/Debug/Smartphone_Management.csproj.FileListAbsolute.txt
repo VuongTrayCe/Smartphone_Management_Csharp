@@ -8,7 +8,7 @@ D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Managem
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.CoreCompileInputs.cache
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.pdb
-D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.Form2.resources
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\FontAwesome.Sharp.dll
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.CopyComplete
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Form1.resources
+D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.UIMain.resources
