@@ -14,13 +14,13 @@ using Color = System.Drawing.Color;
 
 namespace Smartphone_Management
 {
-    public partial class Form2 : Form
+    public partial class UIMain : Form
     {
         private IconButton currentBtn;
 
         private Color corlor = Color.FromArgb(0, 127, 0);
         private int FlagColor = 0;
-        public Form2()
+        public UIMain()
         {
             InitializeComponent();
             CustomizeDising();

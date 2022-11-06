@@ -1,6 +1,6 @@
 ﻿namespace Smartphone_Management
 {
-    partial class Form2
+    partial class UIMain
     {
         /// <summary>
         /// Required designer variable.
