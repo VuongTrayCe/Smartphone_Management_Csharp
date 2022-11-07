@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\Class1.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,7 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BUS\" />
-    <Folder Include="DAO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GUI\Icon\th.jpg" />
