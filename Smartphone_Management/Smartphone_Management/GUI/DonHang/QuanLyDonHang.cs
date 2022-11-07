@@ -1,12 +1,16 @@
-﻿using Smartphone_Management.DAO;
+﻿using Smartphone_Management.BUS;
+using Smartphone_Management.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Markup;
 
@@ -15,6 +19,7 @@ namespace Smartphone_Management.GUI.DonHang
     public partial class QuanLyDonHang : Form
     {
         private DataTable data;
+        private QuanLyDonDatHang_BUS qldh_bus = new QuanLyDonDatHang_BUS();
         public QuanLyDonHang()
         {
             InitializeComponent();
@@ -27,38 +32,61 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void QuanLyDonHang_Load(object sender, EventArgs e)
         {
-            ConnectToMySQL conn = new ConnectToMySQL();
-            DataTable data2 = new DataTable();
-            data2 = conn.DisplayData("select donhang.Ngayban as NgayDat,donhang.Madh,khachhang.Tenkh,donhang.SoLuong,donhang.Soluongdadung,donhang.Soluongduoctang,donhang.Tongtien,nhanvien.Tennv from donhang,nhanvien,khachhang where donhang.Manv=nhanvien.Manv and donhang.Makh=khachhang.Makh");
-            data = new DataTable();
-            data.Columns.Add("STT");
-            data.Columns.Add("NgayDat",Type.GetType("System.DateTime"));
-            data.Columns.Add("Madh");
-            data.Columns.Add("Tenkh");
-            data.Columns.Add("SoLuong");
-            data.Columns.Add("Soluongdadung");
-            data.Columns.Add("Soluongduoctang");
-            data.Columns.Add("TongTien");
-            data.Columns.Add("Tennv");
+            cbbTrangThai.SelectedIndex = 3;
 
-            for (int i = 0; i < data2.Rows.Count; i++)
+            //data = new DataTable();
+            init();
+
+            dataGridView1.DataSource = data;
+            for (int i = 0; i < data.Rows.Count; i++)
             {
-                //dataGridView1.Rows.Add(1) ;
-                DataRow row = data.NewRow();
-                foreach (DataColumn col in data2.Columns)
-                {
-      
-                   
-                        row[col.ColumnName] = data2.Rows[i][col.ColumnName];
-
-                }
-                data.Rows.Add(row);
+                dataGridView1.Rows[i].Cells[2].Value = i + 1;
             }
+        }
+        public void init()
+        { 
+            ConnectToMySQL conn = new ConnectToMySQL();
+            data = qldh_bus.getThongTinDonDatHang(cbbTrangThai.SelectedItem.ToString(),dateStart.Value,DateEnd.Value);
+        }
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            object value = dataGridView1.CurrentRow.Cells[3].Value;
+            DateTime date = (DateTime)value;
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            {
+
+                MessageBox.Show(date.ToString());
+
+            }
+        }
+      
+        public void DoSomething(int row, int column)
+        {
+            MessageBox.Show(string.Format("Cell({0},{1}) Clicked", row, column));
+        }
+
+        private void cbbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            init();
             dataGridView1.DataSource = data;
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void dateStart_ValueChanged(object sender, EventArgs e)
         {
+            DateTime dateTime = (DateTime)dateStart.Value;
+            DateTime dateTimeObj;
+            String datetest = String.Format("{0:yyyy-MM-dd}", dateTime);
+            MessageBox.Show(datetest);
+            //MessageBox.Show(dateTime.ToString());
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            bool isSuccess = DateTime.TryParseExact("2022-03-29", "yyyy-MM-dd", provider, DateTimeStyles.None, out dateTimeObj);
+            //MessageBox.Show(dateTimeObj.ToString());
+            //MessageBox.Show((dateTime>dateTimeObj).ToString());
 
         }
     }

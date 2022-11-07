@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DateEnd = new System.Windows.Forms.DateTimePicker();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,13 +43,14 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnExcel = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.Xem = new System.Windows.Forms.DataGridViewImageColumn();
             this.In = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -61,27 +62,27 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dateStart);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
-            this.panel1.Location = new System.Drawing.Point(137, 55);
+            this.panel1.Location = new System.Drawing.Point(24, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 24);
             this.panel1.TabIndex = 1;
             // 
-            // dateTimePicker2
+            // DateEnd
             // 
-            this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(461, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(112, 22);
-            this.dateTimePicker2.TabIndex = 6;
+            this.DateEnd.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateEnd.Location = new System.Drawing.Point(461, 0);
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.Size = new System.Drawing.Size(112, 22);
+            this.DateEnd.TabIndex = 6;
             // 
             // iconButton1
             // 
@@ -104,15 +105,17 @@
             this.panel4.Size = new System.Drawing.Size(17, 24);
             this.panel4.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dateStart
             // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(250, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(112, 22);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dateStart.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dateStart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateStart.Location = new System.Drawing.Point(250, 0);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(112, 22);
+            this.dateStart.TabIndex = 2;
+            this.dateStart.Value = new System.DateTime(1753, 7, 10, 0, 0, 0, 0);
+            this.dateStart.ValueChanged += new System.EventHandler(this.dateStart_ValueChanged);
             // 
             // panel3
             // 
@@ -212,26 +215,42 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(713, 325);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Xem
+            // 
+            this.Xem.HeaderText = "Xem";
+            this.Xem.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
+            this.Xem.Name = "Xem";
+            this.Xem.ReadOnly = true;
+            this.Xem.Width = 40;
+            // 
+            // In
+            // 
+            this.In.HeaderText = "In";
+            this.In.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
+            this.In.Name = "In";
+            this.In.ReadOnly = true;
+            this.In.Width = 30;
             // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.btnExcel);
-            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.iconButton4);
+            this.panel6.Controls.Add(this.cbbTrangThai);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(314, 85);
+            this.panel6.Location = new System.Drawing.Point(201, 85);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(383, 23);
             this.panel6.TabIndex = 4;
             // 
             // btnExcel
             // 
-            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.btnExcel.IconColor = System.Drawing.Color.Black;
             this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcel.IconSize = 19;
-            this.btnExcel.Location = new System.Drawing.Point(283, 0);
+            this.btnExcel.Location = new System.Drawing.Point(637, 54);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(100, 23);
             this.btnExcel.TabIndex = 2;
@@ -239,19 +258,20 @@
             this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcel.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbbTrangThai
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbTrangThai.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbbTrangThai.FormattingEnabled = true;
+            this.cbbTrangThai.Items.AddRange(new object[] {
             "Đặt Hàng",
             "Đang Xử Lý",
             "Hoàn Thành",
             "Đã Hủy"});
-            this.comboBox1.Location = new System.Drawing.Point(104, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cbbTrangThai.Location = new System.Drawing.Point(104, 0);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Size = new System.Drawing.Size(119, 24);
+            this.cbbTrangThai.TabIndex = 1;
+            this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
             // 
             // panel7
             // 
@@ -276,27 +296,26 @@
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // Xem
+            // iconButton4
             // 
-            this.Xem.HeaderText = "Xem";
-            this.Xem.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
-            this.Xem.Name = "Xem";
-            this.Xem.ReadOnly = true;
-            this.Xem.Width = 40;
-            // 
-            // In
-            // 
-            this.In.HeaderText = "In";
-            this.In.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
-            this.In.Name = "In";
-            this.In.ReadOnly = true;
-            this.In.Width = 30;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(285, 0);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(98, 23);
+            this.iconButton4.TabIndex = 2;
+            this.iconButton4.Text = "Xem";
+            this.iconButton4.UseVisualStyleBackColor = true;
             // 
             // QuanLyDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 465);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel5);
@@ -325,10 +344,10 @@
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DateEnd;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateStart;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
@@ -337,9 +356,10 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbTrangThai;
         private FontAwesome.Sharp.IconButton btnExcel;
         private System.Windows.Forms.DataGridViewImageColumn Xem;
         private System.Windows.Forms.DataGridViewImageColumn In;
+        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }

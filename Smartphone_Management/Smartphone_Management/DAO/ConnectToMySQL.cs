@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Smartphone_Management.DAO
 {
-    internal class ConnectToMySQL
+    public class ConnectToMySQL
     {
         public string server = "localhost";
         public string database = "studentdb";
@@ -21,12 +21,16 @@ namespace Smartphone_Management.DAO
         public string constring;
         private MySqlConnection conn;
 
-        public ConnectToMySQL()
+        public  ConnectToMySQL()
         {
             string connStr = "server=localhost;user=root;database=smartphonemanagement;port=3306;password=123456789lop11b2";
 
             //this.constring = "SERVER=" + this.server + ";" + "DATABASE=" + this.database + ";" + "UID=" + this.username + ";" + "PASSWORD=" + this.password + ";";
             this.conn = new MySqlConnection(connStr);
+        }
+        public MySqlConnection getConnection()
+        {
+            return conn;
         }
         public void DataEditFromDatabase(String query2)
         {
@@ -141,6 +145,11 @@ namespace Smartphone_Management.DAO
             }
             conn.Close();
             return dTable;
+        }
+
+        internal void Open()
+        {
+            throw new NotImplementedException();
         }
     }
 }
