@@ -53,12 +53,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formDonHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formDonHang.Designer.cs">
-      <DependentUpon>formDonHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
