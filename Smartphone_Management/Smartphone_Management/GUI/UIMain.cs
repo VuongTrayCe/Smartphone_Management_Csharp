@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using Smartphone_Management.GUI;
+using Smartphone_Management.GUI.DonHang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -186,7 +187,8 @@ namespace Smartphone_Management
 
         private void btnQLDonDatHang_Click(object sender, EventArgs e)
         {
-
+            QuanLyDonHang qldh = new QuanLyDonHang();
+            openChildForm(qldh);
         }
 
         private void btnKhohang_Click(object sender, EventArgs e)

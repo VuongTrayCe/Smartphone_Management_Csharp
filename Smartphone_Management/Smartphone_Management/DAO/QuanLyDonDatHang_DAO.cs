@@ -14,6 +14,11 @@ namespace Smartphone_Management.DAO
     {
         ConnectToMySQL sqla = new ConnectToMySQL();
 
+        internal DataTable getChiTietDonHang_DAO(int madh)
+        {
+            throw new NotImplementedException();
+        }
+
         internal DataTable getThongTinDonDatHang(string status)
         {
             DataTable data = new DataTable();

@@ -10,9 +10,11 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using Application = System.Windows.Forms.Application;
 
 namespace Smartphone_Management.GUI.DonHang
 {
@@ -46,7 +48,7 @@ namespace Smartphone_Management.GUI.DonHang
         public void init()
         { 
             ConnectToMySQL conn = new ConnectToMySQL();
-            data = qldh_bus.getThongTinDonDatHang(cbbTrangThai.SelectedItem.ToString(),dateStart.Value,DateEnd.Value);
+            data = qldh_bus.getThongTinDonDatHang(cbbTrangThai.SelectedItem.ToString(),dateStart.Value,DateEnd.Value,txtTimKiem.Text);
         }
         private void iconButton3_Click(object sender, EventArgs e)
         {
@@ -55,19 +57,35 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            object value = dataGridView1.CurrentRow.Cells[3].Value;
-            DateTime date = (DateTime)value;
+            object value = dataGridView1.CurrentRow.Cells[4].Value;
+            //DateTime date = (DateTime)value;
             if (e.RowIndex >= 0 && e.ColumnIndex == 0)
             {
-
-                MessageBox.Show(date.ToString());
+                openDetailForm();
 
             }
         }
-      
+      public void openDetailForm()
+        {
+            Boolean isopen = false;
+            foreach(Form f in Application.OpenForms)
+            {
+                if(f.Text=="ChiTietDonHang")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                }
+            }
+            if(isopen==false)
+            {
+                ChiTietDonHang detailForm = new ChiTietDonHang();
+                detailForm.Show();
+            }
+
+        }
         public void DoSomething(int row, int column)
         {
-            MessageBox.Show(string.Format("Cell({0},{1}) Clicked", row, column));
+            System.Windows.MessageBox.Show(string.Format("Cell({0},{1}) Clicked", row, column));
         }
 
         private void cbbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,13 +99,26 @@ namespace Smartphone_Management.GUI.DonHang
             DateTime dateTime = (DateTime)dateStart.Value;
             DateTime dateTimeObj;
             String datetest = String.Format("{0:yyyy-MM-dd}", dateTime);
-            MessageBox.Show(datetest);
+            //MessageBox.Show(datetest);
             //MessageBox.Show(dateTime.ToString());
             CultureInfo provider = CultureInfo.InvariantCulture;
             bool isSuccess = DateTime.TryParseExact("2022-03-29", "yyyy-MM-dd", provider, DateTimeStyles.None, out dateTimeObj);
             //MessageBox.Show(dateTimeObj.ToString());
             //MessageBox.Show((dateTime>dateTimeObj).ToString());
 
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            init();
+            dataGridView1.DataSource = data;
+
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            init();
+            dataGridView1.DataSource = data;
         }
     }
 }

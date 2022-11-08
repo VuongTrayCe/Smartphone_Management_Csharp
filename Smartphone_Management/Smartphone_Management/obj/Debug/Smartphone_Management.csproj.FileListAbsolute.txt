@@ -27,3 +27,4 @@ D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Managem
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\System.Numerics.Vectors.xml
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.ChiTietDonHang.resources
