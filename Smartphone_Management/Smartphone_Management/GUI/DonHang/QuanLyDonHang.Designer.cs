@@ -213,6 +213,7 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(713, 325);
             this.dataGridView1.TabIndex = 3;
@@ -266,7 +267,6 @@
             this.cbbTrangThai.FormattingEnabled = true;
             this.cbbTrangThai.Items.AddRange(new object[] {
             "Đặt Hàng",
-            "Đang Xử Lý",
             "Hoàn Thành",
             "Đã Hủy"});
             this.cbbTrangThai.Location = new System.Drawing.Point(104, 0);

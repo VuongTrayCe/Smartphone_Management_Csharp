@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 using MySqlConnector;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Smartphone_Management.DAO
 {
@@ -16,7 +17,25 @@ namespace Smartphone_Management.DAO
 
         internal DataTable getChiTietDonHang_DAO(int madh)
         {
-            throw new NotImplementedException();
+            DataTable data = new DataTable();
+
+            string query = "select chitietdonhang.Masp,sanpham.Tensp,chitietdonhang.Soluong,chitietdonhang.giaban,khuyenmai.Ptkm as KhuyenMai,baohanh.Thoigianbaohanh as BaoHanh,(chitietdonhang.Soluong*chitietdonhang.giaban)*((100-khuyenmai.Ptkm)/100) as ThanhTien from chitietdonhang,sanpham,khuyenmai,baohanh,chitietbaohanh,chitietkhuyenmai where sanpham.Masp=chitietdonhang.Masp and chitietdonhang.Machitietkhuyenmai=chitietkhuyenmai.Machitietkhuyenmai and chitietbaohanh.Machitietbaohanh=chitietdonhang.Machitietbaohanh and khuyenmai.Makm=chitietkhuyenmai.Makm and baohanh.Mabaohanh=chitietbaohanh.Mabaohanh and chitietdonhang.Madh=@Madh";
+
+            MySqlCommand MyCommand2 = new MySqlCommand(query, sqla.getConnection());
+            MyCommand2.Parameters.AddWithValue("@Madh",madh);
+            //  MyConn2.Open();
+            //For offline connection we weill use  MySqlDataAdapter class.
+            if (MyCommand2 == null)
+            {
+                return null;
+            }
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MyAdapter.SelectCommand = MyCommand2;
+            MyAdapter.Fill(data);
+            //MessageBox.Show("Completed");
+
+            return data;
+
         }
 
         internal DataTable getThongTinDonDatHang(string status)

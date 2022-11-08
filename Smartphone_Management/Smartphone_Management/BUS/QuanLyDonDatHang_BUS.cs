@@ -68,12 +68,45 @@ namespace Smartphone_Management.BUS
             DataTable data2 = qlddh_dao.getChiTietDonHang_DAO(madh);
             data.Columns.Add("STT");
             data.Columns.Add("Masp");
-            data.Columns.Add("Ten");
+            data.Columns.Add("Tensp");
             data.Columns.Add("Soluong");
-            data.Columns.Add("gia");
+            data.Columns.Add("giaban");
             data.Columns.Add("KhuyenMai");
             data.Columns.Add("BaoHanh");
             data.Columns.Add("ThanhTien");
+
+            int tongsl = 0;
+            int tongtien = 0;
+            for (int i = 0; i < data2.Rows.Count; i++)
+            {
+                    //dataGridView1.Rows.Add(1) ;
+                    DataRow row = data.NewRow();
+                    foreach (DataColumn col in data2.Columns)
+                    {
+                        row[col.ColumnName] = data2.Rows[i][col.ColumnName];
+
+                    }
+                int soluong = Int32.Parse( data2.Rows[i][2].ToString());
+                int thanhtien= Int32.Parse(data2.Rows[i][6].ToString());
+                tongsl = tongsl + soluong;
+                tongtien += thanhtien;
+                data.Rows.Add(row);
+            }
+            for(int i=0;i<data.Rows.Count;i++)
+            {
+                data.Rows[i][0] = i + 1;
+            }
+
+            DataRow row4 = data.NewRow();
+            data.Rows.Add(row4);
+            DataRow row2 = data.NewRow();
+
+            row2["Tensp"] = "Tổng Hàng";
+            row2["Soluong"] = tongsl;
+            row2["ThanhTien"] = tongtien;
+
+            data.Rows.Add(row2);
+
             return data;
         }
 

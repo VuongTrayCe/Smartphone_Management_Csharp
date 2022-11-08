@@ -34,7 +34,7 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void QuanLyDonHang_Load(object sender, EventArgs e)
         {
-            cbbTrangThai.SelectedIndex = 3;
+            cbbTrangThai.SelectedIndex = 0;
 
             //data = new DataTable();
             init();
@@ -54,18 +54,24 @@ namespace Smartphone_Management.GUI.DonHang
         {
 
         }
-
+        // Bắt sự kiện khi người dùng click nút xem
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            object value = dataGridView1.CurrentRow.Cells[4].Value;
+            String value = (String)dataGridView1.CurrentRow.Cells[4].Value;
+            String tenkh = (String)dataGridView1.CurrentRow.Cells[5].Value;
+            DateTime ngaydat = (DateTime)dataGridView1.CurrentRow.Cells[3].Value;
+            String trangthai = cbbTrangThai.SelectedItem.ToString();
             //DateTime date = (DateTime)value;
+            int madh = int.Parse(value);
             if (e.RowIndex >= 0 && e.ColumnIndex == 0)
             {
-                openDetailForm();
+                openDetailForm(madh,tenkh,ngaydat,trangthai);
 
             }
         }
-      public void openDetailForm()
+
+        // Mở form chi tiết đơn hàng
+      public void openDetailForm(int Madh,String tenkhachhang,DateTime ngaydat,String trangthai)
         {
             Boolean isopen = false;
             foreach(Form f in Application.OpenForms)
@@ -78,7 +84,8 @@ namespace Smartphone_Management.GUI.DonHang
             }
             if(isopen==false)
             {
-                ChiTietDonHang detailForm = new ChiTietDonHang();
+                ChiTietDonHang detailForm = new ChiTietDonHang(Madh);
+                detailForm.setInfo(tenkhachhang, ngaydat,trangthai);
                 detailForm.Show();
             }
 
