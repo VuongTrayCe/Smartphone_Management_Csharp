@@ -46,11 +46,11 @@
             this.Xem = new System.Windows.Forms.DataGridViewImageColumn();
             this.In = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.btnExcel = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -61,7 +61,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.panel4);
@@ -159,6 +161,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(26, 24);
             this.btnTimKiem.TabIndex = 1;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -173,7 +176,7 @@
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(296, 8);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(141, 41);
+            this.panel5.Size = new System.Drawing.Size(152, 41);
             this.panel5.TabIndex = 2;
             // 
             // label1
@@ -212,6 +215,7 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(713, 325);
             this.dataGridView1.TabIndex = 3;
@@ -235,7 +239,7 @@
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel6.Controls.Add(this.iconButton4);
             this.panel6.Controls.Add(this.cbbTrangThai);
             this.panel6.Controls.Add(this.panel7);
@@ -244,19 +248,20 @@
             this.panel6.Size = new System.Drawing.Size(383, 23);
             this.panel6.TabIndex = 4;
             // 
-            // btnExcel
+            // iconButton4
             // 
-            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.Black;
-            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcel.IconSize = 19;
-            this.btnExcel.Location = new System.Drawing.Point(637, 54);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(100, 23);
-            this.btnExcel.TabIndex = 2;
-            this.btnExcel.Text = "Xuất Excel";
-            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcel.UseVisualStyleBackColor = true;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(285, 0);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(98, 23);
+            this.iconButton4.TabIndex = 2;
+            this.iconButton4.Text = "Xem";
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // cbbTrangThai
             // 
@@ -264,7 +269,6 @@
             this.cbbTrangThai.FormattingEnabled = true;
             this.cbbTrangThai.Items.AddRange(new object[] {
             "Đặt Hàng",
-            "Đang Xử Lý",
             "Hoàn Thành",
             "Đã Hủy"});
             this.cbbTrangThai.Location = new System.Drawing.Point(104, 0);
@@ -296,19 +300,19 @@
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // iconButton4
+            // btnExcel
             // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(285, 0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(98, 23);
-            this.iconButton4.TabIndex = 2;
-            this.iconButton4.Text = "Xem";
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExcel.IconColor = System.Drawing.Color.Green;
+            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcel.IconSize = 19;
+            this.btnExcel.Location = new System.Drawing.Point(637, 54);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(100, 25);
+            this.btnExcel.TabIndex = 2;
+            this.btnExcel.Text = "Xuất Excel";
+            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // QuanLyDonHang
             // 

@@ -19,7 +19,7 @@ namespace Smartphone_Management.DAO
         public string username = "root";
         public string password = "123456789lop11b2";
         public string constring;
-        private MySqlConnection conn;
+        public MySqlConnection conn;
 
         public  ConnectToMySQL()
         {
