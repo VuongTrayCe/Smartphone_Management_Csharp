@@ -28,3 +28,5 @@ D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Managem
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.ChiTietDonHang.resources
+D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.FormBaiTap.resources
+D:\C#\DoAn\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.FormExport_PreView.resources

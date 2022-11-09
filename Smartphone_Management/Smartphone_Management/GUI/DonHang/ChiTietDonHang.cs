@@ -18,17 +18,19 @@ namespace Smartphone_Management.GUI.DonHang
         private String tenKhachHang;
         private DateTime ngaydat;
        private String trangthai;
+        QuanLyDonHang formqldh;
         public ChiTietDonHang(int Madh)
         {
             InitializeComponent();
             this.Madh = Madh;
 
         }
-        public void setInfo(String tenKhachHang,DateTime ngaydat,String trangthai)
+        public void setInfo(String tenKhachHang,DateTime ngaydat,String trangthai,QuanLyDonHang formQLDH )
         {
             this.tenKhachHang = tenKhachHang;
             this.ngaydat= ngaydat;
             this.trangthai = trangthai;
+            this.formqldh = formQLDH;
         }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -79,12 +81,17 @@ namespace Smartphone_Management.GUI.DonHang
         private void btnHoanThanh_Click(object sender, EventArgs e)
         {
             qldh.updateDonHang(Madh);
+            this.Dispose();
+            formqldh.init();
 
         }
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
             qldh.updateDonHangHuy(Madh);
+            this.Dispose();
+            formqldh.init();
+
 
         }
     }
