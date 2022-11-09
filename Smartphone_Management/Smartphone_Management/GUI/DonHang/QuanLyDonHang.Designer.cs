@@ -61,7 +61,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.panel4);
@@ -174,7 +176,7 @@
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(296, 8);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(141, 41);
+            this.panel5.Size = new System.Drawing.Size(152, 41);
             this.panel5.TabIndex = 2;
             // 
             // label1
@@ -237,7 +239,7 @@
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel6.Controls.Add(this.iconButton4);
             this.panel6.Controls.Add(this.cbbTrangThai);
             this.panel6.Controls.Add(this.panel7);
@@ -301,12 +303,12 @@
             // btnExcel
             // 
             this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.Black;
+            this.btnExcel.IconColor = System.Drawing.Color.Green;
             this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcel.IconSize = 19;
             this.btnExcel.Location = new System.Drawing.Point(637, 54);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(100, 23);
+            this.btnExcel.Size = new System.Drawing.Size(100, 25);
             this.btnExcel.TabIndex = 2;
             this.btnExcel.Text = "Xuất Excel";
             this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

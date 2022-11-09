@@ -25,8 +25,8 @@ namespace Smartphone_Management.BUS
             data.Columns.Add("Madh");
             data.Columns.Add("Tenkh");
             data.Columns.Add("SoLuong");
-            data.Columns.Add("Soluongdadung");
-            data.Columns.Add("Soluongduoctang");
+            data.Columns.Add("Diemapdung");
+            data.Columns.Add("Diemthuong");
             data.Columns.Add("TongTien");
             data.Columns.Add("Tennv");
             // Kiểm tra đơn hàng có đúng với từ khóa/ngày/ trạng thái tìm kiếm hay không 
@@ -58,8 +58,17 @@ namespace Smartphone_Management.BUS
             }
             return data ;
         }
+        // update dơn hàng hủy
+        internal void updateDonHangHuy(int madh)
+        {
+            qlddh_dao.updateTrangThaiDonHangHuy(madh);
 
-
+        }
+        // Update lại trạng thái đơn hàng
+        internal void updateDonHang(int madh)
+        {
+            qlddh_dao.updateTrangThaiDonHang(madh);
+        }
 
         // lấy thông tin chi tiết của một đơn hàng
         internal DataTable getChiTietDonHang(int madh)
@@ -76,7 +85,7 @@ namespace Smartphone_Management.BUS
             data.Columns.Add("ThanhTien");
 
             int tongsl = 0;
-            int tongtien = 0;
+             Double tongtien = 0;
             for (int i = 0; i < data2.Rows.Count; i++)
             {
                     //dataGridView1.Rows.Add(1) ;
@@ -86,8 +95,9 @@ namespace Smartphone_Management.BUS
                         row[col.ColumnName] = data2.Rows[i][col.ColumnName];
 
                     }
-                int soluong = Int32.Parse( data2.Rows[i][2].ToString());
-                int thanhtien= Int32.Parse(data2.Rows[i][6].ToString());
+                int soluong = int.Parse( data2.Rows[i][2].ToString());
+                Double thanhtien = Double.Parse(data2.Rows[i][6].ToString());
+                  
                 tongsl = tongsl + soluong;
                 tongtien += thanhtien;
                 data.Rows.Add(row);

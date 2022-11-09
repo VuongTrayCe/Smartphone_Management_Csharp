@@ -75,5 +75,17 @@ namespace Smartphone_Management.GUI.DonHang
         {
 
         }
+
+        private void btnHoanThanh_Click(object sender, EventArgs e)
+        {
+            qldh.updateDonHang(Madh);
+
+        }
+
+        private void btnHuyDon_Click(object sender, EventArgs e)
+        {
+            qldh.updateDonHangHuy(Madh);
+
+        }
     }
 }
