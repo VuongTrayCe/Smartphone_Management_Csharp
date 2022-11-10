@@ -14,11 +14,11 @@ namespace Smartphone_Management.DAO
 {
     public class ConnectToMySQL
     {
-        public string server = "localhost";
+        /*public string server = "localhost";
         public string database = "studentdb";
         public string username = "root";
         public string password = "123456789lop11b2";
-        public string constring;
+        public string constring;*/
         private MySqlConnection conn;
 
         public  ConnectToMySQL()

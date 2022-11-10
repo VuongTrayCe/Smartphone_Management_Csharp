@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Smartphone_Management",
+    "\\Smartphone_Management\\Smartphone_Management",
+    "\\Smartphone_Management\\Smartphone_Management\\BUS",
+    "\\Smartphone_Management\\Smartphone_Management\\DAO",
+    "\\Smartphone_Management\\Smartphone_Management\\GUI",
+    "\\Smartphone_Management\\Smartphone_Management\\GUI\\DonHang",
+    "\\Smartphone_Management\\Smartphone_Management\\Properties"
   ],
+  "SelectedNode": "\\Smartphone_Management\\Smartphone_Management\\GUI\\themPhieuNhap.cs",
   "PreviewInSolutionExplorer": false
 }

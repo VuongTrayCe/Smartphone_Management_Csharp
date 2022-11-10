@@ -89,6 +89,18 @@
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PhieuNhap\themPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themPhieuNhap.Designer.cs">
+      <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.Designer.cs">
+      <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UIMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\thongTinPhieuNhap.resx">
+      <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themPhieuNhap.resx">
+      <DependentUpon>themPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UIMain.resx">
       <DependentUpon>UIMain.cs</DependentUpon>
