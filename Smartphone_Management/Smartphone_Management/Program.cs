@@ -17,7 +17,7 @@ namespace Smartphone_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBaiTap());
+            Application.Run(new QuanLyDonHang());
         }
     }
 }
