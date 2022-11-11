@@ -43,14 +43,14 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Xem = new System.Windows.Forms.DataGridViewImageColumn();
-            this.In = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.In = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Xem = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -221,22 +221,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // Xem
-            // 
-            this.Xem.HeaderText = "Xem";
-            this.Xem.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
-            this.Xem.Name = "Xem";
-            this.Xem.ReadOnly = true;
-            this.Xem.Width = 40;
-            // 
-            // In
-            // 
-            this.In.HeaderText = "In";
-            this.In.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
-            this.In.Name = "In";
-            this.In.ReadOnly = true;
-            this.In.Width = 30;
-            // 
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -314,6 +298,22 @@
             this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcel.UseVisualStyleBackColor = true;
             // 
+            // In
+            // 
+            this.In.HeaderText = "In";
+            this.In.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
+            this.In.Name = "In";
+            this.In.ReadOnly = true;
+            this.In.Width = 30;
+            // 
+            // Xem
+            // 
+            this.Xem.HeaderText = "Xem";
+            this.Xem.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
+            this.Xem.Name = "Xem";
+            this.Xem.ReadOnly = true;
+            this.Xem.Width = 40;
+            // 
             // QuanLyDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,8 +362,8 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.ComboBox cbbTrangThai;
         private FontAwesome.Sharp.IconButton btnExcel;
+        private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.DataGridViewImageColumn Xem;
         private System.Windows.Forms.DataGridViewImageColumn In;
-        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }
