@@ -36,7 +36,6 @@ namespace Smartphone_Management.DAO
             return data;
         }
 
-
        
     }
 }
