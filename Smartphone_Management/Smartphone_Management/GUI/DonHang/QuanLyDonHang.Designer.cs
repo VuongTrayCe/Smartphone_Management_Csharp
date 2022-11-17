@@ -83,7 +83,7 @@
             this.DateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateEnd.Location = new System.Drawing.Point(461, 0);
             this.DateEnd.Name = "DateEnd";
-            this.DateEnd.Size = new System.Drawing.Size(112, 22);
+            this.DateEnd.Size = new System.Drawing.Size(112, 26);
             this.DateEnd.TabIndex = 6;
             // 
             // iconButton1
@@ -114,7 +114,7 @@
             this.dateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateStart.Location = new System.Drawing.Point(250, 0);
             this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(112, 22);
+            this.dateStart.Size = new System.Drawing.Size(112, 26);
             this.dateStart.TabIndex = 2;
             this.dateStart.Value = new System.DateTime(1753, 7, 10, 0, 0, 0, 0);
             this.dateStart.ValueChanged += new System.EventHandler(this.dateStart_ValueChanged);
@@ -168,7 +168,7 @@
             this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(134, 22);
+            this.txtTimKiem.Size = new System.Drawing.Size(134, 26);
             this.txtTimKiem.TabIndex = 0;
             // 
             // panel5
@@ -185,7 +185,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 24);
+            this.label1.Size = new System.Drawing.Size(174, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đơn Đặt Hàng";
             // 
@@ -193,13 +193,17 @@
             // 
             this.dataGridViewImageColumn1.HeaderText = "In";
             this.dataGridViewImageColumn1.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
             // 
             // dataGridViewImageColumn2
             // 
             this.dataGridViewImageColumn2.HeaderText = "In";
             this.dataGridViewImageColumn2.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 125;
             // 
             // dataGridView1
             // 
@@ -216,6 +220,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(713, 325);
             this.dataGridView1.TabIndex = 3;
@@ -225,6 +230,7 @@
             // 
             this.Xem.HeaderText = "Xem";
             this.Xem.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
+            this.Xem.MinimumWidth = 6;
             this.Xem.Name = "Xem";
             this.Xem.ReadOnly = true;
             this.Xem.Width = 40;
@@ -233,6 +239,7 @@
             // 
             this.In.HeaderText = "In";
             this.In.Image = global::Smartphone_Management.Properties.Resources.Printer_icon;
+            this.In.MinimumWidth = 6;
             this.In.Name = "In";
             this.In.ReadOnly = true;
             this.In.Width = 30;
@@ -273,7 +280,7 @@
             "Đã Hủy"});
             this.cbbTrangThai.Location = new System.Drawing.Point(104, 0);
             this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(119, 24);
+            this.cbbTrangThai.Size = new System.Drawing.Size(119, 28);
             this.cbbTrangThai.TabIndex = 1;
             this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
             // 
@@ -316,7 +323,7 @@
             // 
             // QuanLyDonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 465);
             this.Controls.Add(this.btnExcel);
