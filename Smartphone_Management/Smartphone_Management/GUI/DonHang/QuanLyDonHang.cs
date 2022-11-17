@@ -49,6 +49,8 @@ namespace Smartphone_Management.GUI.DonHang
         { 
             ConnectToMySQL conn = new ConnectToMySQL();
             data = qldh_bus.getThongTinDonDatHang(cbbTrangThai.SelectedItem.ToString(),dateStart.Value,DateEnd.Value,txtTimKiem.Text);
+            dataGridView1.DataSource = data;
+
         }
         private void iconButton3_Click(object sender, EventArgs e)
         {
@@ -85,7 +87,7 @@ namespace Smartphone_Management.GUI.DonHang
             if(isopen==false)
             {
                 ChiTietDonHang detailForm = new ChiTietDonHang(Madh);
-                detailForm.setInfo(tenkhachhang, ngaydat,trangthai);
+                detailForm.setInfo(tenkhachhang, ngaydat,trangthai,this);
                 detailForm.Show();
             }
 
