@@ -67,6 +67,7 @@ namespace Smartphone_Management.DAO
             DataTable data = new DataTable();
             string query = "select * from donhang";
 
+<<<<<<< HEAD
             MySqlCommand MyCommand2 = new MySqlCommand(query, sqla.getConnection());
             //  MyConn2.Open();
             //For offline connection we weill use  MySqlDataAdapter class.
@@ -132,5 +133,9 @@ namespace Smartphone_Management.DAO
             }
             sqla.getConnection().Close();
         }
+=======
+
+       
+>>>>>>> parent of f506799 (thêm phiếu nhập + chi tiết phiếu nhập)
     }
 }

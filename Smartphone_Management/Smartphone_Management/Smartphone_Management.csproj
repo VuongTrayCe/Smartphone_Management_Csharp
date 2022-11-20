@@ -80,10 +80,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\thongTinPhieuNhap_BUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
-    <Compile Include="DAO\themPhieuNhap_DAO.cs" />
-    <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
     <Compile Include="GUI\DonHang\QuanLyDonHang.cs">
@@ -92,6 +89,7 @@
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs" />
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
@@ -109,6 +107,8 @@
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
       <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> parent of f506799 (thêm phiếu nhập + chi tiết phiếu nhập)
     <Compile Include="GUI\PhieuNhap\themPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +132,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PhieuNhap\chiTietPhieuNhap.resx">
-      <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuNhap\thongTinPhieuNhap.resx">
       <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
@@ -169,35 +166,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="GUI\Icon\th.jpg" />
   </ItemGroup>

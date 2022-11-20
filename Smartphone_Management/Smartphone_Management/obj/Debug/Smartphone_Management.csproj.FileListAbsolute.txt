@@ -57,5 +57,3 @@ C:\Users\Administrator\Desktop\Smartphone_Management_Csharp\Smartphone_Managemen
 C:\Users\Administrator\Desktop\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.pdb
 C:\Users\Administrator\Desktop\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.thongTinPhieuNhap.resources
 C:\Users\Administrator\Desktop\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themPhieuNhap.resources
-C:\Users\Administrator\Desktop\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.ResolveComReference.cache
-C:\Users\Administrator\Desktop\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.chiTietPhieuNhap.resources
