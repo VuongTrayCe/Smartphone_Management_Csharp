@@ -120,9 +120,7 @@
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login\DangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="GUI\Login\DangNhap.cs" />
     <Compile Include="GUI\Login\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
@@ -132,9 +130,7 @@
     <Compile Include="GUI\Login\QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login\VBButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="GUI\Login\VBButton.cs" />
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
