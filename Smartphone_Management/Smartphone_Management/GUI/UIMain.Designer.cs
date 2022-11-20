@@ -59,11 +59,11 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanelCenter = new System.Windows.Forms.Panel();
+            this.panelChucNang = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.panelChucNang = new System.Windows.Forms.Panel();
             this.panelSlide.SuspendLayout();
             this.panelHeThong_Sub.SuspendLayout();
             this.panelThongKe_Sub.SuspendLayout();
@@ -599,6 +599,14 @@
             this.PanelCenter.Size = new System.Drawing.Size(857, 540);
             this.PanelCenter.TabIndex = 1;
             // 
+            // panelChucNang
+            // 
+            this.panelChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChucNang.Location = new System.Drawing.Point(0, 36);
+            this.panelChucNang.Name = "panelChucNang";
+            this.panelChucNang.Size = new System.Drawing.Size(857, 504);
+            this.panelChucNang.TabIndex = 1;
+            // 
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -623,6 +631,7 @@
             // 
             // iconButton3
             // 
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -635,6 +644,7 @@
             // 
             // iconButton2
             // 
+            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -645,15 +655,7 @@
             this.iconButton2.Text = "iconButton2";
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
-            // panelChucNang
-            // 
-            this.panelChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChucNang.Location = new System.Drawing.Point(0, 36);
-            this.panelChucNang.Name = "panelChucNang";
-            this.panelChucNang.Size = new System.Drawing.Size(857, 504);
-            this.panelChucNang.TabIndex = 1;
-            // 
-            // Form2
+            // UIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -661,7 +663,7 @@
             this.ClientSize = new System.Drawing.Size(1084, 540);
             this.Controls.Add(this.PanelCenter);
             this.Controls.Add(this.panelSlide);
-            this.Name = "Form2";
+            this.Name = "UIMain";
             this.Text = "Form2";
             this.panelSlide.ResumeLayout(false);
             this.panelHeThong_Sub.ResumeLayout(false);
