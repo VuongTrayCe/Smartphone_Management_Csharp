@@ -631,7 +631,6 @@
             // 
             // iconButton3
             // 
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -644,7 +643,6 @@
             // 
             // iconButton2
             // 
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -665,6 +663,7 @@
             this.Controls.Add(this.panelSlide);
             this.Name = "UIMain";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.UIMain_Load);
             this.panelSlide.ResumeLayout(false);
             this.panelHeThong_Sub.ResumeLayout(false);
             this.panelThongKe_Sub.ResumeLayout(false);

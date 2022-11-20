@@ -21,9 +21,9 @@ namespace Smartphone_Management.DAO
         public string constring;
         public MySqlConnection conn;
 
-        public  ConnectToMySQL()
+        public ConnectToMySQL()
         {
-            string connStr = "server=localhost;user=root;database=smartphonemanagement;port=3306;password=123456789lop11b2";
+            string connStr = "server=localhost;user=root;database=phoneSale;port=3306;password=dvsaigonese";
             //this.constring = "SERVER=" + this.server + ";" + "DATABASE=" + this.database + ";" + "UID=" + this.username + ";" + "PASSWORD=" + this.password + ";";
             this.conn = new MySqlConnection(connStr);
         }
@@ -42,7 +42,7 @@ namespace Smartphone_Management.DAO
 
         }
         public void closeConnectToMySql()
-         {
+        {
             if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
