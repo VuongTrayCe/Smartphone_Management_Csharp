@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -194,6 +195,7 @@ namespace Smartphone_Management
         private void btnKhohang_Click(object sender, EventArgs e)
         {
 
+            ////ChiTietDonHang a = new ChiTietDonHang();
         }
 
         private void btnTaoPhieuNhap_Click(object sender, EventArgs e)

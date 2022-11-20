@@ -1,4 +1,5 @@
-﻿using Smartphone_Management.BUS;
+﻿using ClosedXML.Excel;
+using Smartphone_Management.BUS;
 using Smartphone_Management.DAO;
 using System;
 using System.Collections.Generic;
@@ -70,8 +71,34 @@ namespace Smartphone_Management.GUI.DonHang
                 openDetailForm(madh,tenkh,ngaydat,trangthai);
 
             }
+
+            //DateTime date = (DateTime)value;
+            if (e.RowIndex >= 0 && e.ColumnIndex == 1)
+            {
+                openReportForm();
+
+            }
+
+
         }
 
+        public void openReportForm()
+        {
+            Boolean isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "FormExport_PreView")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                }
+            }
+            if (isopen == false)
+            {
+               FormExport_PreView formPrinter =  new FormExport_PreView();
+                formPrinter.Show();
+            }
+        }
         // Mở form chi tiết đơn hàng
       public void openDetailForm(int Madh,String tenkhachhang,DateTime ngaydat,String trangthai)
         {
@@ -126,8 +153,56 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            init();
-            dataGridView1.DataSource = data;
+            //init();
+            try
+            {
+                DataView view = dataGridView1.DataSource as DataView;
+                if (view != null)
+                {
+                    dataGridView1.DataSource = data;
+                    view.RowFilter = txtTimKiem.Text;
+                    view.RowStateFilter = DataViewRowState.Unchanged;
+
+                }
+
+            }
+            catch
+            {
+
+            }
+        }
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            //DGVPrinter printer = new DGVPrinter();
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            using(SaveFileDialog  sfd = new SaveFileDialog() { Filter = "Excel wordbool |*.xlsx"})
+            {
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using(XLWorkbook workbook = new XLWorkbook())
+                        {
+                            workbook.Worksheets.Add((DataTable) dataGridView1.DataSource, "Đơn Hàng");
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        System.Windows.MessageBox.Show("update thanh cong","Message",MessageBoxButton.OK);
+                    }
+                    catch(Exception h)
+                    {
+                        System.Windows.MessageBox.Show(h.Message);
+                    }
+                }
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
