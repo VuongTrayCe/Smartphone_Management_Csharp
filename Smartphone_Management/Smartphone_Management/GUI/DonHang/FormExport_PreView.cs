@@ -25,9 +25,9 @@ namespace Smartphone_Management.GUI.DonHang
         }
         public void init()
         {
-            DataTable data = new DataTable();
-            data = qldh_dao.getThongTinDonhang();
-            donhangBindingSource.DataSource = data;
+            //DataTable data = new DataTable();
+            //data = qldh_dao.getThongTinDonhang();
+            //donhangBindingSource.DataSource = data;
         }
         private void label2_Click(object sender, EventArgs e)
         {
