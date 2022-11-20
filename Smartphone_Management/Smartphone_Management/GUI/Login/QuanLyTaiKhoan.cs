@@ -31,20 +31,20 @@ namespace Smartphone_Management.GUI.Login
 
         void LoadData()
         {
-            //// clear the rows
-            //dataGridView.Rows.Clear();
+            // clear the rows
+            dataGridView.Rows.Clear();
 
 
-            ////check for search
-            ////var db = DAO.ConnectToPhucMySQL.Db();
-            ////Query q = db.Query("taikhoan");
+            //check for search
+            //var db = DAO.ConnectToPhucMySQL.Db();
+            //Query q = db.Query("taikhoan");
 
-            //if (txtSearch.Text.Trim().Length > 0)
-            //{
+            if (txtSearch.Text.Trim().Length > 0)
+            {
 
-            //}
+            }
 
-            //// load tat ca tai khoan in database 
+            // load tat ca tai khoan in database 
 
             //IEnumerable<taikhoan> result = q.Get<taikhoan>();
 

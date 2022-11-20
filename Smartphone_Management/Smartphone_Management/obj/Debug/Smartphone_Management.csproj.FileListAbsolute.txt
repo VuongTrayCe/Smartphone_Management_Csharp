@@ -80,12 +80,7 @@ D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Manag
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Smartphone_Management.exe.config
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Smartphone_Management.exe
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Smartphone_Management.pdb
-D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.Licensing.dll
-D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
-D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
-D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\FontAwesome.Sharp.dll
-D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\JTextBox.dll
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\MySql.Data.dll
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\MySqlConnector.dll
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\System.Buffers.dll
