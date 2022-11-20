@@ -92,7 +92,6 @@
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs" />
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
       <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
@@ -102,23 +101,6 @@
       <DependentUpon>themPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.cs" />
-=======
-    <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
-      <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\PhieuNhap\themPhieuNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\PhieuNhap\themPhieuNhap.Designer.cs">
-      <DependentUpon>themPhieuNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
->>>>>>> parent of 1157131 (Merge branch 'main' into Duy)
     <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.Designer.cs">
       <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
     </Compile>
