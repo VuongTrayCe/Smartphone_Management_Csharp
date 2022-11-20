@@ -1,11 +1,13 @@
 ﻿using FontAwesome.Sharp;
 using Smartphone_Management.GUI;
+using Smartphone_Management.GUI.DonHang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -189,12 +191,14 @@ namespace Smartphone_Management
 
         private void btnQLDonDatHang_Click(object sender, EventArgs e)
         {
-
+            QuanLyDonHang qldh = new QuanLyDonHang();
+            openChildForm(qldh);
         }
 
         private void btnKhohang_Click(object sender, EventArgs e)
         {
 
+            ////ChiTietDonHang a = new ChiTietDonHang();
         }
 
         private void btnTaoPhieuNhap_Click(object sender, EventArgs e)
