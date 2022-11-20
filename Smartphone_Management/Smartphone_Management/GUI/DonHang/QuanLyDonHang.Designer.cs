@@ -46,11 +46,12 @@
             this.Xem = new System.Windows.Forms.DataGridViewImageColumn();
             this.In = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,9 +71,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.txtTimKiem);
-            this.panel1.Location = new System.Drawing.Point(24, 55);
+            this.panel1.Location = new System.Drawing.Point(175, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 24);
+            this.panel1.Size = new System.Drawing.Size(659, 24);
             this.panel1.TabIndex = 1;
             // 
             // DateEnd
@@ -87,6 +88,7 @@
             // iconButton1
             // 
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -129,6 +131,7 @@
             // iconButton2
             // 
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -159,6 +162,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(26, 24);
             this.btnTimKiem.TabIndex = 1;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -171,15 +175,16 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(296, 8);
+            this.panel5.Location = new System.Drawing.Point(24, 8);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(141, 41);
+            this.panel5.Size = new System.Drawing.Size(145, 41);
             this.panel5.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 24);
@@ -201,19 +206,21 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Xem,
             this.In});
-            this.dataGridView1.Location = new System.Drawing.Point(24, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 129);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(713, 325);
+            this.dataGridView1.Size = new System.Drawing.Size(696, 294);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -235,28 +242,13 @@
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.iconButton4);
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.Controls.Add(this.cbbTrangThai);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(201, 85);
+            this.panel6.Location = new System.Drawing.Point(353, 54);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(383, 23);
+            this.panel6.Size = new System.Drawing.Size(231, 23);
             this.panel6.TabIndex = 4;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(285, 0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(98, 23);
-            this.iconButton4.TabIndex = 2;
-            this.iconButton4.Text = "Xem";
-            this.iconButton4.UseVisualStyleBackColor = true;
             // 
             // cbbTrangThai
             // 
@@ -264,7 +256,6 @@
             this.cbbTrangThai.FormattingEnabled = true;
             this.cbbTrangThai.Items.AddRange(new object[] {
             "Đặt Hàng",
-            "Đang Xử Lý",
             "Hoàn Thành",
             "Đã Hủy"});
             this.cbbTrangThai.Location = new System.Drawing.Point(104, 0);
@@ -285,6 +276,7 @@
             // iconButton3
             // 
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -296,31 +288,68 @@
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
+            // iconButton4
+            // 
+            this.iconButton4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(741, 129);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(98, 23);
+            this.iconButton4.TabIndex = 2;
+            this.iconButton4.Text = "Xem";
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
             // btnExcel
             // 
-            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.Black;
+            this.btnExcel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.N;
+            this.btnExcel.IconColor = System.Drawing.Color.Green;
             this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcel.IconSize = 19;
-            this.btnExcel.Location = new System.Drawing.Point(637, 54);
+            this.btnExcel.Location = new System.Drawing.Point(741, 158);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(100, 23);
+            this.btnExcel.Size = new System.Drawing.Size(98, 25);
             this.btnExcel.TabIndex = 2;
             this.btnExcel.Text = "Xuất Excel";
             this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton5.IconColor = System.Drawing.Color.Black;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.Location = new System.Drawing.Point(741, 189);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(98, 23);
+            this.iconButton5.TabIndex = 5;
+            this.iconButton5.Text = "Print";
+            this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // QuanLyDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 465);
+            this.ClientSize = new System.Drawing.Size(846, 465);
+            this.Controls.Add(this.iconButton5);
+            this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyDonHang";
             this.Text = "QuanLyDonHang";
@@ -358,8 +387,9 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.ComboBox cbbTrangThai;
         private FontAwesome.Sharp.IconButton btnExcel;
+        private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.DataGridViewImageColumn Xem;
         private System.Windows.Forms.DataGridViewImageColumn In;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton5;
     }
 }
