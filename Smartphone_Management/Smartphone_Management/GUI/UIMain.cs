@@ -194,10 +194,8 @@ namespace Smartphone_Management
 
         private void btnKhohang_Click(object sender, EventArgs e)
         {
-            Form1 a = new Form1();
 
             ////ChiTietDonHang a = new ChiTietDonHang();
-            openChildForm(a);
         }
 
         private void btnTaoPhieuNhap_Click(object sender, EventArgs e)
