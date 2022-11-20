@@ -1,4 +1,5 @@
-﻿using Smartphone_Management.GUI.DonHang;
+﻿using Smartphone_Management.GUI;
+using Smartphone_Management.GUI.DonHang;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Smartphone_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLyDonHang());
+            Application.Run(new thongTinPhieuNhap());
         }
     }
 }
