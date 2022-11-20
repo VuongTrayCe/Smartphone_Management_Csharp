@@ -31,37 +31,37 @@ namespace Smartphone_Management.GUI.Login
 
         void LoadData()
         {
-            // clear the rows
-            dataGridView.Rows.Clear();
+            //// clear the rows
+            //dataGridView.Rows.Clear();
 
 
-            //check for search
-            //var db = DAO.ConnectToPhucMySQL.Db();
-            //Query q = db.Query("taikhoan");
+            ////check for search
+            ////var db = DAO.ConnectToPhucMySQL.Db();
+            ////Query q = db.Query("taikhoan");
 
-            if (txtSearch.Text.Trim().Length > 0)
-            {
+            //if (txtSearch.Text.Trim().Length > 0)
+            //{
 
-            }
+            //}
 
-            // load tat ca tai khoan in database 
+            //// load tat ca tai khoan in database 
 
-            IEnumerable<taikhoan> result = q.Get<taikhoan>();
+            //IEnumerable<taikhoan> result = q.Get<taikhoan>();
 
-            foreach (var taikhoan in result)
-            {
-                dataGridView.Rows.Add(new object[]
-                {
-                    imageList1.Images[0],
-                    taikhoan.Matk,
-                    taikhoan.Manv,
-                    taikhoan.Tendangnhap,
-                    taikhoan.Matkhau,
-                    taikhoan.Trangthai? imageList1.Images[1] : imageList1.Images[2],
-                    taikhoan.Ngaythamgia
+            //foreach (var taikhoan in result)
+            //{
+            //    dataGridView.Rows.Add(new object[]
+            //    {
+            //        imageList1.Images[0],
+            //        taikhoan.Matk,
+            //        taikhoan.Manv,
+            //        taikhoan.Tendangnhap,
+            //        taikhoan.Matkhau,
+            //        taikhoan.Trangthai? imageList1.Images[1] : imageList1.Images[2],
+            //        taikhoan.Ngaythamgia
 
-                });
-            }
+            //    });
+            //}
         }
 
         private void QuanLyTaiKhoan_Load(object sender, EventArgs e)

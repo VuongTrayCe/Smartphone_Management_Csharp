@@ -33,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\JTextBox.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -50,6 +58,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -86,6 +95,7 @@
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="DTO\taikhoan.cs" />
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,12 +148,20 @@
     <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.Designer.cs">
       <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TaiKhoan\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UIMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\UIMain.Designer.cs">
       <DependentUpon>UIMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DonHang\ChiTietDonHang.resx">
@@ -173,6 +191,18 @@
     <EmbeddedResource Include="GUI\UIMain.resx">
       <DependentUpon>UIMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.chiTietPhieuNhap.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.DonHang.ChiTietDonHang.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.DonHang.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.DonHang.FormExport_PreView.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.DonHang.QuanLyDonHang.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.Login.DangNhap.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.Login.QuanLyTaiKhoan.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.themPhieuNhap.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.thongTinPhieuNhap.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Smartphone_Management.UIMain.resources" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -183,7 +213,86 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="FodyWeavers.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="GUI\DonHang\.editorconfig" />
+    <None Include="obj\Debug\Costura\038539203A1EAB74E1AFC9097A6F49D74DEAAECD.costura.system.servicemodel.duplex.dll.compressed" />
+    <None Include="obj\Debug\Costura\0744B613618400F89511140EAB015237DF6BCD54.costura.system.valuetuple.dll.compressed" />
+    <None Include="obj\Debug\Costura\0EA487E0F4A0FA9F7721D25A320E0ED014D86919.costura.system.io.pipes.accesscontrol.dll.compressed" />
+    <None Include="obj\Debug\Costura\0F423916B55E2693771B6388310AD41509F97D44.costura.bunifu.licensing.pdb.compressed" />
+    <None Include="obj\Debug\Costura\13C03454586F5ED2AD3340185A5276102967CA1C.costura.system.data.oledb.dll.compressed" />
+    <None Include="obj\Debug\Costura\180A7BAAFBC820A838BBACA434032D9D33CCEEBE.costura.system.runtime.compilerservices.unsafe.dll.compressed" />
+    <None Include="obj\Debug\Costura\18EA7BD41D31247148ABF184527C9368A26F39E7.costura.system.io.filesystem.accesscontrol.dll.compressed" />
+    <None Include="obj\Debug\Costura\18F65508762D2492F41B22E4E6E5AD19A2226BAA.costura.bunifu.licensing.dll.compressed" />
+    <None Include="obj\Debug\Costura\191D79AD78FB961CE162AD342299EDDACACD94CF.costura.microsoft.win32.registry.accesscontrol.dll.compressed" />
+    <None Include="obj\Debug\Costura\19BF79600B716523B5317B9A7B68760AE5D55741.costura.system.memory.dll.compressed" />
+    <None Include="obj\Debug\Costura\1BB14967938D99E768AF208FB54668109E81ABBB.costura.costura.dll.compressed" />
+    <None Include="obj\Debug\Costura\23C232D69729D1900551DF81A9ABD000A5A2C1EF.costura.system.linq.dynamic.core.dll.compressed" />
+    <None Include="obj\Debug\Costura\2750F5B58436F7834106BFDBAF5504C9496A8624.costura.closedxml.dll.compressed" />
+    <None Include="obj\Debug\Costura\281682EF14BDB16CD6C6ACD455752416DD1B4B53.costura.closedxml.report.dll.compressed" />
+    <None Include="obj\Debug\Costura\2F2C9D016FFC2BD7078104234E27AB2B010BD765.costura.system.drawing.common.dll.compressed" />
+    <None Include="obj\Debug\Costura\2F410A0396BC148ED533AD49B6415FB58DD4D641.costura.system.buffers.dll.compressed" />
+    <None Include="obj\Debug\Costura\31ACE4B26D8A069C84AAD6001E06C2A5483806F3.costura.microsoft.win32.registry.dll.compressed" />
+    <None Include="obj\Debug\Costura\3A6D8C5E4E121B5CF66FA9389236AC4137156BD6.costura.mysqlconnector.dll.compressed" />
+    <None Include="obj\Debug\Costura\3AA1E9BFB6FD657C03B877E8AE8CFBA32AA282B3.costura.fontawesome.sharp.dll.compressed" />
+    <None Include="obj\Debug\Costura\3AAC13F00F8A7F55CC06C1F0FB7691B03537B55B.costura.system.servicemodel.nettcp.dll.compressed" />
+    <None Include="obj\Debug\Costura\3CD7CED8805ED67536E6B7DB5144DB20B822CC38.costura.system.servicemodel.http.pdb.compressed" />
+    <None Include="obj\Debug\Costura\3D216458740AD5CB05BC5F7C3491CDE44A1E5DF0.costura.system.numerics.vectors.dll.compressed" />
+    <None Include="obj\Debug\Costura\49B0E0D5DC1281CC2B200AD0233957085C6F8394.costura.morelinq.dll.compressed" />
+    <None Include="obj\Debug\Costura\4D131D1AF5DE8A09FC857772D5791E18939E7CAD.costura.system.servicemodel.http.dll.compressed" />
+    <None Include="obj\Debug\Costura\54EC870FFB8CE10B3C8B05BBC7FB7EA45142A430.costura.restsharp.dll.compressed" />
+    <None Include="obj\Debug\Costura\5B721C140591E0ADC68963C49A0EE72B0C27EFEF.costura.system.threading.accesscontrol.dll.compressed" />
+    <None Include="obj\Debug\Costura\5FCBFCE1DAD2AD2AB3EFB39DB6CBA231DB83C4F3.costura.closedxml.pdb.compressed" />
+    <None Include="obj\Debug\Costura\656A81F46DB510DAC6CF0F6C401087A4346A5A55.costura.system.linq.dynamic.core.pdb.compressed" />
+    <None Include="obj\Debug\Costura\68AE50EC9E5E6D50EF06593E2B70CCCFCAFB2017.costura.system.security.cryptography.pkcs.dll.compressed" />
+    <None Include="obj\Debug\Costura\6A511A5688B188C4D1615CEDE33B1E5278376001.costura.system.configuration.configurationmanager.dll.compressed" />
+    <None Include="obj\Debug\Costura\73D1557D00F91CC239F13B27EB385D314CA40511.costura.system.io.ports.dll.compressed" />
+    <None Include="obj\Debug\Costura\7490C66757ACE1971272087DD6737A7D272A06BA.costura.system.servicemodel.syndication.dll.compressed" />
+    <None Include="obj\Debug\Costura\7889B3830E815C1EC2CA9B3BC40FBE115B6B9CFE.costura.system.web.services.description.dll.compressed" />
+    <None Include="obj\Debug\Costura\7ADB84B667BBC630CD077280BD9D5C03E04C856C.costura.system.servicemodel.nettcp.pdb.compressed" />
+    <None Include="obj\Debug\Costura\83014E2A98F7597B9A26E424A0759E5A3D2ECFF1.costura.system.security.accesscontrol.dll.compressed" />
+    <None Include="obj\Debug\Costura\85078D8F2C8A9051F3BE278BF13DB8E4E6C598AB.costura.system.diagnostics.diagnosticsource.dll.compressed" />
+    <None Include="obj\Debug\Costura\86312CBA2EB3495CC6BEC66D54D4AB88596275D8.costura.bunifu.ui.winforms.1.5.3.dll.compressed" />
+    <None Include="obj\Debug\Costura\88C8065034EE0E4B9F6A3935FD32E541EFF39EBC.costura.system.codedom.dll.compressed" />
+    <None Include="obj\Debug\Costura\8E83C5A162EEC525281C870B3D7FC2F197A70FAF.costura.system.servicemodel.primitives.pdb.compressed" />
+    <None Include="obj\Debug\Costura\9A5BE1FCF410FE5934D720329D36A2377E83747E.costura.system.security.principal.windows.dll.compressed" />
+    <None Include="obj\Debug\Costura\9BDDAAB55A1FF8564DD64FC32A746CA6AD234450.costura.system.servicemodel.security.dll.compressed" />
+    <None Include="obj\Debug\Costura\9C75559FADD5062664CB04EC20DBA37FFEFD2E4E.costura.system.threading.tasks.extensions.dll.compressed" />
+    <None Include="obj\Debug\Costura\A027BE116049B789BF6451C03FA6A53B7C8C3BAD.costura.system.serviceprocess.servicecontroller.dll.compressed" />
+    <None Include="obj\Debug\Costura\ABE486C3E48EF73B3A116CD3C0320A98D72F4895.costura.devart.data.mysql.dll.compressed" />
+    <None Include="obj\Debug\Costura\B382B80CA629393DA72379C2EC0149E7639D498D.costura.system.security.permissions.dll.compressed" />
+    <None Include="obj\Debug\Costura\B5F3B8153DEB32F540C785C030F190DAF7C0F3F3.costura.system.diagnostics.eventlog.dll.compressed" />
+    <None Include="obj\Debug\Costura\B6A5EBF42211FDABCF377EC2018B6B9A14A99761.costura.system.text.encoding.codepages.dll.compressed" />
+    <None Include="obj\Debug\Costura\BDBF716D6B3E5E94235B177F2FD96519FB13AF79.costura.documentformat.openxml.dll.compressed" />
+    <None Include="obj\Debug\Costura\C57659CDC8B66AF4B6D3B7F0E44028F265207FD2.costura.system.data.odbc.dll.compressed" />
+    <None Include="obj\Debug\Costura\C918B4463C46860E6AD53707257A69B2256267A5.costura.devart.data.dll.compressed" />
+    <None Include="obj\Debug\Costura\C96D0313C788BD447C3EC1145A49E5BEAE200E33.costura.system.security.cryptography.xml.dll.compressed" />
+    <None Include="obj\Debug\Costura\C9ED651322030E84AA2A595DB2455603D790C964.costura.mysql.data.dll.compressed" />
+    <None Include="obj\Debug\Costura\CBC510520FCD85DBC1C82B02E82040702ACA9B79.costura.newtonsoft.json.dll.compressed" />
+    <None Include="obj\Debug\Costura\D00C8BE9945B6FBD22929DD0E666799CF0670673.costura.system.data.sqlclient.dll.compressed" />
+    <None Include="obj\Debug\Costura\D144DD7300828CCED5916AC41BE20563966ABF69.costura.excelnumberformat.dll.compressed" />
+    <None Include="obj\Debug\Costura\DB3618ED05B40478E26949650E4439616A8C5161.costura.system.web.services.description.pdb.compressed" />
+    <None Include="obj\Debug\Costura\DC97569E1CE6E799307290C1A70061CB1AA3BBDD.costura.microsoft.win32.systemevents.dll.compressed" />
+    <None Include="obj\Debug\Costura\E37FE15D2FB33753C042E16D1D008D412E7D99E7.costura.guna.ui2.dll.compressed" />
+    <None Include="obj\Debug\Costura\E47E323D44743A5104620A9E0B0264693A64ED92.costura.system.security.cryptography.cng.dll.compressed" />
+    <None Include="obj\Debug\Costura\ECFE9CA1AD79826D2272A531CB185D980ED0E700.costura.system.diagnostics.performancecounter.dll.compressed" />
+    <None Include="obj\Debug\Costura\EF600AC2BC485766D0577FEEF1A3AB281A0E5E74.costura.system.servicemodel.primitives.dll.compressed" />
+    <None Include="obj\Debug\Costura\EF795925B5FF7A408FDA1913F9B4D0B065DA9291.costura.system.servicemodel.duplex.pdb.compressed" />
+    <None Include="obj\Debug\Costura\F788F0B87276B5EF87721813990E905E3344A8B1.costura.system.io.packaging.dll.compressed" />
+    <None Include="obj\Debug\Costura\FE75C14F17C7B308D6AE149CA2AA602204AA1726.costura.system.servicemodel.security.pdb.compressed" />
+    <None Include="obj\Debug\Costura\FF6F8C28A314B0E878DC3EA10A605A1B06562FC7.costura.system.security.cryptography.protecteddata.dll.compressed" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.CopyComplete" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.Fody.CopyLocal.cache" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.ResolveComReference.cache" />
+    <None Include="obj\Debug\Smartphone_Management.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="obj\Release\Smartphone_Management.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\Smartphone_Management.csproj.ResolveComReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -235,6 +344,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="GUI\Icon\icon_eye2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.1.5.3.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuColorTransition.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuDatePicker.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuDropdown.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuFormDock.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGradientPanel.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGroupBox.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuImageButton.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuLabel.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuPanel.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuRadioButton.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuSeparator.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuShadowPanel.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuShapes.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuSlider.dll" />
+    <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />
+    <Content Include="lib\JTextBox.dll" />
+    <Content Include="lib\MySql.Data.dll" />
+    <Content Include="obj\Debug\Smartphone_Management.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Smartphone_Management.exe" />
+    <Content Include="obj\Debug\smartphone_management.exe.licenses" />
+    <Content Include="obj\Debug\Smartphone_Management.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\quanlybanhangDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\quanlybanhangDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\smartphonemanagementDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\smartphonemanagementDataSet1.Designer.cs.dll" />
+    <Content Include="Resources\bg_user.png" />
+    <Content Include="Resources\icons8-search-32.png" />
+    <Content Include="Resources\icons8-search-48.png" />
+    <Content Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
