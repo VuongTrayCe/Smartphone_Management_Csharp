@@ -74,3 +74,5 @@ D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Manag
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.CoreCompileInputs.cache
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.pdb
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.DangNhap.resources
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.QuanLyTaiKhoan.resources

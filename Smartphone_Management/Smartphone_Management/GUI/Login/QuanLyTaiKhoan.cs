@@ -1,6 +1,6 @@
 ﻿using Smartphone_Management.DTO;
-using SqlKata;
-using SqlKata.Execution;
+//using SqlKata;
+//using SqlKata.Execution;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +20,12 @@ namespace Smartphone_Management.GUI.Login
             InitializeComponent();
 
             //Test
-            for(int i = 0; i < 20; i++)
+            for (int i = 0; i < 20; i++)
             {
                 dataGridView.Rows.Add(new object[]{
                 imageList1.Images[0]
                 });
-           
+
             }
         }
 
@@ -36,8 +36,8 @@ namespace Smartphone_Management.GUI.Login
 
 
             //check for search
-            var db = DAO.ConnectToPhucMySQL.Db();
-            Query q = db.Query("taikhoan");
+            //var db = DAO.ConnectToPhucMySQL.Db();
+            //Query q = db.Query("taikhoan");
 
             if (txtSearch.Text.Trim().Length > 0)
             {
@@ -131,7 +131,7 @@ namespace Smartphone_Management.GUI.Login
         {
             try
             {
-                ScrollBar.Maximum = dataGridView.RowCount -1;
+                ScrollBar.Maximum = dataGridView.RowCount - 1;
 
             }
             catch (Exception)
@@ -156,7 +156,7 @@ namespace Smartphone_Management.GUI.Login
 
         private void QuanLyTaiKhoan_Shown(object sender, EventArgs e)
         {
-         
+
         }
 
         private void init_Tick(object sender, EventArgs e)
@@ -166,5 +166,5 @@ namespace Smartphone_Management.GUI.Login
             LoadData();
         }
     }
-    }
+}
 

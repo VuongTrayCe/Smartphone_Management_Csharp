@@ -1,4 +1,4 @@
-﻿using ClosedXML.Excel;
+﻿//using ClosedXML.Excel;
 using Smartphone_Management.BUS;
 using Smartphone_Management.DAO;
 using System;
@@ -185,12 +185,12 @@ namespace Smartphone_Management.GUI.DonHang
                 {
                     try
                     {
-                        using(XLWorkbook workbook = new XLWorkbook())
-                        {
-                            workbook.Worksheets.Add((DataTable) dataGridView1.DataSource, "Đơn Hàng");
-                            workbook.SaveAs(sfd.FileName);
-                        }
-                        System.Windows.MessageBox.Show("update thanh cong","Message",MessageBoxButton.OK);
+                        //using(XLWorkbook workbook = new XLWorkbook())
+                        //{
+                        //    workbook.Worksheets.Add((DataTable) dataGridView1.DataSource, "Đơn Hàng");
+                        //    workbook.SaveAs(sfd.FileName);
+                        //}
+                        //System.Windows.MessageBox.Show("update thanh cong","Message",MessageBoxButton.OK);
                     }
                     catch(Exception h)
                     {

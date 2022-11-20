@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxUser = new JTextBox.JTextBox();
-            this.txtBoxPassword = new JTextBox.JTextBox();
+            //this.txtBoxUser = new JTextBox.JTextBox();
+            //this.txtBoxPassword = new JTextBox.JTextBox();
             this.btnDangNhap = new Smartphone_Management.GUI.Login.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
