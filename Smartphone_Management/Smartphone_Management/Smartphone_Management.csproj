@@ -86,6 +86,19 @@
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DonHang\ChiTietDonHang.Designer.cs">
+      <DependentUpon>ChiTietDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DonHang\FormExport_PreView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DonHang\FormExport_PreView.Designer.cs">
+      <DependentUpon>FormExport_PreView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DonHang\PrintDataGirdView.cs" />
     <Compile Include="GUI\DonHang\QuanLyDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +131,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DonHang\ChiTietDonHang.resx">
+      <DependentUpon>ChiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DonHang\FormExport_PreView.resx">
+      <DependentUpon>FormExport_PreView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +162,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="GUI\DonHang\.editorconfig" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
