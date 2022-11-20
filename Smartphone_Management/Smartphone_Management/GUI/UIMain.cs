@@ -20,9 +20,6 @@ namespace Smartphone_Management
     {
         private IconButton currentBtn;
 
-        private thongTinPhieuNhap form1;
-        private themPhieuNhap form2;
-
         private Color corlor = Color.FromArgb(0, 127, 0);
         private int FlagColor = 0;
         public UIMain()
@@ -203,14 +200,12 @@ namespace Smartphone_Management
 
         private void btnTaoPhieuNhap_Click(object sender, EventArgs e)
         {
-            form2 = new themPhieuNhap();
-            form2.Show();
+
         }
 
         private void btnTTPhieuNhap_Click(object sender, EventArgs e)
         {
-            form1 = new thongTinPhieuNhap();
-            form1.Show();
+
         }
 
         private void btnChinhSachKhuyenMai_Click(object sender, EventArgs e)
@@ -223,9 +218,9 @@ namespace Smartphone_Management
 
         }
 
-        private void UIMain_Load(object sender, EventArgs e)
-        {
 
-        }
+
+
+      
     }
 }
