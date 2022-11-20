@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormExport_PreView));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExport = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataEnd = new System.Windows.Forms.DateTimePicker();
             this.dataStart = new System.Windows.Forms.DateTimePicker();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -46,31 +46,12 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.smartphonemanagementDataSet = new Smartphone_Management.smartphonemanagementDataSet();
-            this.smartphonemanagementDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.smartphonemanagementDataSet1 = new Smartphone_Management.smartphonemanagementDataSet1();
-            this.donhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.donhangTableAdapter = new Smartphone_Management.smartphonemanagementDataSet1TableAdapters.donhangTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.madhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaybanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemapdungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemthuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartphonemanagementDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartphonemanagementDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartphonemanagementDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donhangBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,6 +102,14 @@
             this.panel4.Size = new System.Drawing.Size(655, 377);
             this.panel4.TabIndex = 2;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(65, 150);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(535, 195);
+            this.dataGridView1.TabIndex = 5;
             // 
             // dataEnd
             // 
@@ -227,104 +216,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // smartphonemanagementDataSet
-            // 
-            this.smartphonemanagementDataSet.DataSetName = "smartphonemanagementDataSet";
-            this.smartphonemanagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // smartphonemanagementDataSetBindingSource
-            // 
-            this.smartphonemanagementDataSetBindingSource.DataSource = this.smartphonemanagementDataSet;
-            this.smartphonemanagementDataSetBindingSource.Position = 0;
-            // 
-            // smartphonemanagementDataSet1
-            // 
-            this.smartphonemanagementDataSet1.DataSetName = "smartphonemanagementDataSet1";
-            this.smartphonemanagementDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // donhangBindingSource
-            // 
-            this.donhangBindingSource.DataMember = "donhang";
-            this.donhangBindingSource.DataSource = this.smartphonemanagementDataSet1;
-            // 
-            // donhangTableAdapter
-            // 
-            this.donhangTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madhDataGridViewTextBoxColumn,
-            this.makhDataGridViewTextBoxColumn,
-            this.manvDataGridViewTextBoxColumn,
-            this.ngaybanDataGridViewTextBoxColumn,
-            this.soLuongDataGridViewTextBoxColumn,
-            this.tongtienDataGridViewTextBoxColumn,
-            this.diemapdungDataGridViewTextBoxColumn,
-            this.diemthuongDataGridViewTextBoxColumn,
-            this.trangthaiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.donhangBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(535, 195);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // madhDataGridViewTextBoxColumn
-            // 
-            this.madhDataGridViewTextBoxColumn.DataPropertyName = "Madh";
-            this.madhDataGridViewTextBoxColumn.HeaderText = "Madh";
-            this.madhDataGridViewTextBoxColumn.Name = "madhDataGridViewTextBoxColumn";
-            // 
-            // makhDataGridViewTextBoxColumn
-            // 
-            this.makhDataGridViewTextBoxColumn.DataPropertyName = "Makh";
-            this.makhDataGridViewTextBoxColumn.HeaderText = "Makh";
-            this.makhDataGridViewTextBoxColumn.Name = "makhDataGridViewTextBoxColumn";
-            // 
-            // manvDataGridViewTextBoxColumn
-            // 
-            this.manvDataGridViewTextBoxColumn.DataPropertyName = "Manv";
-            this.manvDataGridViewTextBoxColumn.HeaderText = "Manv";
-            this.manvDataGridViewTextBoxColumn.Name = "manvDataGridViewTextBoxColumn";
-            // 
-            // ngaybanDataGridViewTextBoxColumn
-            // 
-            this.ngaybanDataGridViewTextBoxColumn.DataPropertyName = "Ngayban";
-            this.ngaybanDataGridViewTextBoxColumn.HeaderText = "Ngayban";
-            this.ngaybanDataGridViewTextBoxColumn.Name = "ngaybanDataGridViewTextBoxColumn";
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            // 
-            // tongtienDataGridViewTextBoxColumn
-            // 
-            this.tongtienDataGridViewTextBoxColumn.DataPropertyName = "Tongtien";
-            this.tongtienDataGridViewTextBoxColumn.HeaderText = "Tongtien";
-            this.tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
-            // 
-            // diemapdungDataGridViewTextBoxColumn
-            // 
-            this.diemapdungDataGridViewTextBoxColumn.DataPropertyName = "Diemapdung";
-            this.diemapdungDataGridViewTextBoxColumn.HeaderText = "Diemapdung";
-            this.diemapdungDataGridViewTextBoxColumn.Name = "diemapdungDataGridViewTextBoxColumn";
-            // 
-            // diemthuongDataGridViewTextBoxColumn
-            // 
-            this.diemthuongDataGridViewTextBoxColumn.DataPropertyName = "Diemthuong";
-            this.diemthuongDataGridViewTextBoxColumn.HeaderText = "Diemthuong";
-            this.diemthuongDataGridViewTextBoxColumn.Name = "diemthuongDataGridViewTextBoxColumn";
-            // 
-            // trangthaiDataGridViewTextBoxColumn
-            // 
-            this.trangthaiDataGridViewTextBoxColumn.DataPropertyName = "Trangthai";
-            this.trangthaiDataGridViewTextBoxColumn.HeaderText = "Trangthai";
-            this.trangthaiDataGridViewTextBoxColumn.Name = "trangthaiDataGridViewTextBoxColumn";
-            // 
             // FormExport_PreView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,14 +230,10 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartphonemanagementDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartphonemanagementDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartphonemanagementDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donhangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,22 +254,8 @@
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.BindingSource smartphonemanagementDataSetBindingSource;
-        private smartphonemanagementDataSet smartphonemanagementDataSet;
         private System.Windows.Forms.DateTimePicker dataEnd;
         private System.Windows.Forms.DateTimePicker dataStart;
-        private smartphonemanagementDataSet1 smartphonemanagementDataSet1;
-        private System.Windows.Forms.BindingSource donhangBindingSource;
-        private smartphonemanagementDataSet1TableAdapters.donhangTableAdapter donhangTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn makhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manvDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaybanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diemapdungDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diemthuongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trangthaiDataGridViewTextBoxColumn;
     }
 }
