@@ -665,7 +665,6 @@
             this.Controls.Add(this.panelSlide);
             this.Name = "UIMain";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.UIMain_Load);
             this.panelSlide.ResumeLayout(false);
             this.panelHeThong_Sub.ResumeLayout(false);
             this.panelThongKe_Sub.ResumeLayout(false);
