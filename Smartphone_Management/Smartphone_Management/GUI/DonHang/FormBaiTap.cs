@@ -30,11 +30,11 @@ namespace Smartphone_Management.GUI.DonHang
         public void init()
         {
 
-            DataTable data2 = getInfor();
-            for (int i = 0; i < data2.Rows.Count; i++)
-            {
-                listBox1.Items.Add(data2.Rows[i][0] + "-" + data2.Rows[i][1]);
-            }
+            //DataTable data2 = getInfor();
+            //for (int i = 0; i < data2.Rows.Count; i++)
+            //{
+            //    listBox1.Items.Add(data2.Rows[i][0] + "-" + data2.Rows[i][1]);
+            //}
                 //     SDT = data2.Rows[i][1].ToString();
                 //     Diachi = data2.Rows[i][2].ToString();
 
@@ -65,27 +65,7 @@ namespace Smartphone_Management.GUI.DonHang
                 //}
 
             }
-        public DataTable getInfor()
-        {
-            ConnectToMySQL conn = new ConnectToMySQL();
-
-            DataTable data = new DataTable();
-
-            string query = "select nhacc.MANCC, nhacc.TenNCC from nhacc";
-            MySqlCommand MyCommand2 = new MySqlCommand(query,conn.getConnection());
-            //  MyConn2.Open();
-            //For offline connection we weill use  MySqlDataAdapter class.
-            if (MyCommand2 == null)
-            {
-                //return null;
-            }
-            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-            MyAdapter.SelectCommand = MyCommand2;
-            MyAdapter.Fill(data);
-            //MessageBox.Show("Completed");
-            conn.getConnection().Close();
-            return data;
-        }
+       
 
         public DataTable getInforNhaCungCap(String mancc)
         {
@@ -122,9 +102,21 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected = listBox1.Text;
-            string[] text = selected.Split('-');
-            dataGridView1.DataSource= getInforNhaCungCap(text[0]);
+            //string selected = listBox1.Text;
+            //string[] text = selected.Split('-');
+            //dataGridView1.DataSource= getInforNhaCungCap(text[0]);
+        }
+
+        private void FormBaiTap_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanlybanhangDataSet.vattu' table. You can move, or remove it, as needed.
+            this.vattuTableAdapter.Fill(this.quanlybanhangDataSet.vattu);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
