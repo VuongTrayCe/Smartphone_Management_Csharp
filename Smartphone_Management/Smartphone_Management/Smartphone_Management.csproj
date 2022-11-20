@@ -16,7 +16,6 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +42,7 @@
     <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="ClosedXML, Version=0.95.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.95.0\lib\net46\ClosedXML.dll</HintPath>
     </Reference>
@@ -269,8 +269,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
+    <Compile Include="BUS\thongTinPhieuNhap_BUS.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="DAO\themPhieuNhap_DAO.cs" />
+    <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +292,24 @@
     </Compile>
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
+      <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themPhieuNhap.Designer.cs">
+      <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.Designer.cs">
+      <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UIMain.cs">
       <SubType>Form</SubType>
@@ -309,6 +330,15 @@
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\chiTietPhieuNhap.resx">
+      <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themPhieuNhap.resx">
+      <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\thongTinPhieuNhap.resx">
+      <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UIMain.resx">
       <DependentUpon>UIMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +348,7 @@
     <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.DonHang.QuanLyDonHang.resources" />
     <EmbeddedResource Include="obj\Debug\Smartphone_Management.Properties.Resources.resources" />
     <EmbeddedResource Include="obj\Debug\Smartphone_Management.UIMain.resources" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -200,12 +200,14 @@ namespace Smartphone_Management
 
         private void btnTaoPhieuNhap_Click(object sender, EventArgs e)
         {
-
+            themPhieuNhap a = new themPhieuNhap();
+            openChildForm(a);
         }
 
         private void btnTTPhieuNhap_Click(object sender, EventArgs e)
         {
-
+            thongTinPhieuNhap a = new thongTinPhieuNhap();
+            openChildForm(a);
         }
 
         private void btnChinhSachKhuyenMai_Click(object sender, EventArgs e)
