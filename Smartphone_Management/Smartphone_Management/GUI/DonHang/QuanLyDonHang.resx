@@ -123,4 +123,38 @@
   <metadata name="In.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Xem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="In.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnXem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAnCAYAAADjEg0YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVHhe7dExAYAwAMAwlMzy8IeM/RsIQECOHrl69hr3
+        fsZ9TkT7+Qb9hSgahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQ
+        rkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuGuMff6CwHMvV5jilcxWpnPbAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="btnXuatExcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAnCAYAAADjEg0YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVHhe7dExAYAwAMAwlMzy8IeM/RsIQECOHrl69hr3
+        fsZ9TkT7+Qb9hSgahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQ
+        rkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuGuMff6CwHMvV5jilcxWpnPbAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="btnPrint.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGkAAAAnCAYAAAAM0GYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dExEYAwAMBAlNQy+EMGewsCENDc/fBTxhzj
+        mve41mJX8/4m/QV2YlKASQEmBZgUYFKASQEmBZgUYFKASQEmBZgUYFKASQEmBZgUYFKASQEmBZgUYFKA
+        SQEmBZgUYFKASQEmBZgUYFKASQEmBZgUYFKASQEmBZgUcIxzPn+BTZzzeQEQNL9lLtyimwAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
 </root>

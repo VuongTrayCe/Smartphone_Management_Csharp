@@ -179,28 +179,26 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            using(SaveFileDialog  sfd = new SaveFileDialog() { Filter = "Excel wordbool |*.xlsx"})
-            {
-                if(sfd.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        using(XLWorkbook workbook = new XLWorkbook())
-                        {
-                            workbook.Worksheets.Add((DataTable) dataGridView1.DataSource, "Đơn Hàng");
-                            workbook.SaveAs(sfd.FileName);
-                        }
-                        System.Windows.MessageBox.Show("update thanh cong","Message",MessageBoxButton.OK);
-                    }
-                    catch(Exception h)
-                    {
-                        System.Windows.MessageBox.Show(h.Message);
-                    }
-                }
-            }
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            init();
+            dataGridView1.DataSource = data;
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
         {
 
         }
