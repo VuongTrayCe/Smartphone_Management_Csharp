@@ -43,6 +43,21 @@
       <HintPath>..\packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>C:\Users\Vuong\Desktop\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>C:\Users\Vuong\Desktop\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="ClosedXML, Version=0.95.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.95.0\lib\net46\ClosedXML.dll</HintPath>
@@ -270,18 +285,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\GiaSanPhamBUS.cs" />
     <Compile Include="BUS\LoiNhuanBanHang_BUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
+    <Compile Include="BUS\SanPhamBUS.cs" />
     <Compile Include="BUS\ThongKeBaoCao_BUS.cs" />
     <Compile Include="BUS\ThongKeBaoCao_NhapHang_BUS.cs" />
     <Compile Include="BUS\thongTinPhieuNhap_BUS.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
+    <Compile Include="DAO\GiaSanPhamDAO.cs" />
     <Compile Include="DAO\LoiNhuanBanHang_DAO.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DAO\themPhieuNhap_DAO.cs" />
     <Compile Include="DAO\ThongKeBaoCao_DAO.cs" />
     <Compile Include="DAO\ThongKeBaoCao_NhapHang_DAO.cs" />
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
+    <Compile Include="DTO\GiaSanPhamDTO.cs" />
+    <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +322,37 @@
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\FullDataDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\FullDataDialog.Designer.cs">
+      <DependentUpon>FullDataDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\PriceManagementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\PriceManagementDialog.Designer.cs">
+      <DependentUpon>PriceManagementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\SelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\SelectDialog.Designer.cs">
+      <DependentUpon>SelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\WarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\WarningDialog.Designer.cs">
+      <DependentUpon>WarningDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\SanPham.Designer.cs">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\ValidateData\ValidateData.cs" />
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +407,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\FullDataDialog.resx">
+      <DependentUpon>FullDataDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\PriceManagementDialog.resx">
+      <DependentUpon>PriceManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\SelectDialog.resx">
+      <DependentUpon>SelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\WarningDialog.resx">
+      <DependentUpon>WarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\SanPham.resx">
+      <DependentUpon>SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuNhap\chiTietPhieuNhap.resx">
       <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
@@ -496,6 +563,46 @@
     <None Include="GUI\Icon\icon_eye2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669536103441.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669541150017.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669541151674.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554360524.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554375894.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554381464.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554507711.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554538538.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554546458.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554551267.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554659623.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554662415.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559373562.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559387927.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559424588.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559571613.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559987574.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669560000509.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669560151222.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669602592655.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669602660486.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669602734367.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon-dots.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_close.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_coin.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_delete.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_edit.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_error.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_excel.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_eye.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_left.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_plus.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_question.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_refresh.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_right.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_save.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_to_end.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_to_start.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_upload_image.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\no_image.png" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />
