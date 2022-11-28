@@ -256,6 +256,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -269,11 +270,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\LoiNhuanBanHang_BUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
+    <Compile Include="BUS\ThongKeBaoCao_BUS.cs" />
+    <Compile Include="BUS\ThongKeBaoCao_NhapHang_BUS.cs" />
     <Compile Include="BUS\thongTinPhieuNhap_BUS.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
+    <Compile Include="DAO\LoiNhuanBanHang_DAO.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
     <Compile Include="DAO\themPhieuNhap_DAO.cs" />
+    <Compile Include="DAO\ThongKeBaoCao_DAO.cs" />
+    <Compile Include="DAO\ThongKeBaoCao_NhapHang_DAO.cs" />
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>
@@ -312,6 +319,24 @@
     <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.Designer.cs">
       <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThongKe\LoiNhuanBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\LoiNhuanBanHang.Designer.cs">
+      <DependentUpon>LoiNhuanBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_BanHang.Designer.cs">
+      <DependentUpon>ThongKeBaoCao_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_NhapHang.Designer.cs">
+      <DependentUpon>ThongKeBaoCao_NhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UIMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +364,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuNhap\thongTinPhieuNhap.resx">
       <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\LoiNhuanBanHang.resx">
+      <DependentUpon>LoiNhuanBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ThongKeBaoCao_BanHang.resx">
+      <DependentUpon>ThongKeBaoCao_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ThongKeBaoCao_NhapHang.resx">
+      <DependentUpon>ThongKeBaoCao_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UIMain.resx">
       <DependentUpon>UIMain.cs</DependentUpon>
