@@ -1,4 +1,7 @@
-﻿using Smartphone_Management.DTO;
+﻿using MySql.Data.MySqlClient;
+using Smartphone_Management.BUS;
+using Smartphone_Management.DAO;
+using Smartphone_Management.DTO;
 using SqlKata;
 using SqlKata.Execution;
 using System;
@@ -10,103 +13,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Markup;
+using System.Windows.Media.Animation;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Smartphone_Management.GUI.Login
 {
     public partial class QuanLyTaiKhoan : Form
     {
+        QuanLyTaiKhoan_BUS qltk_BUS = new QuanLyTaiKhoan_BUS();
+        private string Trangthai = null;
+
+
         public QuanLyTaiKhoan()
         {
             InitializeComponent();
-
-            //Test
-            for(int i = 0; i < 20; i++)
-            {
-                dataGridView.Rows.Add(new object[]{
-                imageList1.Images[0]
-                });
            
-            }
         }
 
-        void LoadData()
+        public void LoadData()
         {
-            // clear the rows
-            dataGridView.Rows.Clear();
+            //// clear the rows
+            //dataGridView.Rows.Clear();
 
+            DataTable data = new DataTable();
 
-            //check for search
-            var db = DAO.ConnectToPhucMySQL.Db();
-            Query q = db.Query("taikhoan");
-
-            if (txtSearch.Text.Trim().Length > 0)
-            {
-
-            }
-
-            // load tat ca tai khoan in database 
-
-            IEnumerable<taikhoan> result = q.Get<taikhoan>();
-
-            foreach (var taikhoan in result)
-            {
-                dataGridView.Rows.Add(new object[]
+            if (Trangthai == "Tìm kiếm") {
+                if (txtSearch.Text.Trim().Length > 0)
                 {
-                    imageList1.Images[0],
-                    taikhoan.Matk,
-                    taikhoan.Manv,
-                    taikhoan.Tendangnhap,
-                    taikhoan.Matkhau,
-                    taikhoan.Trangthai? imageList1.Images[1] : imageList1.Images[2],
-                    taikhoan.Ngaythamgia
-
-                });
+                    //dataGridView.DataSource = null;
+                        data = qltk_BUS.TimKiemTaiKhoan_BUS(txtSearch.Text.Trim());
+                }
+                else if(txtSearch.Text.Trim().Length == 0)
+                {
+                    data = qltk_BUS.getThongTinCacTaiKhoan_BUS();
+                }
             }
-        }
+
+
+            if (Trangthai == null) { data = qltk_BUS.getThongTinCacTaiKhoan_BUS(); }
+            else if (Trangthai == "Tắt hoạt động") { data = qltk_BUS.getThongTinCacTaiKhoanTatHoatDong_BUS(); }
+            else if (Trangthai == "Đang hoạt động") { data = qltk_BUS.getThongTinCacTaiKhoanDangHoatDong_BUS(); }
+
+
+            dataGridView.DataSource = data;
+          }
 
         private void QuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vbButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vbButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vbButton1_Click(object sender, EventArgs e)
-        {
-
+            init.Start();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -161,9 +116,53 @@ namespace Smartphone_Management.GUI.Login
 
         private void init_Tick(object sender, EventArgs e)
         {
-            init.Stop();
+            //init.Stop();
             // Load data
             LoadData();
+        }
+
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
+            Trangthai = "Tìm kiếm";
+            LoadData();
+        }
+
+        private void vbButton5_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            ThemTaiKhoan ttk = new ThemTaiKhoan(this);
+            ttk.ShowDialog();
+        }
+
+        private void cbHoatDong_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbHoatDong.Text == "Tất cả")
+            {
+                Trangthai = null;
+                LoadData();
+            }else if(cbHoatDong.Text == "Đang hoạt động")
+            {
+                Trangthai = "Đang hoạt động";
+                LoadData();
+            }else if(cbHoatDong.Text == "Tắt hoạt động") 
+            {
+                Trangthai = "Tắt hoạt động";
+                LoadData();
+            }
+        }
+
+
+
+        private void btnQuanLyPhanQuyen_Click(object sender, EventArgs e)
+        {
+            QuanLyPhanQuyen qlpq = new QuanLyPhanQuyen(this);
+            qlpq.ShowDialog();
+        }
+
+        private void btnXoaTaiKhoan_Click(object sender, EventArgs e)
+        {
+            XoaTaiKhoan xoaTK = new XoaTaiKhoan(this);
+            xoaTK.ShowDialog();
         }
     }
     }

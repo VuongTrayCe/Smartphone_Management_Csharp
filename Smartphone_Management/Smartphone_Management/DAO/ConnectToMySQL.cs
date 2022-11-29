@@ -4,9 +4,9 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
-using MySqlConnector;
+//using MySqlConnector;
 using System.Threading.Tasks;
-//using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 //using MySql.Data.MySqlClient;
 
@@ -16,27 +16,28 @@ namespace Smartphone_Management.DAO
     {
         public string server = "localhost";
         public string database = "studentdb";
-        public string username = "root";
-        public string password = "123456789lop11b2";
+        public string username = "phuc";
+        public string password = "phuc";
         public string constring;
         public MySqlConnection conn;
 
         public  ConnectToMySQL()
         {
-            string connStr = "server=localhost;user=root;database=smartphonemanagement;port=3306;password=123456789lop11b2";
-            //this.constring = "SERVER=" + this.server + ";" + "DATABASE=" + this.database + ";" + "UID=" + this.username + ";" + "PASSWORD=" + this.password + ";";
-            this.conn = new MySqlConnection(connStr);
+            //string connStr = "server=127.0.0.1;user=phuc;database=smartphonemanagement;port=3306;password=phuc";
+            string conStringg = "SERVER=127.0.0.1;DATABASE=smartphonemanagement;Uid=root;";
+            this.constring = "SERVER=" + this.server + ";" + "DATABASE=" + this.database + ";" + "UID=" + this.username + ";" + "PASSWORD=" + this.password + ";";
+            this.conn = new MySqlConnection(conStringg);
         }
         public void openConnectToMySql()
         {
             if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
-                MessageBox.Show("Kết nối thành công");
+               
             }
             else
             {
-                MessageBox.Show("Đã kết nối");
+                
 
             }
 
@@ -46,11 +47,11 @@ namespace Smartphone_Management.DAO
             if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
-                MessageBox.Show("Đóng thành công");
+             
             }
             else
             {
-                MessageBox.Show("Đã Đóng ");
+               
 
             }
 
