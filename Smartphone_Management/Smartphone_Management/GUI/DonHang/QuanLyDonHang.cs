@@ -39,7 +39,7 @@ namespace Smartphone_Management.GUI.DonHang
 
             //data = new DataTable();
             init();
-
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.DataSource = data;
             for (int i = 0; i < data.Rows.Count; i++)
             {
@@ -95,7 +95,7 @@ namespace Smartphone_Management.GUI.DonHang
             }
             if (isopen == false)
             {
-               FormExport_PreView formPrinter =  new FormExport_PreView();
+               FormExport_PreView formPrinter =  new FormExport_PreView(data);
                 formPrinter.Show();
             }
         }
@@ -153,23 +153,23 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            //init();
-            try
-            {
-                DataView view = dataGridView1.DataSource as DataView;
-                if (view != null)
-                {
-                    dataGridView1.DataSource = data;
-                    view.RowFilter = txtTimKiem.Text;
-                    view.RowStateFilter = DataViewRowState.Unchanged;
+            init();
+            //try
+            //{
+            //    DataView view = dataGridView1.DataSource as DataView;
+            //    if (view != null)
+            //    {
+            //        dataGridView1.DataSource = data;
+            //        view.RowFilter = txtTimKiem.Text;
+            //        view.RowStateFilter = DataViewRowState.Unchanged;
 
-                }
+            //    }
 
-            }
-            catch
-            {
+            //}
+            //catch
+            //{
 
-            }
+            //}
         }
         private void iconButton5_Click(object sender, EventArgs e)
         {
@@ -179,7 +179,25 @@ namespace Smartphone_Management.GUI.DonHang
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            
+            using(SaveFileDialog  sfd = new SaveFileDialog() { Filter = "Excel wordbool |*.xlsx"})
+            {
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using(XLWorkbook workbook = new XLWorkbook())
+                        {
+                            workbook.Worksheets.Add((DataTable) dataGridView1.DataSource, "Đơn Hàng");
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        System.Windows.MessageBox.Show("update thanh cong","Message",MessageBoxButton.OK);
+                    }
+                    catch(Exception h)
+                    {
+                        System.Windows.MessageBox.Show(h.Message);
+                    }
+                }
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -187,19 +205,49 @@ namespace Smartphone_Management.GUI.DonHang
 
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnxem_Click(object sender, EventArgs e)
+        {
+
             init();
             dataGridView1.DataSource = data;
         }
 
-        private void bunifuButton2_Click(object sender, EventArgs e)
+        private void btnXuatEcel_Click(object sender, EventArgs e)
         {
-
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel wordbool |*.xlsx" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            workbook.Worksheets.Add((DataTable)dataGridView1.DataSource, "Đơn Hàng");
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        System.Windows.MessageBox.Show("update thanh cong", "Message", MessageBoxButton.OK);
+                    }
+                    catch (Exception h)
+                    {
+                        System.Windows.MessageBox.Show(h.Message);
+                    }
+                }
+            }
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click_1(object sender, EventArgs e)
         {
+            init();
 
         }
     }

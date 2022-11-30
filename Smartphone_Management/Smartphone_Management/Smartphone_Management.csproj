@@ -52,6 +52,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
       <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
@@ -302,6 +305,7 @@
     <Compile Include="DAO\ThongKeBaoCao_NhapHang_DAO.cs" />
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="DTO\GiaSanPhamDTO.cs" />
+    <Compile Include="DTO\Model_DonHang_ChiTietDonHang.cs" />
     <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>

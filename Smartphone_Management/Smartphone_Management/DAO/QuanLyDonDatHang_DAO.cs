@@ -40,6 +40,24 @@ namespace Smartphone_Management.DAO
 
         }
 
+        internal string getImageSanPham(int masp)
+        {
+            sqla.openConnectToMySql();
+            string ImageIcon = "";
+            String query = "select Icon from sanpham where sanpham.Masp=@masp";
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@masp",masp);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+               ImageIcon = (string)reader["Icon"].ToString();
+            }
+            sqla.closeConnectToMySql();
+            return ImageIcon;
+        }
+
         internal DataTable getThongTinDonDatHang(string status)
         {
             DataTable data = new DataTable();
