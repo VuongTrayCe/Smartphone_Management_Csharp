@@ -17,7 +17,7 @@ namespace Smartphone_Management.GUI
     public partial class thongTinPhieuNhap : Form
     {
         private DataTable data;
-        public string MPN;
+        public string MPN, date, ncc;
         thongTinPhieuNhap_BUS ttpn_BUS = new thongTinPhieuNhap_BUS();
         thongTinPhieuNhap_DAO ttpn_DAO = new thongTinPhieuNhap_DAO();
         public thongTinPhieuNhap()
@@ -35,7 +35,7 @@ namespace Smartphone_Management.GUI
             InitializeComponent();
             SetupDataGridView();
             init();
-
+            ttpn_BUS.setComboBoxData(comboBox1);
         }
 
         private void addNewRowButton_Click(object sender, EventArgs e)
@@ -61,23 +61,23 @@ namespace Smartphone_Management.GUI
             dataGridView1.SelectionMode =
                 DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.MultiSelect = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
 
-            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            addCol("Xem");
+            //addCol("Xem");
         }
 
-        private void addCol(string name)
-        {
-            DataGridViewColumn newCol = new DataGridViewColumn();
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-            newCol.HeaderText = name;
-            newCol.Name = name;
-            newCol.Visible = true;
-            newCol.Width = 75;
+        //private void addCol(string name)
+        //{
+        //    DataGridViewColumn newCol = new DataGridViewColumn();
+        //    DataGridViewCell cell = new DataGridViewTextBoxCell();
+        //    newCol.CellTemplate = cell;
+        //    newCol.HeaderText = name;
+        //    newCol.Name = name;
+        //    newCol.Visible = true;
+        //    newCol.Width = 75;
 
-            dataGridView1.Columns.Add(newCol);
-        }
+        //    dataGridView1.Columns.Add(newCol);
+        //}
 
         private void thongTinPhieuNhap_Load(object sender, EventArgs e)
         {
@@ -89,21 +89,17 @@ namespace Smartphone_Management.GUI
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string searchValue = textBox1.Text.ToString();
-            ttpn_DAO.searchPhieuNhap(searchValue, "Maphieunhap", dataGridView1);
-        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             string searchValue = textBox2.Text.ToString();
-            ttpn_DAO.searchPhieuNhap(searchValue, "Mancc", dataGridView1);
+            ttpn_DAO.searchPhieuNhap(searchValue, dataGridView1);
         }
 
         private void dateTimeFormat()
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker1.Value = new DateTime(2012, 05, 28);
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.CustomFormat = "dd-MM-yyyy";
         }
@@ -125,18 +121,27 @@ namespace Smartphone_Management.GUI
             }
         }
 
-        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.CurrentCell.ColumnIndex.Equals(0) && e.RowIndex != -1)
+            if (e.RowIndex != -1)
             {
-                if (dataGridView1.CurrentCell.ColumnIndex.Equals(0))
-                {
-                    MPN = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    chiTietPhieuNhap formSub = new chiTietPhieuNhap(MPN);
-                    formSub.Show();
-                }
-                    
+                MPN = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                date = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                ncc = ttpn_DAO.returnNcc(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                chiTietPhieuNhap formSub = new chiTietPhieuNhap(MPN, date, ncc);
+                formSub.Show();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            themPhieuNhap themPhieuNhap = new themPhieuNhap();
+            themPhieuNhap.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ttpn_DAO.searchTrangthaiPhieuNhap(comboBox1.Text, dataGridView1);
         }
     }
 }

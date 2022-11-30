@@ -18,7 +18,7 @@ namespace Smartphone_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new thongTinPhieuNhap());
+            Application.Run(new UIMain());
         }
     }
 }

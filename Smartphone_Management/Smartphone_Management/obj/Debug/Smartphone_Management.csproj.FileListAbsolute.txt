@@ -92,3 +92,38 @@ D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Manag
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.CopyComplete
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.pdb
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\Smartphone_Management.exe.config
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\Smartphone_Management.exe
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\Smartphone_Management.pdb
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\MySqlConnector.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Buffers.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Memory.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\MySqlConnector.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Buffers.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Memory.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.QuanLyDonHang.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.chiTietPhieuNhap.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.thongTinPhieuNhap.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themPhieuNhap.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.UIMain.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.Properties.Resources.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.csproj.CopyComplete
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.pdb
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPhamPhieuNhap.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themNcc.resources
+C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPham.resources

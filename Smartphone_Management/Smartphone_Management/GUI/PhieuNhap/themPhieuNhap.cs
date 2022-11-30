@@ -16,7 +16,10 @@ namespace Smartphone_Management.GUI
 {
     public partial class themPhieuNhap : Form
     {
+        public int soLuong = 0;
+        public float tongTien = 0;
         themPhieuNhap_DAO tpn_DAO = new themPhieuNhap_DAO();
+        themPhieuNhap_BUS tpn_BUS = new themPhieuNhap_BUS();
         public themPhieuNhap()
         {
             this.Load += new EventHandler(Form1_Load);
@@ -30,7 +33,7 @@ namespace Smartphone_Management.GUI
         private void Form1_Load(System.Object sender, System.EventArgs e)
         {
             InitializeComponent();
-            SetupDataGridView();
+            SetupLayout();
             SetupDateTime();
             tpn_DAO.getComboBoxData(comboBox1);
         }
@@ -51,7 +54,7 @@ namespace Smartphone_Management.GUI
             ngayNhapTxt.Text = today;
         }
 
-        private void SetupDataGridView()
+        private void SetupLayout()
         {
             dataGridView1.SelectionMode =
                 DataGridViewSelectionMode.FullRowSelect;
@@ -60,11 +63,17 @@ namespace Smartphone_Management.GUI
             dataGridView1.ColumnCount = 5;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.Columns[0].Name = "Mã Phiếu Nhập";
-            dataGridView1.Columns[1].Name = "Mã Nhân Viên";
-            dataGridView1.Columns[2].Name = "Số Lượng";
-            dataGridView1.Columns[3].Name = "Tổng Tiền";
-            dataGridView1.Columns[4].Name = "Trạng Thái";
+            dataGridView1.Columns[0].Name = "Mã Sản Phẩm";
+            dataGridView1.Columns[1].Name = "Tên Sản Phẩm";
+            dataGridView1.Columns[2].Name = "Giá Tiền";
+            dataGridView1.Columns[3].Name = "Số Lượng";
+            dataGridView1.Columns[4].Name = "Tổng Tiền";
+
+            int maxPhieuNhap = tpn_DAO.getPhieuNhapMax();
+            textBox1.Text = (maxPhieuNhap + 1).ToString();
+            textBox1.ReadOnly = true;
+            textBox3.ReadOnly = true;
+            textBox4.ReadOnly = true;
 
         }
 
@@ -75,7 +84,8 @@ namespace Smartphone_Management.GUI
 
         private void addRowbtn_Click(object sender, EventArgs e)
         {
-            this.dataGridView1.Rows.Add();
+            themSanPhamPhieuNhap themSanPhamPhieuNhap = new themSanPhamPhieuNhap(this);
+            themSanPhamPhieuNhap.Show();
         }
 
         private void deleteRowBtn_Click(object sender, EventArgs e)
@@ -91,11 +101,26 @@ namespace Smartphone_Management.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            tpn_DAO.addPhieuNhap(dataGridView1, comboBox1, ngayNhapTxt);
-            diaChiTxt.Clear();
-            textBox1.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
+            tpn_DAO.addPhieuNhap(dataGridView1, comboBox1, textBox1, textBox2, ngayNhapTxt);
+            tpn_DAO.addChiTietPhieuNhap(dataGridView1, textBox1);
+            tpn_DAO.updatePhieuNhap(dataGridView1, soLuong, tongTien);
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            soLuong = tpn_BUS.returnSoLuong(dataGridView1);
+            tongTien = tpn_BUS.returnTongTien(dataGridView1);
+            textBox3.Text = soLuong.ToString();
+            textBox4.Text = tongTien.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            themNcc themNcc = new themNcc(this);
+            if (!themNcc.isClose)
+            {
+                themNcc.ShowDialog();
+            }
         }
     }
 }

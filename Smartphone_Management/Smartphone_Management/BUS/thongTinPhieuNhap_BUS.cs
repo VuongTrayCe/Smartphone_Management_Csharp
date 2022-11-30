@@ -38,6 +38,15 @@ namespace Smartphone_Management.BUS
             return data;
         }
 
+        public void setComboBoxData(ComboBox comboBox1)
+        {
+            comboBox1.Items.Add("Tất Cả");
+            comboBox1.Items.Add("Hoàn Thành");
+            comboBox1.Items.Add("Đang Xử Lý");
+            comboBox1.Items.Add("Đã Huỷ");
+            comboBox1.Text = "Tất Cả";
+        }
+
         internal void ToExcel(DataGridView dataGridView1, string fileName)
         {
             //khai báo thư viện hỗ trợ Microsoft.Office.Interop.Excel
@@ -54,7 +63,7 @@ namespace Smartphone_Management.BUS
                 workbook = excel.Workbooks.Add(Type.Missing);
                 worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets["Sheet1"];
                 //đặt tên cho sheet
-                worksheet.Name = "Quản lý học sinh";
+                worksheet.Name = "Thông tin phiếu nhập ";
 
                 // export header trong DataGridView
                 for (int i = 0; i < dataGridView1.ColumnCount; i++)
