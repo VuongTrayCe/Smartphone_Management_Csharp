@@ -74,7 +74,6 @@ D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\o
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe.licenses
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
-D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.FormBaiTap.resources
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.DonHang.FormExport_PreView.resources
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\BouncyCastle.Crypto.dll
@@ -98,3 +97,12 @@ D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\b
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\MySql.Data.xml
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\SqlKata.xml
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\SqlKata.Execution.xml
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemTaiKhoan.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemTaiKhoanPhu.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemNhanVien.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.QuanLyPhanQuyen.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThayDoiQuyenTaiKhoan.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemQuyen.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemQuyenTaiKhoan.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.XoaTaiKhoan.resources

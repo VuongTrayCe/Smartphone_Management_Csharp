@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Smartphone_Management.BUS;
+using Smartphone_Management.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,26 +14,18 @@ namespace Smartphone_Management.GUI.Login
 {
     public partial class DangNhap : Form
     {
+        QuanLyTaiKhoan_BUS qltk_BUS = new QuanLyTaiKhoan_BUS();
+
+
         public DangNhap()
         {
             InitializeComponent();
         }
 
-        private void txtBoxUser_Load(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
-        private void bunifuButton1_Click_2(object sender, EventArgs e)
-        {
-
+            taikhoan tk = new taikhoan(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim());
+            qltk_BUS.DangNhap_BUS(tk);  
         }
     }
 }
