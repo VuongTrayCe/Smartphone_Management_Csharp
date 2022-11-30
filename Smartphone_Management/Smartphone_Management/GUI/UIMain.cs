@@ -1,6 +1,8 @@
 ﻿using FontAwesome.Sharp;
 using Smartphone_Management.GUI;
 using Smartphone_Management.GUI.DonHang;
+using Smartphone_Management.GUI.GUI_SanPham;
+using Smartphone_Management.GUI.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -183,7 +185,8 @@ namespace Smartphone_Management
 
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
-
+            QuanLyQuyenTaiKhoan a = new QuanLyQuyenTaiKhoan();
+            openChildForm(a);
         }
 
         private void btnQLDonDatHang_Click(object sender, EventArgs e)
@@ -194,7 +197,8 @@ namespace Smartphone_Management
 
         private void btnKhohang_Click(object sender, EventArgs e)
         {
-
+            SanPham a = new SanPham();
+            openChildForm(a);
             ////ChiTietDonHang a = new ChiTietDonHang();
         }
 
@@ -220,9 +224,16 @@ namespace Smartphone_Management
 
         }
 
+        private void btnQLTaiKhoan_Click(object sender, EventArgs e)
+        {
+            QuanLyTaiKhoan a = new QuanLyTaiKhoan();
+            openChildForm(a);
+        }
 
-
-
-      
+        private void btnPhanQuyenTaiKhoan_Click(object sender, EventArgs e)
+        {
+            QuanLyQuyenTaiKhoan a = new QuanLyQuyenTaiKhoan();
+            openChildForm(a);
+        }
     }
 }

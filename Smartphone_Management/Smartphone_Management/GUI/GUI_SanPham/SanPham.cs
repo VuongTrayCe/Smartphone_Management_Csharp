@@ -453,5 +453,10 @@ namespace Smartphone_Management.GUI.GUI_SanPham
             }
             
         }
+
+        private void bunifuGroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

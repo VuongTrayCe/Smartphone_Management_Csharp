@@ -26,6 +26,7 @@ namespace Smartphone_Management.GUI.DonHang
         public QuanLyDonHang()
         {
             InitializeComponent();
+          
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,18 +40,27 @@ namespace Smartphone_Management.GUI.DonHang
 
             //data = new DataTable();
             init();
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.DataSource = data;
+            this.dataGirdView1.EnableHeadersVisualStyles = false;
+            dataGirdView1.DataSource = data;
             for (int i = 0; i < data.Rows.Count; i++)
             {
-                dataGridView1.Rows[i].Cells[2].Value = i + 1;
+                dataGirdView1.Rows[i].Cells[2].Value = i + 1;
             }
         }
         public void init()
         { 
             ConnectToMySQL conn = new ConnectToMySQL();
             data = qldh_bus.getThongTinDonDatHang(cbbTrangThai.SelectedItem.ToString(),dateStart.Value,DateEnd.Value,txtTimKiem.Text);
-            dataGridView1.DataSource = data;
+            dataGirdView1.DataSource = data;
+            dataGirdView1.ScrollBars = ScrollBars.Both;
+            dataGirdView1.Columns[0].Width =30;
+            dataGirdView1.Columns[1].Width =30;
+            dataGirdView1.Columns[2].Width = 100;
+            dataGirdView1.Columns[3].Width =100;
+            dataGirdView1.Columns[4].Width = 100;
+            dataGirdView1.Columns[5].Width = 100;
+            dataGirdView1.Columns[6].Width = 100;
+
 
         }
         private void iconButton3_Click(object sender, EventArgs e)
@@ -60,29 +70,11 @@ namespace Smartphone_Management.GUI.DonHang
         // Bắt sự kiện khi người dùng click nút xem
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            String value = (String)dataGridView1.CurrentRow.Cells[4].Value;
-            String tenkh = (String)dataGridView1.CurrentRow.Cells[5].Value;
-            DateTime ngaydat = (DateTime)dataGridView1.CurrentRow.Cells[3].Value;
-            String trangthai = cbbTrangThai.SelectedItem.ToString();
-            //DateTime date = (DateTime)value;
-            int madh = int.Parse(value);
-            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
-            {
-                openDetailForm(madh,tenkh,ngaydat,trangthai);
-
-            }
-
-            //DateTime date = (DateTime)value;
-            if (e.RowIndex >= 0 && e.ColumnIndex == 1)
-            {
-                openReportForm();
-
-            }
+            
 
 
         }
-
-        public void openReportForm()
+public void openReportForm()
         {
             Boolean isopen = false;
             foreach (Form f in Application.OpenForms)
@@ -127,7 +119,7 @@ namespace Smartphone_Management.GUI.DonHang
         private void cbbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
         {
             init();
-            dataGridView1.DataSource = data;
+            dataGirdView1.DataSource = data;
         }
 
         private void dateStart_ValueChanged(object sender, EventArgs e)
@@ -147,7 +139,7 @@ namespace Smartphone_Management.GUI.DonHang
         private void iconButton4_Click(object sender, EventArgs e)
         {
             init();
-            dataGridView1.DataSource = data;
+            dataGirdView1.DataSource = data;
 
         }
 
@@ -187,7 +179,7 @@ namespace Smartphone_Management.GUI.DonHang
                     {
                         using(XLWorkbook workbook = new XLWorkbook())
                         {
-                            workbook.Worksheets.Add((DataTable) dataGridView1.DataSource, "Đơn Hàng");
+                            workbook.Worksheets.Add((DataTable)dataGirdView1.DataSource, "Đơn Hàng");
                             workbook.SaveAs(sfd.FileName);
                         }
                         System.Windows.MessageBox.Show("update thanh cong","Message",MessageBoxButton.OK);
@@ -219,7 +211,7 @@ namespace Smartphone_Management.GUI.DonHang
         {
 
             init();
-            dataGridView1.DataSource = data;
+            dataGirdView1.DataSource = data;
         }
 
         private void btnXuatEcel_Click(object sender, EventArgs e)
@@ -232,7 +224,7 @@ namespace Smartphone_Management.GUI.DonHang
                     {
                         using (XLWorkbook workbook = new XLWorkbook())
                         {
-                            workbook.Worksheets.Add((DataTable)dataGridView1.DataSource, "Đơn Hàng");
+                            workbook.Worksheets.Add((DataTable)dataGirdView1.DataSource, "Đơn Hàng");
                             workbook.SaveAs(sfd.FileName);
                         }
                         System.Windows.MessageBox.Show("update thanh cong", "Message", MessageBoxButton.OK);
@@ -249,6 +241,28 @@ namespace Smartphone_Management.GUI.DonHang
         {
             init();
 
+        }
+
+        private void dataGirdView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String value = (String)dataGirdView1.CurrentRow.Cells[4].Value;
+            String tenkh = (String)dataGirdView1.CurrentRow.Cells[5].Value;
+            DateTime ngaydat = (DateTime)dataGirdView1.CurrentRow.Cells[3].Value;
+            String trangthai = cbbTrangThai.SelectedItem.ToString();
+            //DateTime date = (DateTime)value;
+            int madh = int.Parse(value);
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            {
+                openDetailForm(madh, tenkh, ngaydat, trangthai);
+
+            }
+
+            //DateTime date = (DateTime)value;
+            if (e.RowIndex >= 0 && e.ColumnIndex == 1)
+            {
+                openReportForm();
+
+            }
         }
     }
 }

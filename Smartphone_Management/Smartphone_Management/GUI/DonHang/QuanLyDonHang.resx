@@ -117,27 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Xem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="In.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnxem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGwAAAAfCAYAAAAC0CiiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVGhD7dGxCYRAAADB60P8ek2E788qHjMTn7MKFyYY
-        2HzHsv2Oz/e+eb/5aswYYxDwvDKsw7AYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAY
-        w2IMizEsxrAYw2IMizEsxrAYw2IMi3lerft1zuD91v06/3Dc0kX2jRaSAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnXuatEcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGwAAAAfCAYAAAAC0CiiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVGhD7dGxCYRAAADB60P8ek2E788qHjMTn7MKFyYY
-        2HzHsv2Oz/e+eb/5aswYYxDwvDKsw7AYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAY
-        w2IMizEsxrAYw2IMizEsxrAYw2IMi3lerft1zuD91v06/3Dc0kX2jRaSAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAALcAAAAfCAYAAAClIVwcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACKSURBVHhe7dKxCcNQFMDAt0dw5k1jyH6eIrhz4/A9hrji
+        QANoXp/f8f7eN5Ssr2fFzEDK87W5KTI3WeYmy9xkmZssc5NlbrLMTZa5yTI3WeYmy9xkmZssc5NlbrLM
+        TZa5yTI3WeYmy9xkmZssc5NlbrLMTZa5yTI3WeYmy9xkPV9v+3WugJJtv84/DLjaJH5o7UEAAAAASUVO
+        RK5CYII=
 </value>
   </data>
   <data name="txtTimKiem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -150,4 +137,18 @@
         TkSuQmCC
 </value>
   </data>
+  <data name="btnXuatEcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGwAAAAfCAYAAAAC0CiiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVGhD7dGxCYRAAADB60P8ek2E788qHjMTn7MKFyYY
+        2HzHsv2Oz/e+eb/5aswYYxDwvDKsw7AYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAY
+        w2IMizEsxrAYw2IMizEsxrAYw2IMi3lerft1zuD91v06/3Dc0kX2jRaSAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="Xem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="In.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
