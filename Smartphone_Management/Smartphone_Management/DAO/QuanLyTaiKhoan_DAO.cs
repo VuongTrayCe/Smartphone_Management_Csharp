@@ -207,14 +207,29 @@ namespace Smartphone_Management.DAO
             cmd2.Parameters.AddWithValue("@Matk", Matk);
             MySqlDataReader MyReader2;
             MyReader2 = cmd2.ExecuteReader();
-            MessageBox.Show("Thay đổi quyền tài khoản thành công");
+            MessageBox.Show("Xóa tài khoản thành công");
 
             cmd2.Dispose();
             sqla.closeConnectToMySql();
         }
 
 
+        public void DangNhapTaiKhoan(taikhoan tk)
+        {
+            sqla.openConnectToMySql();
+            string query = "SELECT * FROM taikhoan  WHERE Tendangnhap = @MTendangnhap AND Matkhau = @Matkhau AND Trangthai = @Trangthai ";
+                           ;
+            MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
+            cmd2.Parameters.AddWithValue("@Tendangnhap", tk.Tendangnhap);
+            cmd2.Parameters.AddWithValue("@Matkhau", tk.Matkhau);
+            cmd2.Parameters.AddWithValue("@Trangthai", "Đang hoạt động");
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
 
+            cmd2.Dispose();
+            sqla.closeConnectToMySql();
+
+        }
 
     }
 }

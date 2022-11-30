@@ -323,6 +323,7 @@ namespace Smartphone_Management.GUI.Login
             this.txtSearch.TextPlaceholder = "Tìm kiếm";
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
+            this.txtSearch.TextChange += new System.EventHandler(this.txtSearch_TextChange);
             // 
             // QuanLyTaiKhoan
             // 

@@ -69,8 +69,8 @@ namespace Smartphone_Management.GUI.Login
 
         private void init_Tick(object sender, EventArgs e)
         {
-            LoadDataQuyen();
-            LoadDataQuyen_TaiKhoan();
+            //LoadDataQuyen();
+            //LoadDataQuyen_TaiKhoan();
         }
 
         private void ScrollQuyen_TaiKhoan_Scroll(object sender, ScrollEventArgs e)
@@ -168,7 +168,9 @@ namespace Smartphone_Management.GUI.Login
 
         private void QuanLyPhanQuyen_Load(object sender, EventArgs e)
         {
-            init.Start();
+            //init.Start();
+            LoadDataQuyen();
+            LoadDataQuyen_TaiKhoan();
 
 
         }
@@ -195,6 +197,18 @@ namespace Smartphone_Management.GUI.Login
         {
             ThayDoiQuyenTaiKhoan tdqtk = new ThayDoiQuyenTaiKhoan(this);
             tdqtk.ShowDialog();
+        }
+
+        private void txtSearchQuyen_TaiKhoan_TextChange(object sender, EventArgs e)
+        {
+            val = 1;
+            LoadDataQuyen_TaiKhoan();
+        }
+
+        private void txtSearchQuyen_TextChange(object sender, EventArgs e)
+        {
+            val = 1;
+            LoadDataQuyen();
         }
     }
 }

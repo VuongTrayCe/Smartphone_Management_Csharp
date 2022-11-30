@@ -11,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Markup;
@@ -23,7 +24,6 @@ namespace Smartphone_Management.GUI.Login
     {
         QuanLyTaiKhoan_BUS qltk_BUS = new QuanLyTaiKhoan_BUS();
         private string Trangthai = null;
-
 
         public QuanLyTaiKhoan()
         {
@@ -61,7 +61,8 @@ namespace Smartphone_Management.GUI.Login
 
         private void QuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
-            init.Start();
+            //init.Start();
+            LoadData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -118,7 +119,7 @@ namespace Smartphone_Management.GUI.Login
         {
             //init.Stop();
             // Load data
-            LoadData();
+            //LoadData();
         }
 
         private void vbButton2_Click(object sender, EventArgs e)
@@ -155,6 +156,14 @@ namespace Smartphone_Management.GUI.Login
 
         private void btnQuanLyPhanQuyen_Click(object sender, EventArgs e)
         {
+            //QuanLyPhanQuyen qlpq = new QuanLyPhanQuyen(this);
+            //qlpq.ShowDialog();
+            Thread newThread = new Thread(createForm);
+            newThread.Start();
+        }
+
+        private void createForm()
+        {
             QuanLyPhanQuyen qlpq = new QuanLyPhanQuyen(this);
             qlpq.ShowDialog();
         }
@@ -163,6 +172,12 @@ namespace Smartphone_Management.GUI.Login
         {
             XoaTaiKhoan xoaTK = new XoaTaiKhoan(this);
             xoaTK.ShowDialog();
+        }
+
+        private void txtSearch_TextChange(object sender, EventArgs e)
+        {
+            Trangthai = "Tìm kiếm";
+            LoadData();
         }
     }
     }

@@ -91,5 +91,9 @@ namespace Smartphone_Management.BUS
         {
             qltk_DAO.XoaTaiKhoan_DAO(Matk);
         }
+        public void DangNhap_BUS(taikhoan tk)
+        {
+            qltk_DAO.DangNhapTaiKhoan(tk);
+        }
     }
 }
