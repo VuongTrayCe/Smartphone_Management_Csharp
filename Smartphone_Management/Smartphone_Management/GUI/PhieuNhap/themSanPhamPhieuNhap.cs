@@ -23,14 +23,14 @@ namespace Smartphone_Management.GUI
         public themSanPhamPhieuNhap(themPhieuNhap themPhieuNhap)
         {
             InitializeComponent();
+            mancc = tsppn_DAO.getMaNcc(themPhieuNhap.comboBox1.Text);
             getComboBox();
             this.themPhieuNhap = themPhieuNhap;
-            mancc = tsppn_DAO.getMaNcc(themPhieuNhap.comboBox1.Text);
         }
 
         public void getComboBox()
         {
-            tsppn_DAO.getSanPhamData(comboBox1);
+            tsppn_DAO.getSanPhamData(comboBox1, mancc);
             textBox3.ReadOnly = true;
             
         }

@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Smartphone_Management",
-    "\\Smartphone_Management\\Smartphone_Management",
-    "\\Smartphone_Management\\Smartphone_Management\\GUI",
-    "\\Smartphone_Management\\Smartphone_Management\\GUI\\PhieuNhap"
+    ""
   ],
-  "SelectedNode": "\\Smartphone_Management\\Smartphone_Management\\GUI\\PhieuNhap\\chiTietPhieuNhap.cs",
+  "SelectedNode": "\\Smartphone_Management.sln",
   "PreviewInSolutionExplorer": false
 }

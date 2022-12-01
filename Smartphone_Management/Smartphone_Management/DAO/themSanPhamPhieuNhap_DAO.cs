@@ -41,10 +41,10 @@ namespace Smartphone_Management.DAO
             sqlNhap.Close();
         }
 
-        internal void getSanPhamData(ComboBox comboBox1)
+        internal void getSanPhamData(ComboBox comboBox1, int mancc)
         {
             MySqlConnection sqlNhap = data.getConnection();
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter("select nhacungcap.Mancc, nhacungcap.Tenncc, sanpham.Masp, sanpham.Tensp from nhacungcap right join sanpham on sanpham.Loaisp = nhacungcap.Tenncc", sqlNhap);
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter("select nhacungcap.Mancc, nhacungcap.Tenncc, sanpham.Masp, sanpham.Tensp from nhacungcap right join sanpham on sanpham.Loaisp = nhacungcap.Tenncc where sanpham.Mancc = " + mancc, sqlNhap);
             DataSet dataSet = new DataSet();
             dataAdapter.Fill(dataSet, "Tensp");
             comboBox1.DisplayMember = "Tensp";

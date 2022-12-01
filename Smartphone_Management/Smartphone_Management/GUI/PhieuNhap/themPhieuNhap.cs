@@ -84,8 +84,15 @@ namespace Smartphone_Management.GUI
 
         private void addRowbtn_Click(object sender, EventArgs e)
         {
-            themSanPhamPhieuNhap themSanPhamPhieuNhap = new themSanPhamPhieuNhap(this);
-            themSanPhamPhieuNhap.Show();
+            if (String.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("Nhập đầy đủ thông tin trước khi thêm sản phẩm!");
+            }
+            else
+            {
+                themSanPhamPhieuNhap themSanPhamPhieuNhap = new themSanPhamPhieuNhap(this);
+                themSanPhamPhieuNhap.Show();
+            }
         }
 
         private void deleteRowBtn_Click(object sender, EventArgs e)
