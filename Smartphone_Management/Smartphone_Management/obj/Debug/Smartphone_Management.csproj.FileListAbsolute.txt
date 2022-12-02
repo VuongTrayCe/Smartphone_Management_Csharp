@@ -106,3 +106,4 @@ D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\o
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemQuyen.resources
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.ThemQuyenTaiKhoan.resources
 D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.XoaTaiKhoan.resources
+D:\C#\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.Login.QuanLyKhuyenMai.resources

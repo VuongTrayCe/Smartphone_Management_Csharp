@@ -179,6 +179,11 @@ namespace Smartphone_Management.GUI.Login
             Trangthai = "Tìm kiếm";
             LoadData();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
