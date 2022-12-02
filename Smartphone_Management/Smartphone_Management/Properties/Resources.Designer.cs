@@ -63,6 +63,16 @@ namespace Smartphone_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add___Copy {
+            get {
+                object obj = ResourceManager.GetObject("Add - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_welcome {
             get {
                 object obj = ResourceManager.GetObject("background_welcome", resourceCulture);
@@ -96,6 +106,16 @@ namespace Smartphone_Management.Properties {
         internal static System.Drawing.Bitmap Printer_icon {
             get {
                 object obj = ResourceManager.GetObject("Printer-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh {
+            get {
+                object obj = ResourceManager.GetObject("Refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

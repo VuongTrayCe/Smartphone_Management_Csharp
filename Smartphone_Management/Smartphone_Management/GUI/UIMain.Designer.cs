@@ -30,6 +30,8 @@
         {
             this.panelSlide = new System.Windows.Forms.Panel();
             this.panelHeThong_Sub = new System.Windows.Forms.Panel();
+            this.btnPhanQuyenTaiKhoan = new FontAwesome.Sharp.IconButton();
+            this.btnQLTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnHeThong = new FontAwesome.Sharp.IconButton();
             this.panelThongKe_Sub = new System.Windows.Forms.Panel();
             this.btnLNBanHang = new FontAwesome.Sharp.IconButton();
@@ -62,8 +64,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.btnQLTaiKhoan = new FontAwesome.Sharp.IconButton();
-            this.btnPhanQuyenTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.panelSlide.SuspendLayout();
             this.panelHeThong_Sub.SuspendLayout();
             this.panelThongKe_Sub.SuspendLayout();
@@ -109,6 +109,44 @@
             this.panelHeThong_Sub.Name = "panelHeThong_Sub";
             this.panelHeThong_Sub.Size = new System.Drawing.Size(210, 125);
             this.panelHeThong_Sub.TabIndex = 12;
+            // 
+            // btnPhanQuyenTaiKhoan
+            // 
+            this.btnPhanQuyenTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanQuyenTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnPhanQuyenTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanQuyenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanQuyenTaiKhoan.ForeColor = System.Drawing.Color.Red;
+            this.btnPhanQuyenTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnPhanQuyenTaiKhoan.IconColor = System.Drawing.Color.Black;
+            this.btnPhanQuyenTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPhanQuyenTaiKhoan.Location = new System.Drawing.Point(0, 46);
+            this.btnPhanQuyenTaiKhoan.Name = "btnPhanQuyenTaiKhoan";
+            this.btnPhanQuyenTaiKhoan.Size = new System.Drawing.Size(210, 46);
+            this.btnPhanQuyenTaiKhoan.TabIndex = 1;
+            this.btnPhanQuyenTaiKhoan.Text = "Phân Quyền Tài Khoản";
+            this.btnPhanQuyenTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanQuyenTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnPhanQuyenTaiKhoan.Click += new System.EventHandler(this.btnPhanQuyenTaiKhoan_Click);
+            // 
+            // btnQLTaiKhoan
+            // 
+            this.btnQLTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnQLTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.Red;
+            this.btnQLTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnQLTaiKhoan.IconColor = System.Drawing.Color.Black;
+            this.btnQLTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
+            this.btnQLTaiKhoan.Size = new System.Drawing.Size(210, 46);
+            this.btnQLTaiKhoan.TabIndex = 0;
+            this.btnQLTaiKhoan.Text = "Quản Lý Tài Khoản";
+            this.btnQLTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             // 
             // btnHeThong
             // 
@@ -313,6 +351,7 @@
             this.btnChinhSachBaoHanh.Text = "Chinh Sách Bảo Hành";
             this.btnChinhSachBaoHanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChinhSachBaoHanh.UseVisualStyleBackColor = true;
+            this.btnChinhSachBaoHanh.Click += new System.EventHandler(this.btnChinhSachBaoHanh_Click);
             // 
             // btnChinhSachKhuyenMai
             // 
@@ -620,44 +659,6 @@
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "iconButton2";
             this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // btnQLTaiKhoan
-            // 
-            this.btnQLTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnQLTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.Red;
-            this.btnQLTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnQLTaiKhoan.IconColor = System.Drawing.Color.Black;
-            this.btnQLTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLTaiKhoan.Location = new System.Drawing.Point(0, 0);
-            this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
-            this.btnQLTaiKhoan.Size = new System.Drawing.Size(210, 46);
-            this.btnQLTaiKhoan.TabIndex = 0;
-            this.btnQLTaiKhoan.Text = "Quản Lý Tài Khoản";
-            this.btnQLTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTaiKhoan.UseVisualStyleBackColor = true;
-            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
-            // 
-            // btnPhanQuyenTaiKhoan
-            // 
-            this.btnPhanQuyenTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPhanQuyenTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnPhanQuyenTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhanQuyenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanQuyenTaiKhoan.ForeColor = System.Drawing.Color.Red;
-            this.btnPhanQuyenTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnPhanQuyenTaiKhoan.IconColor = System.Drawing.Color.Black;
-            this.btnPhanQuyenTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPhanQuyenTaiKhoan.Location = new System.Drawing.Point(0, 46);
-            this.btnPhanQuyenTaiKhoan.Name = "btnPhanQuyenTaiKhoan";
-            this.btnPhanQuyenTaiKhoan.Size = new System.Drawing.Size(210, 46);
-            this.btnPhanQuyenTaiKhoan.TabIndex = 1;
-            this.btnPhanQuyenTaiKhoan.Text = "Phân Quyền Tài Khoản";
-            this.btnPhanQuyenTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhanQuyenTaiKhoan.UseVisualStyleBackColor = true;
-            this.btnPhanQuyenTaiKhoan.Click += new System.EventHandler(this.btnPhanQuyenTaiKhoan_Click);
             // 
             // UIMain
             // 

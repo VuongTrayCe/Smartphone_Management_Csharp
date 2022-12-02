@@ -1,8 +1,10 @@
 ﻿using FontAwesome.Sharp;
 using Smartphone_Management.GUI;
+using Smartphone_Management.GUI.BaoHanh;
 using Smartphone_Management.GUI.DonHang;
 using Smartphone_Management.GUI.GUI_SanPham;
 using Smartphone_Management.GUI.Login;
+using Smartphone_Management.GUI.Login.QuanLyQuyenTaiKhoan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -125,6 +127,7 @@ namespace Smartphone_Management
             }
             active = childForm;
             childForm.TopLevel = false;
+            childForm.TopMost = true;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             PanelCenter.Controls.Add(childForm);
@@ -185,7 +188,7 @@ namespace Smartphone_Management
 
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
-            QuanLyQuyenTaiKhoan a = new QuanLyQuyenTaiKhoan();
+            QuanLyQuyenTaiKhoan1 a = new QuanLyQuyenTaiKhoan1();
             openChildForm(a);
         }
 
@@ -232,7 +235,13 @@ namespace Smartphone_Management
 
         private void btnPhanQuyenTaiKhoan_Click(object sender, EventArgs e)
         {
-            QuanLyQuyenTaiKhoan a = new QuanLyQuyenTaiKhoan();
+            QuanLyQuyenTaiKhoan1 a = new QuanLyQuyenTaiKhoan1();
+            openChildForm(a);
+        }
+
+        private void btnChinhSachBaoHanh_Click(object sender, EventArgs e)
+        {
+            QuanLyBaoHanh a = new QuanLyBaoHanh();
             openChildForm(a);
         }
     }

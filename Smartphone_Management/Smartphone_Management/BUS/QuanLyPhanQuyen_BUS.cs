@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace Smartphone_Management.BUS
@@ -49,12 +50,6 @@ namespace Smartphone_Management.BUS
             qlpq_DAO.DataPropertyMaTaiKhoan(query, cb);
         }
 
-        public void showThuocTinhMaTaiKhoan2(ComboBox cb)
-        {
-            String query = "SELECT taikhoan.Matk, taikhoan.Tendangnhap, taikhoan.Manv FROM taikhoan WHERE taikhoan.Matk IN (SELECT Matk FROM quyen_tk) ";
-
-            qlpq_DAO.DataPropertyMaTaiKhoan(query, cb);
-        }
 
         public void showThuocTinhMaQuyen(ComboBox cb)
         {
@@ -87,6 +82,31 @@ namespace Smartphone_Management.BUS
             dt = qlpq_DAO.getInforQuyenTk();
             return dt;
 
+        }
+
+        internal List<List<String>> getALLTaiKhoan()
+        {
+            return qlpq_DAO.getInforTaiKhoan();
+        }
+
+        internal List<List<string>> getALLQuyenTaiKhoan(int matk)
+        {
+            return qlpq_DAO.getALLQuyenTaiKhoan(matk);
+        }
+
+        internal List<List<string>> getQuyenChuaCo(int matk)
+        {
+            return qlpq_DAO.getQuyenChuaCo(matk);
+        }
+
+        internal void AddQuyenTaiKhoan(int matk, List<string> item)
+        {
+            qlpq_DAO.AddQuyenTaiKhoan(matk, int.Parse(item.ElementAt(0).ToString()));
+        }
+
+        internal void DeleteQuyenTaiKhoan(int maquyentk)
+        {
+            qlpq_DAO.DeleteQuyenTaiKhoan(maquyentk);
         }
     }
 }

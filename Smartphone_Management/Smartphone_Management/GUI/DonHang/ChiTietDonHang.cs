@@ -1,4 +1,5 @@
-﻿using Smartphone_Management.BUS;
+﻿using DocumentFormat.OpenXml.Drawing.Diagrams;
+using Smartphone_Management.BUS;
 using Smartphone_Management.DTO;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ namespace Smartphone_Management.GUI.DonHang
         private DateTime ngaydat;
        private String trangthai;
         QuanLyDonHang formqldh;
+        DataTable data = new DataTable();
+
         public ChiTietDonHang(int Madh)
         {
             InitializeComponent();
@@ -44,7 +47,6 @@ namespace Smartphone_Management.GUI.DonHang
         }
         public void init()
         {
-            DataTable data = new DataTable();
             data = qldh.getChiTietDonHang(this.Madh);
             lbName.Text = tenKhachHang+"| ";
             String ngaydathang = String.Format("{0:yyyy-MM-dd}",ngaydat);
@@ -148,6 +150,18 @@ namespace Smartphone_Management.GUI.DonHang
         private void btnHuyDon_Click_1(object sender, EventArgs e)
         {
             qldh.updateDonHangHuy(Madh);
+            qldh.updateDiemKhachHang(Madh);
+            for (int i=1;i<data.Rows.Count;i++)
+            {
+                if (data.Rows[i][1].ToString().Equals("")!=true)
+                {
+                    int masp = int.Parse(data.Rows[i][1].ToString());
+                    int soluong = int.Parse(data.Rows[i][3].ToString());
+                    qldh.UpdateSoLuongSanPham(masp, soluong);
+                }
+            }
+            MessageBox.Show("Đã Hủy Đơn Hàng Thành Công"); 
+
             this.Dispose();
             formqldh.init();
 

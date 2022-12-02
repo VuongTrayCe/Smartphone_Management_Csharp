@@ -30,7 +30,7 @@ namespace Smartphone_Management.GUI.Login
         private void ThayDoiQuyenTaiKhoan_Load(object sender, EventArgs e)
         {
             qlpq_BUS.showThuocTinhMaQuyen(cbMaQuyen);
-            qlpq_BUS.showThuocTinhMaTaiKhoan2(cbMaTK);
+            //qlpq_BUS.showThuocTinhMaTaiKhoan2(cbMaTK);
 
 
         }

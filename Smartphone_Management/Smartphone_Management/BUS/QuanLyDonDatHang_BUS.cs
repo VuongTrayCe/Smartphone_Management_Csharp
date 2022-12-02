@@ -148,5 +148,19 @@ namespace Smartphone_Management.BUS
         {
             return qlddh_dao.getImageSanPham(masp);
         }
+
+        internal void UpdateSoLuongSanPham(int masp, int soluong)
+        {
+            int soluonghientai = qlddh_dao.getSoLuongHienTai(masp);
+            qlddh_dao.UpdateSoluongSanPham(masp, soluong+soluonghientai);
+        }
+
+        internal void updateDiemKhachHang(int madh)
+        {
+            int makhachhang = qlddh_dao.getMaKhachHang(madh);
+            int sodiemhientai = qlddh_dao.getDiemHienTaiKhachHang(makhachhang);
+            int diemdadung = qlddh_dao.getDiemDaDung(madh);
+            qlddh_dao.UpdateDiemKhachHang(makhachhang, diemdadung + sodiemhientai);
+        }
     }
 }

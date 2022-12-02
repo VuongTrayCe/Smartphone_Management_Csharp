@@ -40,6 +40,44 @@ namespace Smartphone_Management.DAO
 
         }
 
+        internal int getDiemDaDung(int madh)
+        {
+            sqla.openConnectToMySql();
+            int diemapdung = 0;
+            String query = "SELECT donhang.Diemapdung\n"
+                    + "FROM donhang\n"
+                    + "WHERE donhang.Madh =@madh";
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@madh",madh);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                diemapdung = reader.GetInt32("Diemapdung");
+            }
+            sqla.closeConnectToMySql();
+            return diemapdung;
+        }
+
+        internal int getDiemHienTaiKhachHang(int makhachhang)
+        {
+            sqla.openConnectToMySql();
+            int diemhientai = 0;
+            String query = "SELECT khachhang.Diemso FROM khachhang WHERE khachhang.Makh =@makhachhang";
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@makhachhang",makhachhang);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                diemhientai = reader.GetInt32("Diemso");
+            }
+            sqla.closeConnectToMySql();
+            return diemhientai;
+        }
+
         internal string getImageSanPham(int masp)
         {
             sqla.openConnectToMySql();
@@ -56,6 +94,42 @@ namespace Smartphone_Management.DAO
             }
             sqla.closeConnectToMySql();
             return ImageIcon;
+        }
+
+        internal int getMaKhachHang(int madh)
+        {
+            sqla.openConnectToMySql();
+            int makh = 0;
+            String query = "SELECT donhang.Makh FROM donhang WHERE donhang.Madh =@madh ";
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@madh",madh);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                makh = reader.GetInt32("Makh");
+            }
+            sqla.closeConnectToMySql();
+            return makh;
+        }
+
+        internal int getSoLuongHienTai(int masp)
+        {
+            sqla.openConnectToMySql();
+            int soluong = 0;
+            String query = "SELECT sanpham.soluong FROM sanpham WHERE sanpham.Masp=@masp ";
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@masp", masp);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                soluong= reader.GetInt32("soluong");
+            }
+            sqla.closeConnectToMySql();
+            return soluong;
         }
 
         internal DataTable getThongTinDonDatHang(string status)
@@ -100,6 +174,60 @@ namespace Smartphone_Management.DAO
 
             return data;
         }
+
+        internal void UpdateDiemKhachHang(int makhachhang, int v)
+        {
+            try
+            {
+                sqla.getConnection().Open();
+                string query = "UPDATE khachhang SET khachhang.Diemso=@diem WHERE khachhang.Makh =@makhachhang";
+                MySqlCommand cmd = new MySqlCommand(query, sqla.getConnection());
+                cmd.Parameters.AddWithValue("@makhachhang",makhachhang);
+                cmd.Parameters.AddWithValue("@diem",v);
+                MySqlDataReader MyReader2;
+                MyReader2 = cmd.ExecuteReader();
+                while (MyReader2.Read())
+                {
+                }
+                //cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                //MessageBox.Show("Successfully Updated", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            sqla.getConnection().Close();
+
+
+        }
+
+        internal void UpdateSoluongSanPham(int masp, int soluong)
+        {
+            try
+            {
+                sqla.getConnection().Open();
+                string query = "UPDATE sanpham SET sanpham.soluong =@soluong WHERE sanpham.Masp =@masp";
+                MySqlCommand cmd = new MySqlCommand(query,sqla.getConnection());
+                cmd.Parameters.AddWithValue("@masp",masp);
+                cmd.Parameters.AddWithValue("@soluong",soluong);
+                MySqlDataReader MyReader2;
+                MyReader2 = cmd.ExecuteReader();
+                while (MyReader2.Read())
+                {
+                }
+                //cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                //MessageBox.Show("Successfully Updated", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            sqla.getConnection().Close();
+
+        }
+
         internal void updateTrangThaiDonHang(int madh)
         {
 
@@ -116,7 +244,7 @@ namespace Smartphone_Management.DAO
                 }
                 //cmd.ExecuteNonQuery();
                 cmd.Dispose();
-                MessageBox.Show("Successfully Updated", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Successfully Updated", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception e)
             {
@@ -142,7 +270,7 @@ namespace Smartphone_Management.DAO
                 }
                 //cmd.ExecuteNonQuery();
                 cmd.Dispose();
-                MessageBox.Show("Successfully deleted", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Successfully deleted", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
             {

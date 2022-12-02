@@ -290,6 +290,7 @@
   <ItemGroup>
     <Compile Include="BUS\GiaSanPhamBUS.cs" />
     <Compile Include="BUS\LoiNhuanBanHang_BUS.cs" />
+    <Compile Include="BUS\QuanLyBaoHanh_BUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
     <Compile Include="BUS\QuanLyPhanQuyen_BUS.cs" />
     <Compile Include="BUS\QuanLyTaiKhoan_BUS.cs" />
@@ -300,6 +301,7 @@
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\GiaSanPhamDAO.cs" />
     <Compile Include="DAO\LoiNhuanBanHang_DAO.cs" />
+    <Compile Include="DAO\QuanLyBaoHanh_DAO.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
     <Compile Include="DAO\QuanLyPhanQuyen_DAO.cs" />
     <Compile Include="DAO\QuanLyTaiKhoan_DAO.cs" />
@@ -315,6 +317,12 @@
     <Compile Include="DTO\quyen_taikhoan.cs" />
     <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="DTO\taikhoan.cs" />
+    <Compile Include="GUI\BaoHanh\QuanLyBaoHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoHanh\QuanLyBaoHanh.Designer.cs">
+      <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,16 +379,22 @@
     <Compile Include="GUI\Login\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan.cs">
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan.Designer.cs">
-      <DependentUpon>QuanLyQuyenTaiKhoan.cs</DependentUpon>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.Designer.cs">
+      <DependentUpon>QuanLyQuyenTaiKhoan1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login\QuanLyTaiKhoan.cs">
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenMoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Login\QuanLyTaiKhoan.Designer.cs">
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenMoi.Designer.cs">
+      <DependentUpon>ThemQuyenMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login\ThayDoiQuyenTaiKhoan.cs">
@@ -401,16 +415,16 @@
     <Compile Include="GUI\Login\ThemQuyen.Designer.cs">
       <DependentUpon>ThemQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login\ThemQuyenTaiKhoan.cs">
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Login\ThemQuyenTaiKhoan.Designer.cs">
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenTaiKhoan.Designer.cs">
       <DependentUpon>ThemQuyenTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Login\ThemTaiKhoan.cs">
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\ThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Login\ThemTaiKhoan.Designer.cs">
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login\ThemTaiKhoanPhu.cs">
@@ -474,6 +488,9 @@
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BaoHanh\QuanLyBaoHanh.resx">
+      <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DonHang\ChiTietDonHang.resx">
       <DependentUpon>ChiTietDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,10 +518,13 @@
     <EmbeddedResource Include="GUI\Login\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan.resx">
-      <DependentUpon>QuanLyQuyenTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.resx">
+      <DependentUpon>QuanLyQuyenTaiKhoan1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Login\QuanLyTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenMoi.resx">
+      <DependentUpon>ThemQuyenMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyTaiKhoan\QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\ThayDoiQuyenTaiKhoan.resx">
@@ -516,10 +536,10 @@
     <EmbeddedResource Include="GUI\Login\ThemQuyen.resx">
       <DependentUpon>ThemQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Login\ThemQuyenTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenTaiKhoan.resx">
       <DependentUpon>ThemQuyenTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Login\ThemTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\Login\QuanLyTaiKhoan\ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\ThemTaiKhoanPhu.resx">
@@ -708,8 +728,10 @@
     <Content Include="GUI\GUI_SanPham\HinhAnh\icon_to_start.png" />
     <Content Include="GUI\GUI_SanPham\HinhAnh\icon_upload_image.png" />
     <Content Include="GUI\GUI_SanPham\HinhAnh\no_image.png" />
+    <None Include="GUI\Icon\Add - Copy.png" />
     <Content Include="GUI\Icon\background_welcome.jpg" />
     <Content Include="GUI\Icon\bg_user.png" />
+    <None Include="GUI\Icon\Refresh.png" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />
@@ -722,6 +744,9 @@
     <Content Include="obj\Debug\TempPE\quanlybanhangDataSet1.Designer.cs.dll" />
     <Content Include="obj\Debug\TempPE\smartphonemanagementDataSet.Designer.cs.dll" />
     <Content Include="obj\Debug\TempPE\smartphonemanagementDataSet1.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\Login\QuanLyQuyen\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

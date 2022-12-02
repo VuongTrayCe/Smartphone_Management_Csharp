@@ -4,10 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 //using MySql.Data.MySqlClient;
 using MySqlConnector;
 using Smartphone_Management.DTO;
+using Smartphone_Management.GUI.Login;
 
 namespace Smartphone_Management.DAO
 {
@@ -188,6 +190,97 @@ namespace Smartphone_Management.DAO
             adapter.Fill(dt);
             sqla.closeConnectToMySql();
             return dt;
+        }
+
+        internal List<List<String>> getInforTaiKhoan()
+        {
+
+            List<List<String>> list = new List<List<String>>();
+            sqla.openConnectToMySql();
+            string query = "select taikhoan.Matk,nhanvien.Tennv from nhanvien,taikhoan where nhanvien.Manv=taikhoan.Manv and taikhoan.TrangThai='T'";
+     
+            MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while(MyReader2.Read())
+            {
+                List<String> list2 = new List<String>();
+                list2.Add(MyReader2.GetInt32("Matk").ToString());
+                list2.Add(MyReader2.GetString("Tennv"));
+                list.Add(list2);
+            }
+            cmd2.Dispose();
+            sqla.closeConnectToMySql();
+            return list;
+
+
+        }
+
+        internal List<List<string>> getALLQuyenTaiKhoan(int matk)
+        {
+
+            List<List<String>> list = new List<List<String>>();
+            sqla.openConnectToMySql();
+            string query = "select quyen.Maquyen,quyen.Tenquyen from quyen,quyen_tk,taikhoan where taikhoan.Matk=quyen_tk.Matk and quyen_tk.Maquyen=quyen.Maquyen and taikhoan.Matk=@matk";
+            MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
+            cmd2.Parameters.AddWithValue("@matk", matk);
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                List<String> list2 = new List<String>();
+                list2.Add(MyReader2.GetInt32("Maquyen").ToString());
+                list2.Add(MyReader2.GetString("Tenquyen"));
+                list.Add(list2);
+            }
+            cmd2.Dispose();
+            sqla.closeConnectToMySql();
+            return list;
+        }
+
+        internal List<List<string>> getQuyenChuaCo(int matk)
+        {
+
+
+            List<List<String>> list = new List<List<String>>();
+            sqla.openConnectToMySql();
+            string query = "select quyen.Maquyen,quyen.Tenquyen from quyen where quyen.Maquyen not in (select quyen.Maquyen from quyen,quyen_tk,taikhoan where taikhoan.Matk=quyen_tk.Matk and quyen_tk.Maquyen=quyen.Maquyen and taikhoan.Matk=@matk)";
+            MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
+            cmd2.Parameters.AddWithValue("@matk", matk);
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                List<String> list2 = new List<String>();
+                list2.Add(MyReader2.GetInt32("Maquyen").ToString());
+                list2.Add(MyReader2.GetString("Tenquyen"));
+                list.Add(list2);
+            }
+            cmd2.Dispose();
+            sqla.closeConnectToMySql();
+            return list;
+        }
+
+        internal void AddQuyenTaiKhoan(int matk, int v)
+        {
+            sqla.openConnectToMySql();
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = "insert into quyen_tk(Matk,Maquyen) values(@matk,@maquyen)";
+            command.Parameters.AddWithValue("@matk",matk);
+            command.Parameters.AddWithValue("@maquyen",v);
+            command.ExecuteNonQuery();
+            sqla.closeConnectToMySql();
+
+        }
+
+        internal void DeleteQuyenTaiKhoan(int maquyentk)
+        {
+            sqla.openConnectToMySql();
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = "DELETE FROM quyen_tk WHERE (Maquyentk=@maquyentk);";
+            command.Parameters.AddWithValue("@maquyentk", maquyentk);
+            command.ExecuteNonQuery();
+            sqla.closeConnectToMySql();
         }
     }
 }

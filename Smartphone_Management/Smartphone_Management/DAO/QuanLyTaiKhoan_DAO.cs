@@ -38,7 +38,7 @@ namespace Smartphone_Management.DAO
         public DataTable getThongTinCacTaiKhoanTatHoatDong_DAO()
         {
             sqla.openConnectToMySql();
-            string query = "SELECT * FROM taikhoan WHERE Trangthai LIKE '%Tắt hoạt động%'";
+            string query = "SELECT * FROM taikhoan WHERE Trangthai LIKE '%F%'";
             MySqlCommand cmd = new MySqlCommand(query, sqla.getConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -51,7 +51,7 @@ namespace Smartphone_Management.DAO
         public DataTable getThongTinCacTaiKhoanDangHoatDong_DAO()
         {
             sqla.openConnectToMySql();
-            string query = "SELECT * FROM taikhoan WHERE Trangthai LIKE  '%Đang hoạt động%'";
+            string query = "SELECT * FROM taikhoan WHERE Trangthai LIKE  '%T%'";
             MySqlCommand cmd = new MySqlCommand(query, sqla.getConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -98,7 +98,7 @@ namespace Smartphone_Management.DAO
             cmd.Parameters.AddWithValue("@Tuoi", nv.Tuoi);
             cmd.Parameters.AddWithValue("@DiaChi", nv.DiaChi);
             cmd.Parameters.AddWithValue("@ChucDanh", nv.ChucDanh);
-            cmd.Parameters.AddWithValue("@TrangThai", "Đang hoạt động");
+            cmd.Parameters.AddWithValue("@TrangThai", "T");
             MySqlDataReader MyReader2;
             MyReader2 = cmd.ExecuteReader();
             cmd.Dispose();
@@ -117,7 +117,7 @@ namespace Smartphone_Management.DAO
             cmd2.Parameters.AddWithValue("@Manv", queryMaNV);
             cmd2.Parameters.AddWithValue("@Tendangnhap", tk.Tendangnhap);
             cmd2.Parameters.AddWithValue("@Matkhau", tk.Matkhau);
-            cmd2.Parameters.AddWithValue("@TrangThai", "Đang hoạt động");
+            cmd2.Parameters.AddWithValue("@TrangThai", "T");
             cmd2.Parameters.AddWithValue("@Ngaythamgia", timeNow);
             MySqlDataReader MyReader2;
             MyReader2 = cmd2.ExecuteReader();
@@ -203,7 +203,7 @@ namespace Smartphone_Management.DAO
             string query = "UPDATE taikhoan SET Trangthai = @Trangthai  WHERE Matk = @Matk "
                            ;
             MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
-            cmd2.Parameters.AddWithValue("@Trangthai", "Tắt hoạt động");
+            cmd2.Parameters.AddWithValue("@Trangthai", "F");
             cmd2.Parameters.AddWithValue("@Matk", Matk);
             MySqlDataReader MyReader2;
             MyReader2 = cmd2.ExecuteReader();
@@ -222,7 +222,7 @@ namespace Smartphone_Management.DAO
             MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
             cmd2.Parameters.AddWithValue("@Tendangnhap", tk.Tendangnhap);
             cmd2.Parameters.AddWithValue("@Matkhau", tk.Matkhau);
-            cmd2.Parameters.AddWithValue("@Trangthai", "Đang hoạt động");
+            cmd2.Parameters.AddWithValue("@Trangthai", "T");
             MySqlDataReader MyReader2;
             MyReader2 = cmd2.ExecuteReader();
 

@@ -44,7 +44,7 @@ namespace Smartphone_Management.BUS
 
         public void ShowThuocTinhNhanVienConHoatDong(ComboBox cb)
         {
-            String query = "SELECT nhanvien.Manv, nhanvien.Tennv FROM nhanvien WHERE nhanvien.Manv NOT IN (SELECT taikhoan.Manv FROM taikhoan) AND nhanvien.Trangthai LIKE '%Đang hoạt động%' ";
+            String query = "SELECT nhanvien.Manv, nhanvien.Tennv FROM nhanvien WHERE nhanvien.Manv NOT IN (SELECT taikhoan.Manv FROM taikhoan) AND nhanvien.Trangthai LIKE '%T%' ";
             String thuocTinh = "Tennv";
             qltk_DAO.DataProperty(query, thuocTinh, cb);
         }
@@ -67,7 +67,7 @@ namespace Smartphone_Management.BUS
         public void getCacTaiKhoanDangHoatDong_BUS(ComboBox cb)
         {
 
-            String query = "SELECT Matk, Tendangnhap FROM taikhoan WHERE Trangthai LIKE '%Đang hoạt động%' ";
+            String query = "SELECT Matk, Tendangnhap FROM taikhoan WHERE Trangthai LIKE '%T%' ";
             qltk_DAO.DataPropertyTaiKhoanDangHoatDong(query, cb);
         }
 
