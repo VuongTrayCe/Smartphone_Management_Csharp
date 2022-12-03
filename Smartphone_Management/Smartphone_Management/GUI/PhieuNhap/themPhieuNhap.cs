@@ -185,6 +185,12 @@ namespace Smartphone_Management.GUI
             }
         }
 
-
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            soLuong = tpn_BUS.returnSoLuong(dataGridView1);
+            tongTien = tpn_BUS.returnTongTien(dataGridView1);
+            txtTongSoLuong.Text = soLuong.ToString();
+            txtTongTien.Text = tongTien.ToString();
+        }
     }
 }
