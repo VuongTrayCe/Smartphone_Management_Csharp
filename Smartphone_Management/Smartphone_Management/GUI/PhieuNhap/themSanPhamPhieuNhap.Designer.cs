@@ -30,16 +30,14 @@ namespace Smartphone_Management.GUI
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbSanPham = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtGiaNhap = new System.Windows.Forms.TextBox();
+            this.btnThemSP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,14 +50,14 @@ namespace Smartphone_Management.GUI
             this.label1.TabIndex = 0;
             this.label1.Text = "Thêm Chi Tiết Phiếu Nhập";
             // 
-            // comboBox1
+            // cbbSanPham
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
+            this.cbbSanPham.FormattingEnabled = true;
+            this.cbbSanPham.Location = new System.Drawing.Point(190, 59);
+            this.cbbSanPham.Name = "cbbSanPham";
+            this.cbbSanPham.Size = new System.Drawing.Size(199, 21);
+            this.cbbSanPham.TabIndex = 1;
+            this.cbbSanPham.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -75,89 +73,70 @@ namespace Smartphone_Management.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label3.Location = new System.Drawing.Point(90, 190);
+            this.label3.Location = new System.Drawing.Point(90, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Số Lượng";
             // 
-            // textBox1
+            // txtSoLuong
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtSoLuong.Location = new System.Drawing.Point(190, 140);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(199, 20);
+            this.txtSoLuong.TabIndex = 4;
             // 
-            // button1
+            // btnThem
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button1.Location = new System.Drawing.Point(190, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnThem.Location = new System.Drawing.Point(190, 177);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(138, 48);
+            this.btnThem.TabIndex = 5;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.Location = new System.Drawing.Point(91, 140);
+            this.label4.Location = new System.Drawing.Point(90, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Giá Nhập";
             // 
-            // textBox2
+            // txtGiaNhap
             // 
-            this.textBox2.Location = new System.Drawing.Point(190, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtGiaNhap.Location = new System.Drawing.Point(190, 103);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.Size = new System.Drawing.Size(199, 20);
+            this.txtGiaNhap.TabIndex = 7;
             // 
-            // textBox3
+            // btnThemSP
             // 
-            this.textBox3.Location = new System.Drawing.Point(190, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label6.Location = new System.Drawing.Point(62, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Mã Sản Phẩm";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(396, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnThemSP.Location = new System.Drawing.Point(396, 59);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(56, 23);
+            this.btnThemSP.TabIndex = 12;
+            this.btnThemSP.Text = "Thêm";
+            this.btnThemSP.UseVisualStyleBackColor = true;
+            this.btnThemSP.Click += new System.EventHandler(this.button2_Click);
             // 
             // themSanPhamPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 272);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnThemSP);
+            this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbSanPham);
             this.Controls.Add(this.label1);
             this.Name = "themSanPhamPhieuNhap";
             this.Text = "Thêm chi tiết phiếu nhập";
@@ -169,15 +148,13 @@ namespace Smartphone_Management.GUI
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbSanPham;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtGiaNhap;
+        private System.Windows.Forms.Button btnThemSP;
     }
 }

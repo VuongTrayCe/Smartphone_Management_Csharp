@@ -17,6 +17,7 @@ namespace Smartphone_Management
     public partial class UIMain : Form
     {
         private IconButton currentBtn;
+        public static int manv = 1;
 
         private thongTinPhieuNhap form1;
         private themPhieuNhap form2;

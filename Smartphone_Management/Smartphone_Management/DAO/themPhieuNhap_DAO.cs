@@ -7,6 +7,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using MySqlConnector;
+using Smartphone_Management.DTO;
+using System.Windows.Documents;
 
 namespace Smartphone_Management.DAO
 {
@@ -130,6 +132,64 @@ namespace Smartphone_Management.DAO
             command = new MySqlCommand("INSERT INTO nhacungcap VALUES (" + (num + 1).ToString() + ", ' " + textBox1.Text + " ' , " + textBox3.Text + ",'" + textBox4.Text + "' , '" + comboBox1.Text.ToString() + "')", sqlNhap);
             command.ExecuteNonQuery();
             sqlNhap.Close();
+        }
+
+        internal List<List<string>> getDataNhaCungCap()
+        {
+            List<List<String>> list = new List<List<String>>();
+            data.openConnectToMySql();
+            string query = "select nhacungcap.Mancc, nhacungcap.Tenncc from nhacungcap where nhacungcap.TrangThai='T'";
+            MySqlCommand cmd2 = new MySqlCommand(query, data.getConnection());
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                List<String> list2 = new List<String>();
+                list2.Add(MyReader2.GetInt32("Mancc").ToString());
+                list2.Add(MyReader2.GetString("Tenncc"));
+                list.Add(list2);
+            }
+            cmd2.Dispose();
+            data.closeConnectToMySql();
+            return list;
+        }
+
+        internal int addPhieuNhap(Model_PhieuNhap dataPhieuNhap)
+        {
+            int madh = 0;
+            data.openConnectToMySql();
+            MySqlCommand command = data.getConnection().CreateCommand();
+            command.CommandText = "insert into phieunhap(Manv,Mancc,SoLuong,NgayNhap,TongTien,Trangthai) values (@manv,@mancc,@soluong,@ngaynhap,@tongtien,'Đang Xử Lý'); SELECT LAST_INSERT_ID() as madh;";
+            command.Parameters.AddWithValue("@manv",dataPhieuNhap.Manhanvien);
+            command.Parameters.AddWithValue("@mancc",dataPhieuNhap.Manhacungcap);
+            command.Parameters.AddWithValue("@soluong",dataPhieuNhap.soluong);
+            command.Parameters.AddWithValue("@ngaynhap",dataPhieuNhap.ngaynhap);
+            command.Parameters.AddWithValue("@tongtien",dataPhieuNhap.tongtien);
+            MySqlDataReader MyReader2;
+
+            MyReader2 = command.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                madh = MyReader2.GetInt32("madh");
+            }
+
+            data.closeConnectToMySql();
+            return madh;
+        }
+
+        internal void AddChiTietPhieuNhap2(Model_ChiTietPhieuNhap ph, int mapn)
+        {
+            MySqlConnection sqlNhap = data.getConnection();
+            data.openConnectToMySql();
+            MySqlCommand command; 
+                command = new MySqlCommand("INSERT INTO chitietphieunhap(Masp,Maphieunhap,GiaNhap,Soluong) VALUES(@Masp,@Maphieunhap,@GiaNhap,@Soluong)", sqlNhap);
+            command.Parameters.AddWithValue("@Masp", ph.Masp);
+            command.Parameters.AddWithValue("@Maphieunhap",mapn);
+            command.Parameters.AddWithValue("@GiaNhap", ph.gianhap);
+            command.Parameters.AddWithValue("@Soluong", ph.soluong);
+
+            command.ExecuteNonQuery();
+            data.closeConnectToMySql();
         }
     }
 }

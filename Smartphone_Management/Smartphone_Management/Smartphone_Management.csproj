@@ -89,6 +89,8 @@
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="DTO\Model_ChiTietPhieuNhap.cs" />
+    <Compile Include="DTO\Model_PhieuNhap.cs" />
     <Compile Include="GUI\DonHang\QuanLyDonHang.cs">
       <SubType>Form</SubType>
     </Compile>

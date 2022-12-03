@@ -127,3 +127,6 @@ C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Manag
 C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPhamPhieuNhap.resources
 C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themNcc.resources
 C:\Users\Administrator\Desktop\New folder\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPham.resources
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPhamPhieuNhap.resources
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themNcc.resources
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPham.resources

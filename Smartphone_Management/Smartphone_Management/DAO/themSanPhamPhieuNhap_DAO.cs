@@ -60,5 +60,26 @@ namespace Smartphone_Management.DAO
             int myNum = int.Parse(dataTable.Rows[0][0].ToString());
             return myNum;
         }
+
+        internal List<List<string>> getDataSanPham(int mancc)
+        {
+            List<List<String>> list = new List<List<String>>();
+            data.openConnectToMySql();
+            string query = "select sanpham.Masp,sanpham.Tensp from sanpham where sanpham.TrangThai='T' and sanpham.Mancc=@mancc";
+            MySqlCommand cmd2 = new MySqlCommand(query,data.getConnection());
+            cmd2.Parameters.AddWithValue("@mancc",mancc);
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                List<String> list2 = new List<String>();
+                list2.Add(MyReader2.GetInt32("Masp").ToString());
+                list2.Add(MyReader2.GetString("Tensp"));
+                list.Add(list2);
+            }
+            cmd2.Dispose();
+            data.closeConnectToMySql();
+            return list;
+        }
     }
 }
