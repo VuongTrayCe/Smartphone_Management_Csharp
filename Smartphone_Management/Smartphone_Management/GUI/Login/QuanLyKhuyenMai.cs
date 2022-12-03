@@ -139,8 +139,6 @@ namespace Smartphone_Management.GUI.Login
 
         private void btnXoaChiTietKM_Click(object sender, EventArgs e)
         {
-
-
             qlkm_BUS.XoaChiTietKMSP_BUS(maChiTietKM);
             LoadDataKM();
             LoadDataChiTietKM();

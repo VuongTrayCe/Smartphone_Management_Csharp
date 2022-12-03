@@ -162,6 +162,7 @@
   <ItemGroup>
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
     <Compile Include="BUS\QuanLyKhuyenMai_BUS.cs" />
+    <Compile Include="BUS\QuanLyNCC_BUS.cs" />
     <Compile Include="BUS\QuanLyPhanQuyen_BUS.cs" />
     <Compile Include="BUS\QuanLyTaiKhoan_BUS.cs" />
     <Compile Include="DAO\ConncectToPhucSQL.cs" />
@@ -169,10 +170,12 @@
     <Compile Include="DAO\ConnectToPhucMySQL.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
     <Compile Include="DAO\QuanLyKhuyenMai_DAO.cs" />
+    <Compile Include="DAO\QuanLyNCC_DAO.cs" />
     <Compile Include="DAO\QuanLyPhanQuyen_DAO.cs" />
     <Compile Include="DAO\QuanLyTaiKhoan_DAO.cs" />
     <Compile Include="DTO\chitietkhuyenmai.cs" />
     <Compile Include="DTO\khuyenmai.cs" />
+    <Compile Include="DTO\nhacungcap.cs" />
     <Compile Include="DTO\nhanvien.cs" />
     <Compile Include="DTO\quyen.cs" />
     <Compile Include="DTO\quyen_taikhoan.cs" />
@@ -206,6 +209,12 @@
     </Compile>
     <Compile Include="GUI\Login\QuanLyKhuyenMai.Designer.cs">
       <DependentUpon>QuanLyKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyNhaCungCap.Designer.cs">
+      <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login\QuanLyPhanQuyen.cs">
       <SubType>Form</SubType>
@@ -286,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\QuanLyKhuyenMai.resx">
       <DependentUpon>QuanLyKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyNhaCungCap.resx">
+      <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\QuanLyPhanQuyen.resx">
       <DependentUpon>QuanLyPhanQuyen.cs</DependentUpon>

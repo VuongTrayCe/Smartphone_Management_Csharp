@@ -60,6 +60,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dtgChiTietKM = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnXoaKhuyenMai = new Smartphone_Management.GUI.Login.VBButton();
+            this.btnSuaKhuyenMai = new Smartphone_Management.GUI.Login.VBButton();
+            this.btnThemKhuyenMai = new Smartphone_Management.GUI.Login.VBButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,6 +70,8 @@
             this.txtPTKM = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTenKM = new Bunifu.UI.WinForms.BunifuTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnXoaChiTietKM = new Smartphone_Management.GUI.Login.VBButton();
+            this.btnThemChiTietKM = new Smartphone_Management.GUI.Login.VBButton();
             this.cbSanPham = new System.Windows.Forms.ComboBox();
             this.cbMaKM = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,11 +79,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtSearchChiTietKM = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnXoaKhuyenMai = new Smartphone_Management.GUI.Login.VBButton();
-            this.btnSuaKhuyenMai = new Smartphone_Management.GUI.Login.VBButton();
-            this.btnThemKhuyenMai = new Smartphone_Management.GUI.Login.VBButton();
-            this.btnXoaChiTietKM = new Smartphone_Management.GUI.Login.VBButton();
-            this.btnThemChiTietKM = new Smartphone_Management.GUI.Login.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgKhuyenMai)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -343,6 +343,66 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Khuyến mãi";
             // 
+            // btnXoaKhuyenMai
+            // 
+            this.btnXoaKhuyenMai.BackColor = System.Drawing.Color.Pink;
+            this.btnXoaKhuyenMai.BackgroundColor = System.Drawing.Color.Pink;
+            this.btnXoaKhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoaKhuyenMai.BorderRadius = 20;
+            this.btnXoaKhuyenMai.BorderSize = 0;
+            this.btnXoaKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btnXoaKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaKhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaKhuyenMai.ForeColor = System.Drawing.Color.White;
+            this.btnXoaKhuyenMai.Location = new System.Drawing.Point(414, 203);
+            this.btnXoaKhuyenMai.Name = "btnXoaKhuyenMai";
+            this.btnXoaKhuyenMai.Size = new System.Drawing.Size(178, 48);
+            this.btnXoaKhuyenMai.TabIndex = 35;
+            this.btnXoaKhuyenMai.Text = "Xóa";
+            this.btnXoaKhuyenMai.TextColor = System.Drawing.Color.White;
+            this.btnXoaKhuyenMai.UseVisualStyleBackColor = false;
+            this.btnXoaKhuyenMai.Click += new System.EventHandler(this.btnXoaKhuyenMai_Click);
+            // 
+            // btnSuaKhuyenMai
+            // 
+            this.btnSuaKhuyenMai.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSuaKhuyenMai.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSuaKhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSuaKhuyenMai.BorderRadius = 20;
+            this.btnSuaKhuyenMai.BorderSize = 0;
+            this.btnSuaKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btnSuaKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaKhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaKhuyenMai.ForeColor = System.Drawing.Color.White;
+            this.btnSuaKhuyenMai.Location = new System.Drawing.Point(219, 203);
+            this.btnSuaKhuyenMai.Name = "btnSuaKhuyenMai";
+            this.btnSuaKhuyenMai.Size = new System.Drawing.Size(178, 48);
+            this.btnSuaKhuyenMai.TabIndex = 34;
+            this.btnSuaKhuyenMai.Text = "Sửa";
+            this.btnSuaKhuyenMai.TextColor = System.Drawing.Color.White;
+            this.btnSuaKhuyenMai.UseVisualStyleBackColor = false;
+            this.btnSuaKhuyenMai.Click += new System.EventHandler(this.btnSuaKhuyenMai_Click);
+            // 
+            // btnThemKhuyenMai
+            // 
+            this.btnThemKhuyenMai.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnThemKhuyenMai.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.btnThemKhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThemKhuyenMai.BorderRadius = 20;
+            this.btnThemKhuyenMai.BorderSize = 0;
+            this.btnThemKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btnThemKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemKhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemKhuyenMai.ForeColor = System.Drawing.Color.White;
+            this.btnThemKhuyenMai.Location = new System.Drawing.Point(23, 203);
+            this.btnThemKhuyenMai.Name = "btnThemKhuyenMai";
+            this.btnThemKhuyenMai.Size = new System.Drawing.Size(178, 48);
+            this.btnThemKhuyenMai.TabIndex = 33;
+            this.btnThemKhuyenMai.Text = "Thêm";
+            this.btnThemKhuyenMai.TextColor = System.Drawing.Color.White;
+            this.btnThemKhuyenMai.UseVisualStyleBackColor = false;
+            this.btnThemKhuyenMai.Click += new System.EventHandler(this.btnThemKhuyenMai_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -480,6 +540,7 @@
             this.txtTenKM.DefaultFont = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKM.DefaultText = "";
             this.txtTenKM.FillColor = System.Drawing.Color.White;
+            this.txtTenKM.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.txtTenKM.HideSelection = true;
             this.txtTenKM.IconLeft = null;
             this.txtTenKM.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -510,7 +571,7 @@
             this.txtTenKM.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.ForeColor = System.Drawing.Color.LightSeaGreen;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtTenKM.OnIdleState = stateProperties12;
             this.txtTenKM.Padding = new System.Windows.Forms.Padding(3);
@@ -549,6 +610,46 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết khuyến mãi";
+            // 
+            // btnXoaChiTietKM
+            // 
+            this.btnXoaChiTietKM.BackColor = System.Drawing.Color.Pink;
+            this.btnXoaChiTietKM.BackgroundColor = System.Drawing.Color.Pink;
+            this.btnXoaChiTietKM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoaChiTietKM.BorderRadius = 20;
+            this.btnXoaChiTietKM.BorderSize = 0;
+            this.btnXoaChiTietKM.FlatAppearance.BorderSize = 0;
+            this.btnXoaChiTietKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaChiTietKM.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaChiTietKM.ForeColor = System.Drawing.Color.White;
+            this.btnXoaChiTietKM.Location = new System.Drawing.Point(412, 203);
+            this.btnXoaChiTietKM.Name = "btnXoaChiTietKM";
+            this.btnXoaChiTietKM.Size = new System.Drawing.Size(178, 48);
+            this.btnXoaChiTietKM.TabIndex = 36;
+            this.btnXoaChiTietKM.Text = "Xóa";
+            this.btnXoaChiTietKM.TextColor = System.Drawing.Color.White;
+            this.btnXoaChiTietKM.UseVisualStyleBackColor = false;
+            this.btnXoaChiTietKM.Click += new System.EventHandler(this.btnXoaChiTietKM_Click);
+            // 
+            // btnThemChiTietKM
+            // 
+            this.btnThemChiTietKM.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnThemChiTietKM.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.btnThemChiTietKM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThemChiTietKM.BorderRadius = 20;
+            this.btnThemChiTietKM.BorderSize = 0;
+            this.btnThemChiTietKM.FlatAppearance.BorderSize = 0;
+            this.btnThemChiTietKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemChiTietKM.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemChiTietKM.ForeColor = System.Drawing.Color.White;
+            this.btnThemChiTietKM.Location = new System.Drawing.Point(209, 203);
+            this.btnThemChiTietKM.Name = "btnThemChiTietKM";
+            this.btnThemChiTietKM.Size = new System.Drawing.Size(178, 48);
+            this.btnThemChiTietKM.TabIndex = 36;
+            this.btnThemChiTietKM.Text = "Thêm";
+            this.btnThemChiTietKM.TextColor = System.Drawing.Color.White;
+            this.btnThemChiTietKM.UseVisualStyleBackColor = false;
+            this.btnThemChiTietKM.Click += new System.EventHandler(this.btnThemChiTietKM_Click);
             // 
             // cbSanPham
             // 
@@ -686,106 +787,6 @@
             this.label6.Size = new System.Drawing.Size(197, 24);
             this.label6.TabIndex = 30;
             this.label6.Text = "Quản lý khuyến mãi";
-            // 
-            // btnXoaKhuyenMai
-            // 
-            this.btnXoaKhuyenMai.BackColor = System.Drawing.Color.Pink;
-            this.btnXoaKhuyenMai.BackgroundColor = System.Drawing.Color.Pink;
-            this.btnXoaKhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoaKhuyenMai.BorderRadius = 20;
-            this.btnXoaKhuyenMai.BorderSize = 0;
-            this.btnXoaKhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btnXoaKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaKhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaKhuyenMai.ForeColor = System.Drawing.Color.White;
-            this.btnXoaKhuyenMai.Location = new System.Drawing.Point(414, 203);
-            this.btnXoaKhuyenMai.Name = "btnXoaKhuyenMai";
-            this.btnXoaKhuyenMai.Size = new System.Drawing.Size(178, 48);
-            this.btnXoaKhuyenMai.TabIndex = 35;
-            this.btnXoaKhuyenMai.Text = "Xóa";
-            this.btnXoaKhuyenMai.TextColor = System.Drawing.Color.White;
-            this.btnXoaKhuyenMai.UseVisualStyleBackColor = false;
-            this.btnXoaKhuyenMai.Click += new System.EventHandler(this.btnXoaKhuyenMai_Click);
-            // 
-            // btnSuaKhuyenMai
-            // 
-            this.btnSuaKhuyenMai.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnSuaKhuyenMai.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.btnSuaKhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSuaKhuyenMai.BorderRadius = 20;
-            this.btnSuaKhuyenMai.BorderSize = 0;
-            this.btnSuaKhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btnSuaKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaKhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaKhuyenMai.ForeColor = System.Drawing.Color.White;
-            this.btnSuaKhuyenMai.Location = new System.Drawing.Point(219, 203);
-            this.btnSuaKhuyenMai.Name = "btnSuaKhuyenMai";
-            this.btnSuaKhuyenMai.Size = new System.Drawing.Size(178, 48);
-            this.btnSuaKhuyenMai.TabIndex = 34;
-            this.btnSuaKhuyenMai.Text = "Sửa";
-            this.btnSuaKhuyenMai.TextColor = System.Drawing.Color.White;
-            this.btnSuaKhuyenMai.UseVisualStyleBackColor = false;
-            this.btnSuaKhuyenMai.Click += new System.EventHandler(this.btnSuaKhuyenMai_Click);
-            // 
-            // btnThemKhuyenMai
-            // 
-            this.btnThemKhuyenMai.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnThemKhuyenMai.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.btnThemKhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThemKhuyenMai.BorderRadius = 20;
-            this.btnThemKhuyenMai.BorderSize = 0;
-            this.btnThemKhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btnThemKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemKhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemKhuyenMai.ForeColor = System.Drawing.Color.White;
-            this.btnThemKhuyenMai.Location = new System.Drawing.Point(23, 203);
-            this.btnThemKhuyenMai.Name = "btnThemKhuyenMai";
-            this.btnThemKhuyenMai.Size = new System.Drawing.Size(178, 48);
-            this.btnThemKhuyenMai.TabIndex = 33;
-            this.btnThemKhuyenMai.Text = "Thêm";
-            this.btnThemKhuyenMai.TextColor = System.Drawing.Color.White;
-            this.btnThemKhuyenMai.UseVisualStyleBackColor = false;
-            this.btnThemKhuyenMai.Click += new System.EventHandler(this.btnThemKhuyenMai_Click);
-            // 
-            // btnXoaChiTietKM
-            // 
-            this.btnXoaChiTietKM.BackColor = System.Drawing.Color.Pink;
-            this.btnXoaChiTietKM.BackgroundColor = System.Drawing.Color.Pink;
-            this.btnXoaChiTietKM.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoaChiTietKM.BorderRadius = 20;
-            this.btnXoaChiTietKM.BorderSize = 0;
-            this.btnXoaChiTietKM.FlatAppearance.BorderSize = 0;
-            this.btnXoaChiTietKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaChiTietKM.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaChiTietKM.ForeColor = System.Drawing.Color.White;
-            this.btnXoaChiTietKM.Location = new System.Drawing.Point(412, 203);
-            this.btnXoaChiTietKM.Name = "btnXoaChiTietKM";
-            this.btnXoaChiTietKM.Size = new System.Drawing.Size(178, 48);
-            this.btnXoaChiTietKM.TabIndex = 36;
-            this.btnXoaChiTietKM.Text = "Xóa";
-            this.btnXoaChiTietKM.TextColor = System.Drawing.Color.White;
-            this.btnXoaChiTietKM.UseVisualStyleBackColor = false;
-            this.btnXoaChiTietKM.Click += new System.EventHandler(this.btnXoaChiTietKM_Click);
-            // 
-            // btnThemChiTietKM
-            // 
-            this.btnThemChiTietKM.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnThemChiTietKM.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.btnThemChiTietKM.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThemChiTietKM.BorderRadius = 20;
-            this.btnThemChiTietKM.BorderSize = 0;
-            this.btnThemChiTietKM.FlatAppearance.BorderSize = 0;
-            this.btnThemChiTietKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemChiTietKM.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemChiTietKM.ForeColor = System.Drawing.Color.White;
-            this.btnThemChiTietKM.Location = new System.Drawing.Point(209, 203);
-            this.btnThemChiTietKM.Name = "btnThemChiTietKM";
-            this.btnThemChiTietKM.Size = new System.Drawing.Size(178, 48);
-            this.btnThemChiTietKM.TabIndex = 36;
-            this.btnThemChiTietKM.Text = "Thêm";
-            this.btnThemChiTietKM.TextColor = System.Drawing.Color.White;
-            this.btnThemChiTietKM.UseVisualStyleBackColor = false;
-            this.btnThemChiTietKM.Click += new System.EventHandler(this.btnThemChiTietKM_Click);
             // 
             // QuanLyKhuyenMai
             // 
