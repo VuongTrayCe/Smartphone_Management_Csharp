@@ -15,16 +15,46 @@ namespace Smartphone_Management.BUS
         internal DataTable getLoiNhuanBanHang_HangHoa()
         {
             dt = lnbh.getLoiNhuanBanHang_HangHoa();
+            int tongtien = 0;
+            int tongso = 0;
+            int tienhang = 0;
+            int tiensaukm = 0;
+            int tienvon = 0;
+            int tienlai = 0;
+            dt.Columns.Add("Tiền Lãi");
 
-
-
+            for (int i=0;i<dt.Rows.Count;i++)
+            {
+               int tiensaukm1 = int.Parse(dt.Rows[i][4].ToString());
+               int tienvon1 = int.Parse(dt.Rows[i][5].ToString());
+                dt.Rows[i][6] = tiensaukm1 - tienvon1;
+                tiensaukm += tiensaukm1;
+                tienlai += tiensaukm1 - tienvon1;
+                tienvon += tienvon1;
+                tongso+= int.Parse(dt.Rows[i][2].ToString());
+            }
+            DataRow a = dt.NewRow();
+            a["TongSo"] = tongso;
+            a["TienSauKM"] = tiensaukm;
+            a["TienVon"] = tienvon;
+            a["Tiền Lãi"] = tienlai;
+            dt.Rows.InsertAt(a,0);
             return dt;
+        }
+
+        internal List<List<string>> getLoiNhuanBanHang_HangHoa_BieuDo1()
+        {
+           return lnbh.getLoiNhuanBanHang_HangHoa_BieuDo1();
         }
 
         internal DataTable getLoiNhuanBanHang_LaiLo()
         {
-            dt = lnbh.getLoiNhuanBanHang_LaiLo();
             return dt;
+        }
+
+        internal List<List<string>> getLoiNhuanBanHang_NgayBan_BieuDo1(string ngaybatdau, string ngayketthuc)
+        {
+            return lnbh.getLoiNhuanBanHang_NgayBan_BieuDo1(ngaybatdau,ngayketthuc);
         }
 
         internal DataTable getLoiNhuanBanHang_TheoThang(DateTime dateStart,DateTime dateEnd)

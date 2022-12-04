@@ -110,7 +110,7 @@
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(11, 81);
+            this.panel6.Location = new System.Drawing.Point(11, 107);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(183, 23);
             this.panel6.TabIndex = 4;
@@ -165,9 +165,9 @@
             this.groupBox1.Controls.Add(this.DateEnd);
             this.groupBox1.Controls.Add(this.panel6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(634, 121);
+            this.groupBox1.Location = new System.Drawing.Point(634, 92);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 308);
+            this.groupBox1.Size = new System.Drawing.Size(200, 361);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm Kiếm Nâng Cao";
@@ -337,7 +337,7 @@
             this.txtTimKiem.IconRight = null;
             this.txtTimKiem.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTimKiem.Lines = new string[0];
-            this.txtTimKiem.Location = new System.Drawing.Point(3, 91);
+            this.txtTimKiem.Location = new System.Drawing.Point(3, 55);
             this.txtTimKiem.MaxLength = 32767;
             this.txtTimKiem.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTimKiem.Modified = false;
@@ -484,7 +484,7 @@
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(620, 18);
+            this.iconButton5.Location = new System.Drawing.Point(600, 18);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(98, 31);
             this.iconButton5.TabIndex = 5;
@@ -498,7 +498,7 @@
             this.btnTimKiem.IconColor = System.Drawing.Color.Black;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTimKiem.IconSize = 20;
-            this.btnTimKiem.Location = new System.Drawing.Point(450, 90);
+            this.btnTimKiem.Location = new System.Drawing.Point(450, 55);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(36, 38);
             this.btnTimKiem.TabIndex = 1;
@@ -564,14 +564,14 @@
             this.dataGirdView1.HeaderBackColor = System.Drawing.Color.DarkSlateGray;
             this.dataGirdView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dataGirdView1.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGirdView1.Location = new System.Drawing.Point(3, 134);
+            this.dataGirdView1.Location = new System.Drawing.Point(10, 99);
             this.dataGirdView1.MultiSelect = false;
             this.dataGirdView1.Name = "dataGirdView1";
             this.dataGirdView1.ReadOnly = true;
             this.dataGirdView1.RowHeadersVisible = false;
             this.dataGirdView1.RowTemplate.Height = 40;
             this.dataGirdView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGirdView1.Size = new System.Drawing.Size(625, 319);
+            this.dataGirdView1.Size = new System.Drawing.Size(625, 354);
             this.dataGirdView1.TabIndex = 9;
             this.dataGirdView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.dataGirdView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGirdView1_CellContentClick);

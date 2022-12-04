@@ -20,6 +20,7 @@ namespace Smartphone_Management.BUS
         {
             DataTable data = new DataTable();
             DataTable data2 = qlddh_dao.getThongTinDonDatHang(status);
+
             data.Columns.Add("STT");
             data.Columns.Add("Ngày Đặt", Type.GetType("System.DateTime"));
             data.Columns.Add("Mã đơn Hàng");
@@ -59,7 +60,7 @@ namespace Smartphone_Management.BUS
                     //}
                        for (int j = 0; j < data2.Columns.Count; j++)
                     {
-                        row[j] = data2.Rows[i][j];
+                        row[j+1] = data2.Rows[i][j];
                     }
                     data.Rows.Add(row);
                 }

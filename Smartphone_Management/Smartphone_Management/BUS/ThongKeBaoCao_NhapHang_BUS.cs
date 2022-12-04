@@ -14,6 +14,22 @@ namespace Smartphone_Management.BUS
         DataTable data2 = new DataTable();
 
         ThongKeBaoCao_NhapHang_DAO tkbc = new ThongKeBaoCao_NhapHang_DAO();
+
+        internal List<List<string>> getChiPhiNhapHang_HangHoa_BieuDo1()
+        {
+            return tkbc.getChiPhiNhapHang_HangHoa_BieuDo();
+        }
+
+        internal List<List<string>> getChiPhiNhapHang_NgayNhap_BieuDo()
+        {
+            return tkbc.getChiPhiNhapHang_NgayNhap_BieuDo();
+        }
+
+        internal List<List<string>> getChiPhiNhapHang_NhaCungCap_BieuDo()
+        {
+            return tkbc.getChiPhiNhapHang_NhaCungCap_BieuDo();
+        }
+
         internal DataTable getThongKeNhapHang_HangHoa()
         {
             data2 = tkbc.getThongKeNhapHang_HangHoa();
@@ -46,6 +62,11 @@ namespace Smartphone_Management.BUS
             //    data.Rows.Add(row);
             //}
             return data2;
+        }
+
+        internal DataTable getThongKeNhapHang_NgayBan_ChiTiet(string v)
+        {
+            return tkbc.getThongKeNhapHang_NgayBan_ChiTiet(v);
         }
 
         internal DataTable getThongKeNhapHang_NgayThang(DateTime dateStart, DateTime dateEnd)
@@ -106,6 +127,11 @@ namespace Smartphone_Management.BUS
                 data2.Rows[i][0] = i + 1;
             }
             return data2;
+        }
+
+        internal DataTable getThongKeNhaphang_NhaCungCap_ChiTiet(int mancc)
+        {
+            return tkbc.getThongKeNhaphang_NhaCungCap_ChiTiet(mancc);
         }
     }
 }

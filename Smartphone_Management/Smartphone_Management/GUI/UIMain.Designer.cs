@@ -64,6 +64,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnDoanhThuNhapHang = new FontAwesome.Sharp.IconButton();
             this.panelSlide.SuspendLayout();
             this.panelHeThong_Sub.SuspendLayout();
             this.panelThongKe_Sub.SuspendLayout();
@@ -105,7 +106,7 @@
             this.panelHeThong_Sub.Controls.Add(this.btnPhanQuyenTaiKhoan);
             this.panelHeThong_Sub.Controls.Add(this.btnQLTaiKhoan);
             this.panelHeThong_Sub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeThong_Sub.Location = new System.Drawing.Point(0, 794);
+            this.panelHeThong_Sub.Location = new System.Drawing.Point(0, 829);
             this.panelHeThong_Sub.Name = "panelHeThong_Sub";
             this.panelHeThong_Sub.Size = new System.Drawing.Size(210, 125);
             this.panelHeThong_Sub.TabIndex = 12;
@@ -160,7 +161,7 @@
             this.btnHeThong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHeThong.IconSize = 40;
             this.btnHeThong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHeThong.Location = new System.Drawing.Point(0, 744);
+            this.btnHeThong.Location = new System.Drawing.Point(0, 779);
             this.btnHeThong.Name = "btnHeThong";
             this.btnHeThong.Size = new System.Drawing.Size(210, 50);
             this.btnHeThong.TabIndex = 11;
@@ -172,11 +173,12 @@
             // panelThongKe_Sub
             // 
             this.panelThongKe_Sub.Controls.Add(this.btnLNBanHang);
+            this.panelThongKe_Sub.Controls.Add(this.btnDoanhThuNhapHang);
             this.panelThongKe_Sub.Controls.Add(this.btnDTBanHang);
             this.panelThongKe_Sub.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelThongKe_Sub.Location = new System.Drawing.Point(0, 667);
             this.panelThongKe_Sub.Name = "panelThongKe_Sub";
-            this.panelThongKe_Sub.Size = new System.Drawing.Size(210, 77);
+            this.panelThongKe_Sub.Size = new System.Drawing.Size(210, 112);
             this.panelThongKe_Sub.TabIndex = 10;
             // 
             // btnLNBanHang
@@ -189,13 +191,14 @@
             this.btnLNBanHang.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLNBanHang.IconColor = System.Drawing.Color.Black;
             this.btnLNBanHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLNBanHang.Location = new System.Drawing.Point(0, 23);
+            this.btnLNBanHang.Location = new System.Drawing.Point(0, 46);
             this.btnLNBanHang.Name = "btnLNBanHang";
             this.btnLNBanHang.Size = new System.Drawing.Size(210, 23);
             this.btnLNBanHang.TabIndex = 1;
             this.btnLNBanHang.Text = "Lợi Nhuận Bán Hàng";
             this.btnLNBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLNBanHang.UseVisualStyleBackColor = true;
+            this.btnLNBanHang.Click += new System.EventHandler(this.btnLNBanHang_Click);
             // 
             // btnDTBanHang
             // 
@@ -214,6 +217,7 @@
             this.btnDTBanHang.Text = "Doanh Thu Bán Hàng";
             this.btnDTBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDTBanHang.UseVisualStyleBackColor = true;
+            this.btnDTBanHang.Click += new System.EventHandler(this.btnDTBanHang_Click);
             // 
             // btnThongKe
             // 
@@ -660,6 +664,25 @@
             this.iconButton2.Text = "iconButton2";
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
+            // btnDoanhThuNhapHang
+            // 
+            this.btnDoanhThuNhapHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoanhThuNhapHang.FlatAppearance.BorderSize = 0;
+            this.btnDoanhThuNhapHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoanhThuNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoanhThuNhapHang.ForeColor = System.Drawing.Color.Red;
+            this.btnDoanhThuNhapHang.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDoanhThuNhapHang.IconColor = System.Drawing.Color.Black;
+            this.btnDoanhThuNhapHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDoanhThuNhapHang.Location = new System.Drawing.Point(0, 23);
+            this.btnDoanhThuNhapHang.Name = "btnDoanhThuNhapHang";
+            this.btnDoanhThuNhapHang.Size = new System.Drawing.Size(210, 23);
+            this.btnDoanhThuNhapHang.TabIndex = 2;
+            this.btnDoanhThuNhapHang.Text = "Chi Phí Nhập Hàng";
+            this.btnDoanhThuNhapHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoanhThuNhapHang.UseVisualStyleBackColor = true;
+            this.btnDoanhThuNhapHang.Click += new System.EventHandler(this.btnDoanhThuNhapHang_Click);
+            // 
             // UIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -722,5 +745,6 @@
         private System.Windows.Forms.Panel panelChucNang;
         private FontAwesome.Sharp.IconButton btnQLTaiKhoan;
         private FontAwesome.Sharp.IconButton btnPhanQuyenTaiKhoan;
+        private FontAwesome.Sharp.IconButton btnDoanhThuNhapHang;
     }
 }

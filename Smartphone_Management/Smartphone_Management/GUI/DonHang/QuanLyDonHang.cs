@@ -16,6 +16,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Markup;
 using Application = System.Windows.Forms.Application;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Smartphone_Management.GUI.DonHang
 {

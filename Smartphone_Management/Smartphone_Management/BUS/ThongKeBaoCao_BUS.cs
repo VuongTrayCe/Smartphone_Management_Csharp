@@ -57,22 +57,28 @@ namespace Smartphone_Management.BUS
             data2 = tkbc.getDoanhThuBanHang_KhachHang();
             data2.Columns.Add("STT").SetOrdinal(0);
             int stt = 1;
-            int tongsl = 0;
+            int tongsldon = 0;
+            Double tongsoluong = 0;
             Double tongtien = 0;
             for (int i = 0; i < data2.Rows.Count; i++)
             {
                 data2.Rows[i][0] = stt;
                 stt += 1;
-                int soluong = int.Parse(data2.Rows[i][3].ToString());
-                Double thanhtien = Double.Parse(data2.Rows[i][4].ToString());
-                tongsl = tongsl + soluong;
-                tongtien += thanhtien;
+                int sodon = int.Parse(data2.Rows[i][3].ToString());
+                Double tongsoluong1 = Double.Parse(data2.Rows[i][4].ToString());
+                Double tongtien1 = Double.Parse(data2.Rows[i][5].ToString());
+                tongtien += tongtien1;
+                tongsldon = tongsldon + sodon;
+                tongsoluong += tongsoluong1;
 
             }
             DataRow row2 = data2.NewRow();
-            row2[3]=tongsl;
-            row2[4] = tongtien;
-            data2.Rows.Add(row2);
+            row2[2] = "Tổng";
+            row2[3] = tongsldon;
+            row2[4] = tongsoluong;
+            row2[5] = tongtien;
+
+            data2.Rows.InsertAt(row2, 0);
             return data2;
 
         }
@@ -127,6 +133,36 @@ namespace Smartphone_Management.BUS
             CultureInfo provider = CultureInfo.InvariantCulture;
             bool isSuccess = DateTime.TryParseExact(date, "yyyy-MM-dd", provider, DateTimeStyles.None, out dateTimeObj);
             return dateTimeObj;
+        }
+
+        internal string[] getDanhThuBanHang_KhachHang_BieuDo()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal List<List<string>> getDanhThuBanHang_KhachHang_BieuDo1()
+        {
+            return tkbc.getDanhThuBanHang_KhachHang_BieuDo1();
+        }
+
+        internal List<List<string>> getDanhThuBanHang_HangHoa_BieuDo()
+        {
+            return tkbc.getDanhThuBanHang_HangHoa_BieuDo();
+        }
+
+        internal DataTable getDoanhThuBanHang_KhachHang_ChiTiet(int makh)
+        {
+            return tkbc.getDoanhThuBanHang_KhachHang_ChiTiet(makh);
+        }
+
+        internal DataTable getDoanhThuBanHang_NgayBan_ChiTiet(string ngayban)
+        {
+            return tkbc.getDoanhThuBanHang_NgayBan_ChiTiet(ngayban);
+        }
+
+        internal List<List<string>> getDanhThuBanHang_NgayBan_BieuDo1()
+        {
+            return tkbc.getDanhThuBanHang_NgayBan_BieuDo1();
         }
     }
 }

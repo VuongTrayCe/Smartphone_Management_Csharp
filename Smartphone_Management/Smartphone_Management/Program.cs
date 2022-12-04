@@ -22,7 +22,7 @@ namespace Smartphone_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new  UIMain());
+            Application.Run(new UIMain());
         }
     }
 }

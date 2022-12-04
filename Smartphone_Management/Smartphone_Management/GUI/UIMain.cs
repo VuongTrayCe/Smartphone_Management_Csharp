@@ -5,6 +5,7 @@ using Smartphone_Management.GUI.DonHang;
 using Smartphone_Management.GUI.GUI_SanPham;
 using Smartphone_Management.GUI.Login;
 using Smartphone_Management.GUI.Login.QuanLyQuyenTaiKhoan;
+using Smartphone_Management.GUI.ThongKe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -219,7 +220,8 @@ namespace Smartphone_Management
 
         private void btnChinhSachKhuyenMai_Click(object sender, EventArgs e)
         {
-
+            QuanLyKhuyenMai a = new QuanLyKhuyenMai();
+            openChildForm(a);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,6 +244,24 @@ namespace Smartphone_Management
         private void btnChinhSachBaoHanh_Click(object sender, EventArgs e)
         {
             QuanLyBaoHanh a = new QuanLyBaoHanh();
+            openChildForm(a);
+        }
+
+        private void btnDTBanHang_Click(object sender, EventArgs e)
+        {
+            ThongKeBaoCao_BanHang a = new ThongKeBaoCao_BanHang();
+            openChildForm(a);
+        }
+
+        private void btnLNBanHang_Click(object sender, EventArgs e)
+        {
+            LoiNhuanBanHang a = new LoiNhuanBanHang();
+            openChildForm(a);
+        }
+
+        private void btnDoanhThuNhapHang_Click(object sender, EventArgs e)
+        {
+            ThongKeBaoCao_NhapHang a = new ThongKeBaoCao_NhapHang();
             openChildForm(a);
         }
     }
