@@ -1,4 +1,5 @@
 ﻿using Smartphone_Management.GUI.DonHang;
+using Smartphone_Management.GUI.GUI_BanHang;
 using Smartphone_Management.GUI.GUI_SanPham;
 using Smartphone_Management.GUI.GUI_SanPham.Dialog;
 using System;
@@ -19,7 +20,7 @@ namespace Smartphone_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SanPham());
+            Application.Run(new UIMain());
         }
     }
 }

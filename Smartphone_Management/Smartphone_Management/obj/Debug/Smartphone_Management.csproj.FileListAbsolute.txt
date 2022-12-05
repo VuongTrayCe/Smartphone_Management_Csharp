@@ -179,3 +179,8 @@ C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_SanPham.Dialog.SelectDialog.resources
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_SanPham.Dialog.FullDataDialog.resources
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_SanPham.Dialog.PriceManagementDialog.resources
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.BanHang.resources
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.BanHang_DonHang.resources
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.BanHang_ThemKhachHang.resources
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.ChiTietSanPham.resources
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.GioHang.resources

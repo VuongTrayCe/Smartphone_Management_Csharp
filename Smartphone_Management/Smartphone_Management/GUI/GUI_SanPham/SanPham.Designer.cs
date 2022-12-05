@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SanPham));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -131,6 +132,7 @@
             this.LabelLoiSanPham = new System.Windows.Forms.Label();
             this.DataGridViewSanPham = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuGroupBox4 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.bunifuGroupBox1.SuspendLayout();
             this.bunifuGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAnhSanPham)).BeginInit();
@@ -2208,7 +2210,7 @@
             this.ButtonQuanLyGia.OnIdleState.BorderThickness = 1;
             this.ButtonQuanLyGia.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(95)))), ((int)(((byte)(255)))));
             this.ButtonQuanLyGia.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.ButtonQuanLyGia.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnIdleState.IconLeftImage")));
+            this.ButtonQuanLyGia.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("ButtonQuanLyGia.OnIdleState.IconLeftImage")));
             this.ButtonQuanLyGia.OnIdleState.IconRightImage = null;
             this.ButtonQuanLyGia.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(95)))), ((int)(((byte)(255)))));
             this.ButtonQuanLyGia.OnPressedState.BorderRadius = 5;
@@ -2595,5 +2597,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox AnhSanPhamUpdate;
         private Bunifu.UI.WinForms.BunifuDataGridView DataGridViewSanPham;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox4;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }

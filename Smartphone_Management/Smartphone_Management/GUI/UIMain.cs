@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using Smartphone_Management.GUI;
 using Smartphone_Management.GUI.DonHang;
+using Smartphone_Management.GUI.GUI_BanHang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +20,11 @@ namespace Smartphone_Management
     public partial class UIMain : Form
     {
         private IconButton currentBtn;
+        public static int manv = 1;
 
         private Color corlor = Color.FromArgb(0, 127, 0);
         private int FlagColor = 0;
+       
         public UIMain()
         {
             InitializeComponent();
@@ -183,7 +186,8 @@ namespace Smartphone_Management
 
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
-
+            BanHang banHang = new BanHang();
+            openChildForm(banHang);
         }
 
         private void btnQLDonDatHang_Click(object sender, EventArgs e)
@@ -217,10 +221,5 @@ namespace Smartphone_Management
         {
 
         }
-
-
-
-
-      
     }
 }

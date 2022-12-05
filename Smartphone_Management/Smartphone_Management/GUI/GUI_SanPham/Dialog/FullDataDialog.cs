@@ -123,9 +123,9 @@ namespace Smartphone_Management.GUI.GUI_SanPham.Dialog
             DataGridViewFullSanPham.ScrollBars = ScrollBars.Vertical;
             Padding newPadding = new Padding(0, 5, 0, 5);
             DataGridViewFullSanPham.RowTemplate.DefaultCellStyle.Padding = newPadding;
-            DataGridViewFullSanPham.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DataGridViewFullSanPham.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             List<SanPhamDTO> sanphamDTOList = sanphamBUS.getFullDataSanPham();
-            for(int i = 0; i < sanphamDTOList.Count; i++)
+            for (int i = 0; i < sanphamDTOList.Count; i++)
             {
                 SanPhamDTO sanphamDTO = sanphamDTOList[i];
                 DataGridViewFullSanPham.Rows.Add();
@@ -135,15 +135,16 @@ namespace Smartphone_Management.GUI.GUI_SanPham.Dialog
                 DataGridViewFullSanPham.Rows[i].Cells[3].Value = sanphamDTO.soluong;
                 DataGridViewFullSanPham.Rows[i].Cells[4].Value = sanphamDTO.MauSac;
                 DataGridViewFullSanPham.Rows[i].Cells[5].Value = sanphamDTO.Namsx;
-                if(!sanphamDTO.Icon.Equals(""))
+                if (!sanphamDTO.Icon.Equals(""))
                 {
-                    Bitmap bitmap = (Bitmap) Bitmap.FromFile(getImageStorePath() + sanphamDTO.Icon);
+                    Bitmap bitmap = (Bitmap)Bitmap.FromFile(getImageStorePath() + sanphamDTO.Icon);
                     DataGridViewImageCell imageCell = new DataGridViewImageCell();
                     imageCell.Value = bitmap;
                     DataGridViewFullSanPham.Rows[i].Cells[6] = imageCell;
-                } else
+                }
+                else
                 {
-                    Bitmap bitmap = (Bitmap) Bitmap.FromFile(getImageStorePath() + "no_image.png");
+                    Bitmap bitmap = (Bitmap)Bitmap.FromFile(getImageStorePath() + "no_image.png");
                     DataGridViewImageCell imageCell = new DataGridViewImageCell();
                     imageCell.Value = bitmap;
                     DataGridViewFullSanPham.Rows[i].Cells[6] = imageCell;
@@ -152,14 +153,6 @@ namespace Smartphone_Management.GUI.GUI_SanPham.Dialog
                 DataGridViewFullSanPham.Rows[i].Cells[8].Value = sanphamDTO.Mancc;
                 DataGridViewFullSanPham.Rows[i].Cells[9].Value = sanphamDTO.Gianhap;
                 DataGridViewFullSanPham.Rows[i].Cells[10].Value = sanphamDTO.Giaban;
-            }
-            for (int i = 0; i < DataGridViewFullSanPham.Columns.Count; i++)
-            {
-                if (DataGridViewFullSanPham.Columns[i] is DataGridViewImageColumn)
-                {
-                    ((DataGridViewImageColumn)DataGridViewFullSanPham.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-                    break;
-                }
             }
         }
 

@@ -309,9 +309,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BanHangBUS.cs" />
     <Compile Include="BUS\GiaSanPhamBUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
     <Compile Include="BUS\SanPhamBUS.cs" />
+    <Compile Include="DAO\BanHangDAO.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
     <Compile Include="DAO\GiaSanPhamDAO.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
@@ -336,6 +338,37 @@
     </Compile>
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang.Designer.cs">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_DonHang.Designer.cs">
+      <DependentUpon>BanHang_DonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_ThemKhachHang.Designer.cs">
+      <DependentUpon>BanHang_ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\CartItem.cs" />
+    <Compile Include="GUI\GUI_BanHang\ChiTietSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\ChiTietSanPham.Designer.cs">
+      <DependentUpon>ChiTietSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\GioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\GioHang.Designer.cs">
+      <DependentUpon>GioHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_SanPham\Dialog\FullDataDialog.cs">
       <SubType>Form</SubType>
@@ -384,6 +417,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\BanHang.resx">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\BanHang_DonHang.resx">
+      <DependentUpon>BanHang_DonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\BanHang_ThemKhachHang.resx">
+      <DependentUpon>BanHang_ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\ChiTietSanPham.resx">
+      <DependentUpon>ChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\GioHang.resx">
+      <DependentUpon>GioHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\FullDataDialog.resx">
       <DependentUpon>FullDataDialog.cs</DependentUpon>
@@ -441,10 +489,16 @@
   <ItemGroup>
     <None Include="GUI\Icon\icon_eye2.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="GUI\GUI_BanHang\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icon-search.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icon-cart.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-checkmark-150.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-search-64 %281%29.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-shopping-bag-100 %281%29.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-u-turn-to-left-100.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-update-left-rotation-100 %281%29.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-available-updates-100.png" />
     <Content Include="GUI\GUI_SanPham\HinhAnh\icon_delete.png" />
     <Content Include="GUI\GUI_SanPham\HinhAnh\icon_close.png" />
     <Content Include="GUI\GUI_SanPham\HinhAnh\icon_eye.png" />
