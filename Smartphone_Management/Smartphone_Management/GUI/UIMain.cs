@@ -204,7 +204,8 @@ namespace Smartphone_Management
 
         private void btnTaoPhieuNhap_Click(object sender, EventArgs e)
         {
-
+            SanPham sp = new SanPham();
+            openChildForm(sp);
         }
 
         private void btnTTPhieuNhap_Click(object sender, EventArgs e)

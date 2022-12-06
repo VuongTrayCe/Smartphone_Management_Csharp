@@ -87,6 +87,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.ButtonXuatSanPham = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonLastSanPham = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -127,6 +128,7 @@
             this.MaNhaCungCapSanPham = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonSelectMaNhaCungCap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.ButtonThemSanPhamExcel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGroupBox3.SuspendLayout();
             this.PanelLoiSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSanPham)).BeginInit();
@@ -160,7 +162,7 @@
             this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
             this.bunifuGroupBox3.Location = new System.Drawing.Point(871, 21);
             this.bunifuGroupBox3.Name = "bunifuGroupBox3";
-            this.bunifuGroupBox3.Size = new System.Drawing.Size(309, 320);
+            this.bunifuGroupBox3.Size = new System.Drawing.Size(309, 323);
             this.bunifuGroupBox3.TabIndex = 2;
             this.bunifuGroupBox3.TabStop = false;
             this.bunifuGroupBox3.Text = "Thao Tác";
@@ -1631,7 +1633,6 @@
             this.bunifuGroupBox2.TabIndex = 1;
             this.bunifuGroupBox2.TabStop = false;
             this.bunifuGroupBox2.Text = "Ảnh Sản Phẩm";
-            this.bunifuGroupBox2.Enter += new System.EventHandler(this.bunifuGroupBox2_Enter);
             // 
             // MaSanPham
             // 
@@ -2414,6 +2415,7 @@
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
             this.bunifuGroupBox1.BorderRadius = 2;
             this.bunifuGroupBox1.BorderThickness = 1;
+            this.bunifuGroupBox1.Controls.Add(this.ButtonThemSanPhamExcel);
             this.bunifuGroupBox1.Controls.Add(this.ButtonSelectMaNhaCungCap);
             this.bunifuGroupBox1.Controls.Add(this.MaNhaCungCapSanPham);
             this.bunifuGroupBox1.Controls.Add(this.label8);
@@ -2442,6 +2444,97 @@
             this.bunifuGroupBox1.TabIndex = 0;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Thông Tin Sản Phẩm";
+            // 
+            // ButtonThemSanPhamExcel
+            // 
+            this.ButtonThemSanPhamExcel.AllowAnimations = true;
+            this.ButtonThemSanPhamExcel.AllowMouseEffects = true;
+            this.ButtonThemSanPhamExcel.AllowToggling = false;
+            this.ButtonThemSanPhamExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonThemSanPhamExcel.AnimationSpeed = 200;
+            this.ButtonThemSanPhamExcel.AutoGenerateColors = false;
+            this.ButtonThemSanPhamExcel.AutoRoundBorders = false;
+            this.ButtonThemSanPhamExcel.AutoSizeLeftIcon = true;
+            this.ButtonThemSanPhamExcel.AutoSizeRightIcon = true;
+            this.ButtonThemSanPhamExcel.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonThemSanPhamExcel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonThemSanPhamExcel.BackgroundImage")));
+            this.ButtonThemSanPhamExcel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonThemSanPhamExcel.ButtonText = "Thêm Sản Phẩm Excel";
+            this.ButtonThemSanPhamExcel.ButtonTextMarginLeft = 0;
+            this.ButtonThemSanPhamExcel.ColorContrastOnClick = 45;
+            this.ButtonThemSanPhamExcel.ColorContrastOnHover = 45;
+            this.ButtonThemSanPhamExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.ButtonThemSanPhamExcel.CustomizableEdges = borderEdges15;
+            this.ButtonThemSanPhamExcel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonThemSanPhamExcel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ButtonThemSanPhamExcel.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ButtonThemSanPhamExcel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ButtonThemSanPhamExcel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ButtonThemSanPhamExcel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonThemSanPhamExcel.ForeColor = System.Drawing.Color.White;
+            this.ButtonThemSanPhamExcel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonThemSanPhamExcel.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonThemSanPhamExcel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ButtonThemSanPhamExcel.IconMarginLeft = 11;
+            this.ButtonThemSanPhamExcel.IconPadding = 10;
+            this.ButtonThemSanPhamExcel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonThemSanPhamExcel.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonThemSanPhamExcel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ButtonThemSanPhamExcel.IconSize = 25;
+            this.ButtonThemSanPhamExcel.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.IdleBorderRadius = 5;
+            this.ButtonThemSanPhamExcel.IdleBorderThickness = 1;
+            this.ButtonThemSanPhamExcel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("ButtonThemSanPhamExcel.IdleIconLeftImage")));
+            this.ButtonThemSanPhamExcel.IdleIconRightImage = null;
+            this.ButtonThemSanPhamExcel.IndicateFocus = false;
+            this.ButtonThemSanPhamExcel.Location = new System.Drawing.Point(313, 255);
+            this.ButtonThemSanPhamExcel.Name = "ButtonThemSanPhamExcel";
+            this.ButtonThemSanPhamExcel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ButtonThemSanPhamExcel.OnDisabledState.BorderRadius = 5;
+            this.ButtonThemSanPhamExcel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonThemSanPhamExcel.OnDisabledState.BorderThickness = 1;
+            this.ButtonThemSanPhamExcel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ButtonThemSanPhamExcel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ButtonThemSanPhamExcel.OnDisabledState.IconLeftImage = null;
+            this.ButtonThemSanPhamExcel.OnDisabledState.IconRightImage = null;
+            this.ButtonThemSanPhamExcel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.onHoverState.BorderRadius = 5;
+            this.ButtonThemSanPhamExcel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonThemSanPhamExcel.onHoverState.BorderThickness = 1;
+            this.ButtonThemSanPhamExcel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ButtonThemSanPhamExcel.onHoverState.IconLeftImage = null;
+            this.ButtonThemSanPhamExcel.onHoverState.IconRightImage = null;
+            this.ButtonThemSanPhamExcel.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.OnIdleState.BorderRadius = 5;
+            this.ButtonThemSanPhamExcel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonThemSanPhamExcel.OnIdleState.BorderThickness = 1;
+            this.ButtonThemSanPhamExcel.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.ButtonThemSanPhamExcel.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.ButtonThemSanPhamExcel.OnIdleState.IconRightImage = null;
+            this.ButtonThemSanPhamExcel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.OnPressedState.BorderRadius = 5;
+            this.ButtonThemSanPhamExcel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonThemSanPhamExcel.OnPressedState.BorderThickness = 1;
+            this.ButtonThemSanPhamExcel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.ButtonThemSanPhamExcel.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ButtonThemSanPhamExcel.OnPressedState.IconLeftImage = null;
+            this.ButtonThemSanPhamExcel.OnPressedState.IconRightImage = null;
+            this.ButtonThemSanPhamExcel.Size = new System.Drawing.Size(274, 45);
+            this.ButtonThemSanPhamExcel.TabIndex = 24;
+            this.ButtonThemSanPhamExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtonThemSanPhamExcel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ButtonThemSanPhamExcel.TextMarginLeft = 0;
+            this.ButtonThemSanPhamExcel.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonThemSanPhamExcel.UseDefaultRadiusAndThickness = true;
+            this.ButtonThemSanPhamExcel.Click += new System.EventHandler(this.ButtonThemSanPhamExcel_Click);
             // 
             // SanPham
             // 
@@ -2518,5 +2611,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox MaNhaCungCapSanPham;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonSelectMaNhaCungCap;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonThemSanPhamExcel;
     }
 }

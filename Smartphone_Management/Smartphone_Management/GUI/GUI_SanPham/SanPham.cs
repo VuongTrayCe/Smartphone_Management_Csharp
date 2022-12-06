@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using ExcelDataReader;
 using Smartphone_Management.BUS;
 using Smartphone_Management.DAO;
 using Smartphone_Management.DTO;
@@ -452,9 +453,91 @@ namespace Smartphone_Management.GUI.GUI_SanPham
             
         }
 
-        private void bunifuGroupBox2_Enter(object sender, EventArgs e)
+        /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* THÊM SẢN PHẨM BẰNG FILE EXCEL *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+        private void ButtonThemSanPhamExcel_Click(object sender, EventArgs e)
         {
+            var filePath = string.Empty;
+            OpenFileDialog OpenFile = new OpenFileDialog();
 
+            OpenFile.Filter = "Excel Files|*.xlsx*";
+            OpenFile.Title = "Chọn file Excel chứa dữ liệu sản phẩm";
+            OpenFile.FilterIndex = 2;
+            OpenFile.RestoreDirectory = true;
+
+            if (OpenFile.ShowDialog() == DialogResult.OK)
+            {
+                filePath = OpenFile.FileName;
+            }
+            DataTable table = new DataTable();
+            using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
+            {
+                IExcelDataReader reader;
+                reader = ExcelDataReader.ExcelReaderFactory.CreateReader(stream);
+                var config = new ExcelDataSetConfiguration
+                {
+                    ConfigureDataTable = _ => new ExcelDataTableConfiguration
+                    {
+                        UseHeaderRow = true
+                    }
+                };
+                var dataSet = reader.AsDataSet(config);
+                table = dataSet.Tables[0];
+            }
+            WarningDialog warningDialog = new WarningDialog("Bạn có muốn thêm các sản phẩm này?");
+            DialogResult dialogResult = warningDialog.ShowDialog();
+            if (dialogResult == DialogResult.Cancel) { MaSanPham.Focus(); }
+            if (dialogResult == DialogResult.Yes)
+            {
+                MaSanPham.Focus();
+                int i = 0;
+                int error = 0;
+                foreach (DataRow item in table.Rows)
+                {
+                    i++;
+                    string errorMessage = sanphamBUS.checkInputSanPham(
+                       item["Tensp"].ToString(), item["Loaisp"].ToString(), item["MauSac"].ToString(), item["Namsx"].ToString(),
+                       item["ThongSo"].ToString(), item["Mancc"].ToString()
+                       );
+                    if (errorMessage.Equals(""))
+                    {
+                        PanelLoiSanPham.Hide();
+                    } else
+                    {
+                        PanelLoiSanPham.Show();
+                        LabelLoiSanPham.Text = errorMessage + ". Dòng thứ [ " + (i + 1) + " ] trong File Import.";
+                        error++;
+                        break;
+                    }
+                }
+                if(error == 0)
+                {
+                    foreach(DataRow item in table.Rows)
+                    {
+                        /*---------------------------- Insert sản phẩm ----------------------------*/
+                        SanPhamDTO sanphamDTO = new SanPhamDTO();
+                        sanphamDTO.Tensp = item["Tensp"].ToString();
+                        sanphamDTO.Loaisp = item["Loaisp"].ToString();
+                        sanphamDTO.soluong = 0;
+                        sanphamDTO.MauSac = item["MauSac"].ToString();
+                        sanphamDTO.Namsx = item["Namsx"].ToString();
+                        sanphamDTO.TrangThai = "T";
+                        sanphamDTO.Icon = "";
+                        sanphamDTO.ThongSo = item["ThongSo"].ToString();
+                        sanphamDTO.Mancc = Int32.Parse(item["Mancc"].ToString());
+                        sanphamBUS.insertSanPham(sanphamDTO);
+                        /*---------------------------- Insert giá sản phẩm ----------------------------*/
+                        GiaSanPhamDTO giaSanPhamDTO = new GiaSanPhamDTO();
+                        giaSanPhamDTO.Masp = sanphamBUS.getMaSanPhamCuoiCung();
+                        giaSanPhamDTO.Gianhap = 0;
+                        giaSanPhamDTO.Giaban = 0;
+                        giaSanPhamDTO.Ngayupdate = getToday();
+                        giaSanPhamDTO.TrangThai = "T";
+                        giaSanPhamBUS.insertGiaSanPham(giaSanPhamDTO);
+                        resetForm();
+                        showSanPham();
+                    }
+                }
+            }
         }
     }
 }

@@ -173,7 +173,6 @@ C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.pdb
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_SanPham.SanPham.resources
-C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe.config
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.exe.licenses
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_SanPham.Dialog.WarningDialog.resources
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_SanPham.Dialog.SelectDialog.resources
@@ -184,3 +183,5 @@ C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.BanHang_ThemKhachHang.resources
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.ChiTietSanPham.resources
 C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.GUI_BanHang.GioHang.resources
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\ExcelDataReader.xml
+C:\Users\thanh\OneDrive\Máy tính\QuanLyDienThoai\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\ExcelDataReader.DataSet.xml
