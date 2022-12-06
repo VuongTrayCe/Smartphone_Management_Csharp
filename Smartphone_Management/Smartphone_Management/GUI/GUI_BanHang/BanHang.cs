@@ -76,11 +76,29 @@ namespace Smartphone_Management.GUI.GUI_BanHang
 
         /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* THÊM SẢN PHẨM VÀO GIỎ HÀNG *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
         private void ThemSanPham_Click(object sender, EventArgs e)
-        {
+        {       
             int selectedIndex = BanHang_DanhSachSanPham.SelectedRows[0].Index;
             int selectedMaSP = (int) BanHang_DanhSachSanPham.Rows[selectedIndex].Cells[0].Value;
-            listMaSPGioHang.Add(selectedMaSP);
-            BanHang_OpenGioHang.Text = listMaSPGioHang.Count.ToString();
+            int SLConLai = banHangBUS.getSoLuongSanPhamByMaSP(selectedMaSP);
+            if(SLConLai > 0)
+            {
+                int count = 0;
+                for(int i = 0; i < listMaSPGioHang.Count; i++)
+                {
+                    if(listMaSPGioHang[i] == selectedMaSP) count++;
+                }
+                if(count < SLConLai)
+                {
+                    listMaSPGioHang.Add(selectedMaSP);
+                    BanHang_OpenGioHang.Text = listMaSPGioHang.Count.ToString();                  
+                } else
+                {
+                    MessageBox.Show("Số lượng sản phẩm không đủ! Vui lòng chọn sản phẩm khác");
+                }
+            } else
+            {
+                MessageBox.Show("Hết sản phẩm! Vui lòng chọn sản phẩm khác");
+            }
         }
 
         /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* FETCH GIỎ HÀNG *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
