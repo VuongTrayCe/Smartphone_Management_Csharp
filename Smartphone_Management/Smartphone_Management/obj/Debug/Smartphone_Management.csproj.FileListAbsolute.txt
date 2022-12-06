@@ -205,3 +205,5 @@ D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Manag
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPham.resources
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.themSanPhamPhieuNhap.resources
 D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\bin\Debug\itextsharp.xml
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.KhachHang.QuanLyKhachHang.resources
+D:\hocCSharp\Smartphone_Management_Csharp\Smartphone_Management\Smartphone_Management\obj\Debug\Smartphone_Management.GUI.NhanVien.QuanLyNhanVien.resources

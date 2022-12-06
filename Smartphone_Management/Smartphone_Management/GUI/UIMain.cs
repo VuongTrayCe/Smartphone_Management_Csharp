@@ -4,8 +4,10 @@ using Smartphone_Management.GUI;
 using Smartphone_Management.GUI.BaoHanh;
 using Smartphone_Management.GUI.DonHang;
 using Smartphone_Management.GUI.GUI_SanPham;
+using Smartphone_Management.GUI.KhachHang;
 using Smartphone_Management.GUI.Login;
 using Smartphone_Management.GUI.Login.QuanLyQuyenTaiKhoan;
+using Smartphone_Management.GUI.NhanVien;
 using Smartphone_Management.GUI.ThongKe;
 using System;
 using System.Collections;
@@ -396,6 +398,18 @@ namespace Smartphone_Management
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien a = new QuanLyNhanVien();
+            openChildForm(a);
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHang a = new QuanLyKhachHang();
+            openChildForm(a);
         }
     }
 }

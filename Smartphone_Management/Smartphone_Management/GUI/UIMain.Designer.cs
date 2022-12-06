@@ -303,6 +303,7 @@
             this.btnKhachHang.Text = "Quản Lý Khách Hàng";
             this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhachHang.UseVisualStyleBackColor = true;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhanVien
             // 
@@ -321,6 +322,7 @@
             this.btnNhanVien.Text = "Quản Lý Nhân Viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnConNguoi
             // 

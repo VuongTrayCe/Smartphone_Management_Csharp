@@ -298,7 +298,9 @@
     <Compile Include="BUS\LoiNhuanBanHang_BUS.cs" />
     <Compile Include="BUS\QuanLyBaoHanh_BUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
+    <Compile Include="BUS\QuanLyKhachHang_BUS.cs" />
     <Compile Include="BUS\QuanLyKhuyenMai_BUS.cs" />
+    <Compile Include="BUS\QuanLyNhanVien_BUS.cs" />
     <Compile Include="BUS\QuanLyPhanQuyen_BUS.cs" />
     <Compile Include="BUS\QuanLyTaiKhoan_BUS.cs" />
     <Compile Include="BUS\SanPhamBUS.cs" />
@@ -312,7 +314,9 @@
     <Compile Include="DAO\LoiNhuanBanHang_DAO.cs" />
     <Compile Include="DAO\QuanLyBaoHanh_DAO.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="DAO\QuanLyKhachHang_DAO.cs" />
     <Compile Include="DAO\QuanLyKhuyenMai_DAO.cs" />
+    <Compile Include="DAO\QuanLyNhanVien_DAO.cs" />
     <Compile Include="DAO\QuanLyPhanQuyen_DAO.cs" />
     <Compile Include="DAO\QuanLyTaiKhoan_DAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
@@ -326,6 +330,8 @@
     <Compile Include="DTO\khuyenmai.cs" />
     <Compile Include="DTO\Model_ChiTietPhieuNhap.cs" />
     <Compile Include="DTO\Model_DonHang_ChiTietDonHang.cs" />
+    <Compile Include="DTO\model_kh.cs" />
+    <Compile Include="DTO\model_nv.cs" />
     <Compile Include="DTO\Model_PhieuNhap.cs" />
     <Compile Include="DTO\nhanvien.cs" />
     <Compile Include="DTO\quyen.cs" />
@@ -389,6 +395,12 @@
       <DependentUpon>SanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_SanPham\ValidateData\ValidateData.cs" />
+    <Compile Include="GUI\KhachHang\QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHang\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Login\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -463,6 +475,12 @@
     </Compile>
     <Compile Include="GUI\Login\XoaTaiKhoan.Designer.cs">
       <DependentUpon>XoaTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs">
       <SubType>Form</SubType>
@@ -579,6 +597,9 @@
     <EmbeddedResource Include="GUI\GUI_SanPham\SanPham.resx">
       <DependentUpon>SanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHang\QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -614,6 +635,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\XoaTaiKhoan.resx">
       <DependentUpon>XoaTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhanVien\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuNhap\chiTietPhieuNhap.resx">
       <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
@@ -823,6 +847,8 @@
     <None Include="GUI\Icon\Logos-Excel-icon.png" />
     <None Include="GUI\Icon\Very-Basic-Print-icon.png" />
     <None Include="GUI\Icon\search.png" />
+    <None Include="GUI\Icon\check.png" />
+    <None Include="GUI\Icon\Delete.png" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />
