@@ -285,6 +285,7 @@
             this.btnNhaCungCap.Text = "Quản Lý Nhà Cung Cấp";
             this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhaCungCap.UseVisualStyleBackColor = true;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // btnKhachHang
             // 

@@ -411,5 +411,11 @@ namespace Smartphone_Management
             QuanLyKhachHang a = new QuanLyKhachHang();
             openChildForm(a);
         }
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            QuanLyNhaCungCap a = new QuanLyNhaCungCap();
+            openChildForm(a);
+        }
     }
 }

@@ -300,6 +300,7 @@
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
     <Compile Include="BUS\QuanLyKhachHang_BUS.cs" />
     <Compile Include="BUS\QuanLyKhuyenMai_BUS.cs" />
+    <Compile Include="BUS\QuanLyNCC_BUS.cs" />
     <Compile Include="BUS\QuanLyNhanVien_BUS.cs" />
     <Compile Include="BUS\QuanLyPhanQuyen_BUS.cs" />
     <Compile Include="BUS\QuanLyTaiKhoan_BUS.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
     <Compile Include="DAO\QuanLyKhachHang_DAO.cs" />
     <Compile Include="DAO\QuanLyKhuyenMai_DAO.cs" />
+    <Compile Include="DAO\QuanLyNCC_DAO.cs" />
     <Compile Include="DAO\QuanLyNhanVien_DAO.cs" />
     <Compile Include="DAO\QuanLyPhanQuyen_DAO.cs" />
     <Compile Include="DAO\QuanLyTaiKhoan_DAO.cs" />
@@ -333,6 +335,7 @@
     <Compile Include="DTO\model_kh.cs" />
     <Compile Include="DTO\model_nv.cs" />
     <Compile Include="DTO\Model_PhieuNhap.cs" />
+    <Compile Include="DTO\nhacungcap.cs" />
     <Compile Include="DTO\nhanvien.cs" />
     <Compile Include="DTO\quyen.cs" />
     <Compile Include="DTO\quyen_taikhoan.cs" />
@@ -412,6 +415,12 @@
     </Compile>
     <Compile Include="GUI\Login\QuanLyKhuyenMai.Designer.cs">
       <DependentUpon>QuanLyKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\QuanLyNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\QuanLyNhaCungCap.Designer.cs">
+      <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.cs">
       <SubType>Form</SubType>
@@ -605,6 +614,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\QuanLyKhuyenMai.resx">
       <DependentUpon>QuanLyKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaCungCap\QuanLyNhaCungCap.resx">
+      <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.resx">
       <DependentUpon>QuanLyQuyenTaiKhoan1.cs</DependentUpon>
@@ -841,6 +853,7 @@
     <Content Include="GUI\GUI_SanPham\HinhAnh\icon_upload_image.png" />
     <Content Include="GUI\GUI_SanPham\HinhAnh\no_image.png" />
     <None Include="GUI\Icon\Add - Copy.png" />
+    <None Include="GUI\Icon\Add.png" />
     <Content Include="GUI\Icon\background_welcome.jpg" />
     <Content Include="GUI\Icon\bg_user.png" />
     <None Include="GUI\Icon\Refresh.png" />
@@ -849,6 +862,7 @@
     <None Include="GUI\Icon\search.png" />
     <None Include="GUI\Icon\check.png" />
     <None Include="GUI\Icon\Delete.png" />
+    <None Include="GUI\Icon\fix.png" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />
