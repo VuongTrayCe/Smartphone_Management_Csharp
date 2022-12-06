@@ -54,7 +54,6 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtTimKiem = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnXuatEcel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.dataGirdView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Xem = new System.Windows.Forms.DataGridViewImageColumn();
@@ -92,7 +91,7 @@
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(3, 8);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(164, 41);
+            this.panel5.Size = new System.Drawing.Size(239, 41);
             this.panel5.TabIndex = 2;
             // 
             // label1
@@ -100,11 +99,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Location = new System.Drawing.Point(2, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 25);
+            this.label1.Size = new System.Drawing.Size(229, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Đơn Đặt Hàng";
+            this.label1.Text = "Thông Tin Đơn Hàng";
             // 
             // panel6
             // 
@@ -164,7 +163,7 @@
             this.groupBox1.Controls.Add(this.dateStart);
             this.groupBox1.Controls.Add(this.DateEnd);
             this.groupBox1.Controls.Add(this.panel6);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(634, 92);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 361);
@@ -395,7 +394,7 @@
             this.btnXuatEcel.AutoSizeLeftIcon = true;
             this.btnXuatEcel.AutoSizeRightIcon = true;
             this.btnXuatEcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnXuatEcel.BackColor1 = System.Drawing.Color.Black;
+            this.btnXuatEcel.BackColor1 = System.Drawing.Color.White;
             this.btnXuatEcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatEcel.BackgroundImage")));
             this.btnXuatEcel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnXuatEcel.ButtonText = "Xuất Excel";
@@ -414,7 +413,7 @@
             this.btnXuatEcel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnXuatEcel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnXuatEcel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatEcel.ForeColor = System.Drawing.Color.White;
+            this.btnXuatEcel.ForeColor = System.Drawing.Color.Black;
             this.btnXuatEcel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXuatEcel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnXuatEcel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -423,15 +422,15 @@
             this.btnXuatEcel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuatEcel.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnXuatEcel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnXuatEcel.IconSize = 25;
-            this.btnXuatEcel.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXuatEcel.IconSize = 40;
+            this.btnXuatEcel.IdleBorderColor = System.Drawing.Color.White;
             this.btnXuatEcel.IdleBorderRadius = 1;
             this.btnXuatEcel.IdleBorderThickness = 1;
-            this.btnXuatEcel.IdleFillColor = System.Drawing.Color.Black;
-            this.btnXuatEcel.IdleIconLeftImage = null;
+            this.btnXuatEcel.IdleFillColor = System.Drawing.Color.White;
+            this.btnXuatEcel.IdleIconLeftImage = global::Smartphone_Management.Properties.Resources.Logos_Excel_icon;
             this.btnXuatEcel.IdleIconRightImage = null;
             this.btnXuatEcel.IndicateFocus = false;
-            this.btnXuatEcel.Location = new System.Drawing.Point(726, 18);
+            this.btnXuatEcel.Location = new System.Drawing.Point(492, 47);
             this.btnXuatEcel.Name = "btnXuatEcel";
             this.btnXuatEcel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXuatEcel.OnDisabledState.BorderRadius = 1;
@@ -449,13 +448,13 @@
             this.btnXuatEcel.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnXuatEcel.onHoverState.IconLeftImage = null;
             this.btnXuatEcel.onHoverState.IconRightImage = null;
-            this.btnXuatEcel.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXuatEcel.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.btnXuatEcel.OnIdleState.BorderRadius = 1;
             this.btnXuatEcel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnXuatEcel.OnIdleState.BorderThickness = 1;
-            this.btnXuatEcel.OnIdleState.FillColor = System.Drawing.Color.Black;
-            this.btnXuatEcel.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnXuatEcel.OnIdleState.IconLeftImage = null;
+            this.btnXuatEcel.OnIdleState.FillColor = System.Drawing.Color.White;
+            this.btnXuatEcel.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btnXuatEcel.OnIdleState.IconLeftImage = global::Smartphone_Management.Properties.Resources.Logos_Excel_icon;
             this.btnXuatEcel.OnIdleState.IconRightImage = null;
             this.btnXuatEcel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnXuatEcel.OnPressedState.BorderRadius = 1;
@@ -465,32 +464,14 @@
             this.btnXuatEcel.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnXuatEcel.OnPressedState.IconLeftImage = null;
             this.btnXuatEcel.OnPressedState.IconRightImage = null;
-            this.btnXuatEcel.Size = new System.Drawing.Size(108, 31);
+            this.btnXuatEcel.Size = new System.Drawing.Size(134, 46);
             this.btnXuatEcel.TabIndex = 7;
-            this.btnXuatEcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXuatEcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuatEcel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnXuatEcel.TextMarginLeft = 0;
-            this.btnXuatEcel.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnXuatEcel.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnXuatEcel.UseDefaultRadiusAndThickness = true;
             this.btnXuatEcel.Click += new System.EventHandler(this.btnXuatEcel_Click);
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton5.IconColor = System.Drawing.Color.Black;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(600, 18);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(98, 31);
-            this.iconButton5.TabIndex = 5;
-            this.iconButton5.Text = "Print";
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // btnTimKiem
             // 
@@ -507,11 +488,11 @@
             // 
             // dataGirdView1
             // 
-            this.dataGirdView1.AllowCustomTheming = true;
+            this.dataGirdView1.AllowCustomTheming = false;
             this.dataGirdView1.AllowUserToAddRows = false;
             this.dataGirdView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dataGirdView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGirdView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -522,10 +503,10 @@
             this.dataGirdView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGirdView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGirdView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -533,35 +514,35 @@
             this.dataGirdView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Xem,
             this.In});
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGirdView1.CurrentTheme.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGirdView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.dataGirdView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGirdView1.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            this.dataGirdView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.dataGirdView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.dataGirdView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dataGirdView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGirdView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.dataGirdView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.dataGirdView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataGirdView1.CurrentTheme.Name = null;
-            this.dataGirdView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.dataGirdView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.dataGirdView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dataGirdView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGirdView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGirdView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGirdView1.EnableHeadersVisualStyles = false;
-            this.dataGirdView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.dataGirdView1.HeaderBackColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGirdView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.dataGirdView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.dataGirdView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dataGirdView1.HeaderForeColor = System.Drawing.Color.White;
             this.dataGirdView1.Location = new System.Drawing.Point(10, 99);
@@ -596,12 +577,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(846, 465);
             this.Controls.Add(this.dataGirdView1);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnXuatEcel);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnTimKiem);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -633,7 +614,6 @@
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.ComboBox cbbTrangThai;
-        private FontAwesome.Sharp.IconButton iconButton5;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnxem;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnXuatEcel;

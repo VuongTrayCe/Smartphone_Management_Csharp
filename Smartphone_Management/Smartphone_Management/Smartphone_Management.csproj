@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.Licensing.5.0.0\lib\net40\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -84,6 +87,9 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
@@ -296,6 +302,8 @@
     <Compile Include="BUS\QuanLyPhanQuyen_BUS.cs" />
     <Compile Include="BUS\QuanLyTaiKhoan_BUS.cs" />
     <Compile Include="BUS\SanPhamBUS.cs" />
+    <Compile Include="BUS\themPhieuNhap_BUS.cs" />
+    <Compile Include="BUS\themSanPhamPhieuNhap_BUS.cs" />
     <Compile Include="BUS\ThongKeBaoCao_BUS.cs" />
     <Compile Include="BUS\ThongKeBaoCao_NhapHang_BUS.cs" />
     <Compile Include="BUS\thongTinPhieuNhap_BUS.cs" />
@@ -309,13 +317,16 @@
     <Compile Include="DAO\QuanLyTaiKhoan_DAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DAO\themPhieuNhap_DAO.cs" />
+    <Compile Include="DAO\themSanPhamPhieuNhap_DAO.cs" />
     <Compile Include="DAO\ThongKeBaoCao_DAO.cs" />
     <Compile Include="DAO\ThongKeBaoCao_NhapHang_DAO.cs" />
     <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
     <Compile Include="DTO\chitietkhuyenmai.cs" />
     <Compile Include="DTO\GiaSanPhamDTO.cs" />
     <Compile Include="DTO\khuyenmai.cs" />
+    <Compile Include="DTO\Model_ChiTietPhieuNhap.cs" />
     <Compile Include="DTO\Model_DonHang_ChiTietDonHang.cs" />
+    <Compile Include="DTO\Model_PhieuNhap.cs" />
     <Compile Include="DTO\nhanvien.cs" />
     <Compile Include="DTO\quyen.cs" />
     <Compile Include="DTO\quyen_taikhoan.cs" />
@@ -339,6 +350,7 @@
     <Compile Include="GUI\DonHang\FormExport_PreView.Designer.cs">
       <DependentUpon>FormExport_PreView.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DonHang\Print.cs" />
     <Compile Include="GUI\DonHang\PrintDataGirdView.cs" />
     <Compile Include="GUI\DonHang\QuanLyDonHang.cs">
       <SubType>Form</SubType>
@@ -458,11 +470,29 @@
     <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
       <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PhieuNhap\themNcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themNcc.Designer.cs">
+      <DependentUpon>themNcc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PhieuNhap\themPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\PhieuNhap\themPhieuNhap.Designer.cs">
       <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPham.Designer.cs">
+      <DependentUpon>themSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPhamPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPhamPhieuNhap.Designer.cs">
+      <DependentUpon>themSanPhamPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.cs">
       <SubType>Form</SubType>
@@ -588,8 +618,17 @@
     <EmbeddedResource Include="GUI\PhieuNhap\chiTietPhieuNhap.resx">
       <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themNcc.resx">
+      <DependentUpon>themNcc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuNhap\themPhieuNhap.resx">
       <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themSanPham.resx">
+      <DependentUpon>themSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themSanPhamPhieuNhap.resx">
+      <DependentUpon>themSanPhamPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuNhap\thongTinPhieuNhap.resx">
       <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
@@ -782,6 +821,8 @@
     <Content Include="GUI\Icon\bg_user.png" />
     <None Include="GUI\Icon\Refresh.png" />
     <None Include="GUI\Icon\Logos-Excel-icon.png" />
+    <None Include="GUI\Icon\Very-Basic-Print-icon.png" />
+    <None Include="GUI\Icon\search.png" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />

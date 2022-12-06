@@ -52,9 +52,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Smartphone_Management.Properties.Resources.background_welcome;
-            this.pictureBox1.Location = new System.Drawing.Point(75, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(595, 604);
+            this.pictureBox1.Size = new System.Drawing.Size(446, 491);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -62,7 +63,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Smartphone_Management.Properties.Resources.bg_user;
-            this.pictureBox2.Location = new System.Drawing.Point(1067, 96);
+            this.pictureBox2.Location = new System.Drawing.Point(673, 75);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -74,9 +76,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(1029, 212);
+            this.label1.Location = new System.Drawing.Point(645, 169);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 21);
+            this.label1.Size = new System.Drawing.Size(157, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Đăng nhập để sử dụng";
             // 
@@ -85,9 +88,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(955, 269);
+            this.label2.Location = new System.Drawing.Point(589, 216);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 21);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tài khoản";
             // 
@@ -96,9 +100,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(955, 367);
+            this.label3.Location = new System.Drawing.Point(589, 295);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 21);
+            this.label3.Size = new System.Drawing.Size(72, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Mật khẩu";
             // 
@@ -129,7 +134,8 @@
             this.txtTaiKhoan.IconRight = null;
             this.txtTaiKhoan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTaiKhoan.Lines = new string[0];
-            this.txtTaiKhoan.Location = new System.Drawing.Point(959, 303);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(592, 243);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTaiKhoan.MaxLength = 32767;
             this.txtTaiKhoan.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTaiKhoan.Modified = false;
@@ -155,7 +161,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtTaiKhoan.OnIdleState = stateProperties4;
-            this.txtTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
+            this.txtTaiKhoan.Padding = new System.Windows.Forms.Padding(2);
             this.txtTaiKhoan.PasswordChar = '\0';
             this.txtTaiKhoan.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtTaiKhoan.PlaceholderText = "";
@@ -165,7 +171,7 @@
             this.txtTaiKhoan.SelectionLength = 0;
             this.txtTaiKhoan.SelectionStart = 0;
             this.txtTaiKhoan.ShortcutsEnabled = true;
-            this.txtTaiKhoan.Size = new System.Drawing.Size(336, 48);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(252, 39);
             this.txtTaiKhoan.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTaiKhoan.TabIndex = 11;
             this.txtTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -203,7 +209,8 @@
             this.txtMatKhau.IconRight = null;
             this.txtMatKhau.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhau.Lines = new string[0];
-            this.txtMatKhau.Location = new System.Drawing.Point(959, 405);
+            this.txtMatKhau.Location = new System.Drawing.Point(592, 326);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2);
             this.txtMatKhau.MaxLength = 32767;
             this.txtMatKhau.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMatKhau.Modified = false;
@@ -229,8 +236,8 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMatKhau.OnIdleState = stateProperties8;
-            this.txtMatKhau.Padding = new System.Windows.Forms.Padding(3);
-            this.txtMatKhau.PasswordChar = '\0';
+            this.txtMatKhau.Padding = new System.Windows.Forms.Padding(2);
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMatKhau.PlaceholderText = "";
             this.txtMatKhau.ReadOnly = false;
@@ -239,7 +246,7 @@
             this.txtMatKhau.SelectionLength = 0;
             this.txtMatKhau.SelectionStart = 0;
             this.txtMatKhau.ShortcutsEnabled = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(336, 48);
+            this.txtMatKhau.Size = new System.Drawing.Size(252, 39);
             this.txtMatKhau.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMatKhau.TabIndex = 12;
             this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -261,9 +268,10 @@
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(959, 478);
+            this.btnDangNhap.Location = new System.Drawing.Point(592, 385);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(336, 48);
+            this.btnDangNhap.Size = new System.Drawing.Size(252, 39);
             this.btnDangNhap.TabIndex = 10;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextColor = System.Drawing.Color.White;
@@ -272,10 +280,10 @@
             // 
             // DangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1445, 665);
+            this.ClientSize = new System.Drawing.Size(888, 540);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.btnDangNhap);
@@ -285,6 +293,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập nè các tình yêu";

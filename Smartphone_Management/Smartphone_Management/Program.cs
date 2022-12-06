@@ -1,4 +1,5 @@
 ﻿using Smartphone_Management.BUS;
+using Smartphone_Management.GUI;
 using Smartphone_Management.GUI.BaoHanh;
 using Smartphone_Management.GUI.DonHang;
 using Smartphone_Management.GUI.GUI_SanPham;
@@ -22,7 +23,7 @@ namespace Smartphone_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UIMain());
+            Application.Run(new UIMain(12,"Vuong",new DangNhap()));
         }
     }
 }

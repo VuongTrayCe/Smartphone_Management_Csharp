@@ -76,6 +76,10 @@ namespace Smartphone_Management.BUS
         // Update lại trạng thái đơn hàng
         internal void updateDonHang(int madh)
         {
+            int diemthuong = qlddh_dao.getDiemThuongDonHang(madh);
+            int makh = qlddh_dao.getMaKhachHang(madh);
+            int diemhientai = qlddh_dao.getDiemHienTaiKhachHang(makh);
+            qlddh_dao.UpdateDiemKhachHang(makh, diemhientai + diemthuong);
             qlddh_dao.updateTrangThaiDonHang(madh);
         }
 
@@ -115,9 +119,6 @@ namespace Smartphone_Management.BUS
             {
                 data.Rows[i][0] = i + 1;
             }
-
-            DataRow row4 = data.NewRow();
-            data.Rows.Add(row4);
             DataRow row2 = data.NewRow();
 
             row2["Tensp"] = "Tổng Hàng";

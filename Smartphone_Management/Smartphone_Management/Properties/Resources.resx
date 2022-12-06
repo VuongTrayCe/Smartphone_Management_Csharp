@@ -121,6 +121,9 @@
   <data name="background_welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\GUI\Icon\background_welcome.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Very-Basic-Print-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\GUI\Icon\Very-Basic-Print-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_eye2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\GUI\Icon\icon_eye2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,10 +142,13 @@
   <data name="bg_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\GUI\Icon\bg_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logos-Excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\GUI\Icon\Logos-Excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Printer-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\GUI\Icon\Printer-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logos-Excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\GUI\Icon\Logos-Excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\GUI\Icon\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

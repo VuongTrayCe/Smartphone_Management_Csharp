@@ -88,8 +88,8 @@ public void openReportForm()
             }
             if (isopen == false)
             {
-               FormExport_PreView formPrinter =  new FormExport_PreView(data);
-                formPrinter.Show();
+                int index = dataGirdView1.CurrentRow.Index;
+                //Print a = new Print(data, index);
             }
         }
         // Mở form chi tiết đơn hàng
@@ -166,7 +166,8 @@ public void openReportForm()
         }
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            //DGVPrinter printer = new DGVPrinter();
+            Print print = new Print();
+            //print.inHoaDon(dataGirdView1);
 
         }
 
@@ -246,8 +247,10 @@ public void openReportForm()
 
         private void dataGirdView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataTable newData;
             String value = (String)dataGirdView1.CurrentRow.Cells[4].Value;
             String tenkh = (String)dataGirdView1.CurrentRow.Cells[5].Value;
+            String ngaydat1 =dataGirdView1.CurrentRow.Cells[3].Value.ToString();
             DateTime ngaydat = (DateTime)dataGirdView1.CurrentRow.Cells[3].Value;
             String trangthai = cbbTrangThai.SelectedItem.ToString();
             //DateTime date = (DateTime)value;
@@ -261,9 +264,15 @@ public void openReportForm()
             //DateTime date = (DateTime)value;
             if (e.RowIndex >= 0 && e.ColumnIndex == 1)
             {
-                openReportForm();
 
+                newData = new DataTable();
+                newData = qldh_bus.getChiTietDonHang(madh);
+                Print a = new Print();
+                a.inHoaDon(newData, tenkh, String.Format("{0:yyyy-MM-dd}", DateTime.Parse(ngaydat1)));
             }
+
+
+            
         }
     }
 }

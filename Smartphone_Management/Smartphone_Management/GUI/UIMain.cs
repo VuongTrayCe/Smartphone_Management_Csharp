@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Smartphone_Management.BUS;
 using Smartphone_Management.GUI;
 using Smartphone_Management.GUI.BaoHanh;
 using Smartphone_Management.GUI.DonHang;
@@ -7,6 +8,7 @@ using Smartphone_Management.GUI.Login;
 using Smartphone_Management.GUI.Login.QuanLyQuyenTaiKhoan;
 using Smartphone_Management.GUI.ThongKe;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,13 +26,133 @@ namespace Smartphone_Management
     public partial class UIMain : Form
     {
         private IconButton currentBtn;
-
+        public static int manv=1;
         private Color corlor = Color.FromArgb(0, 127, 0);
         private int FlagColor = 0;
-        public UIMain()
+        DangNhap formDangNhap;
+        QuanLyTaiKhoan_BUS qltk = new QuanLyTaiKhoan_BUS();
+
+       public int BanHang;
+       public int PhieuNhap;
+       public int SanPham;
+       public  int DonHang;
+       public  int ChinhSach;
+       public int ConNguoi;
+       public int ThongKe;
+       public  int TaiKhoan;
+        public void CheckQuyen(int manv1)
+        {
+            List<String> arrQuyen = new List<string>();
+            this.BanHang = 0;
+            this.SanPham = 0;
+            this.DonHang = 0;
+            this.PhieuNhap = 0;
+            this.ConNguoi = 0;
+            ThongKe = 0;
+            TaiKhoan = 0;
+            ChinhSach = 0;
+            arrQuyen =  qltk.getALLQuyenTK(manv1);
+            foreach(String s in arrQuyen)
+            {
+                if (s.Equals("Quản Lý"))
+                {
+                    BanHang = 1;
+                    SanPham = 1;
+                    DonHang = 1;
+                    PhieuNhap = 1;
+                    ConNguoi = 1;
+                    ThongKe = 1;
+                    TaiKhoan = 1;
+                    ChinhSach = 1;
+                }
+                if (s.Equals("Bán Hàng"))
+                {
+                    BanHang = 1;
+                }
+                if (s.Equals("Đơn Hàng"))
+                {
+                    DonHang = 1;
+
+
+                }
+                if (s.Equals("Sản Phẩm"))
+                {
+                    SanPham = 1;
+                }
+                if (s.Equals("Phiếu Nhập"))
+                {
+                    PhieuNhap = 1;
+                }
+                if (s.Equals("Chính Sách"))
+                {
+                    ChinhSach = 1;
+
+                }
+                if (s.Equals("Con Người"))
+                {
+                    ConNguoi = 1;
+                }
+                if (s.Equals("Thống Kê"))
+                {
+                    ThongKe = 1;
+                }
+                if (s.Equals("Tài Khoản"))
+                {
+                    TaiKhoan = 1;
+                }
+            }
+            if(SanPham==0 && PhieuNhap==0)
+            {
+                btnQuanLyHangHoa.Dispose();
+            }
+            if (BanHang == 0 && DonHang == 0)
+            {
+                btndatHang.Dispose();
+            }
+
+            if (SanPham == 0)
+            {
+                btnKhohang.Dispose();
+            }
+            if (PhieuNhap == 0)
+            {
+                btnTTPhieuNhap.Dispose();
+            }
+            if (BanHang==0)
+            {
+                btnTaoDonHang.Dispose();
+            }
+            if(DonHang==0)
+            {
+                btnQLDonDatHang.Dispose();
+            }
+            if (ConNguoi == 0)
+            {
+                btnConNguoi.Dispose();
+            }
+            if (ThongKe == 0)
+            {
+                btnThongKe.Dispose();
+            }
+            if (ChinhSach == 0)
+            {
+                btnChinhSach.Dispose();
+            }
+            if (TaiKhoan == 0)
+            {
+                btnHeThong.Dispose();
+            }
+        }
+
+        public UIMain(int manv,string tennv,DangNhap formDangNhap)
         {
             InitializeComponent();
+            UIMain.manv = manv;
+            lbName.Text = tennv;
             CustomizeDising();
+            this.formDangNhap = formDangNhap;
+            CheckQuyen(manv);
+            comboBox1.SelectedIndex = 0;
         }
         private void ActivateButton(Object sender,Color color)
         {
@@ -226,6 +348,12 @@ namespace Smartphone_Management
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(comboBox1.SelectedIndex==1)
+            {
+                this.Dispose();
+                formDangNhap.Visible = true;
+
+            }
 
         }
 
@@ -263,6 +391,11 @@ namespace Smartphone_Management
         {
             ThongKeBaoCao_NhapHang a = new ThongKeBaoCao_NhapHang();
             openChildForm(a);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

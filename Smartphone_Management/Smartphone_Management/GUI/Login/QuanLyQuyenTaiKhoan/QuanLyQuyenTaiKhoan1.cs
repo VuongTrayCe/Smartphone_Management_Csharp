@@ -54,5 +54,10 @@ namespace Smartphone_Management.GUI.Login.QuanLyQuyenTaiKhoan
                 MessageBox.Show("Vui Lòng Chọn Quyền Cần Xóa");
             }
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

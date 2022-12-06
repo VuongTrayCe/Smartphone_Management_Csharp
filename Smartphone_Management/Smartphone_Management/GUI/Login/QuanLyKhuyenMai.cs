@@ -49,7 +49,11 @@ namespace Smartphone_Management.GUI.Login
             }
 
             dtgKhuyenMai.DataSource = dataKM;
-           
+            dtgKhuyenMai.Columns[0].HeaderText = "Mã Khuyến Mãi";
+            dtgKhuyenMai.Columns[1].HeaderText = "Tên Khuyến Mãi";
+            dtgKhuyenMai.Columns[2].HeaderText = "Phần Trăm";
+            dtgKhuyenMai.Columns[3].HeaderText = "Trạng Thái";
+
         }
 
         public void LoadDataChiTietKM()
@@ -68,6 +72,12 @@ namespace Smartphone_Management.GUI.Login
             }
 
             dtgChiTietKM.DataSource = dataChiTietKM;
+
+            dtgChiTietKM.Columns[0].HeaderText = "Mã Chi Tiết Khuyến Mãi";
+            dtgChiTietKM.Columns[1].HeaderText = "Mã Sản Phẩm";
+            dtgChiTietKM.Columns[2].HeaderText = "Mã Khuyến Mãi";
+            dtgChiTietKM.Columns[3].HeaderText = "Trạng Thái";
+
             cbSanPham.Items.Clear();
 
             arrmasp = qlbh.getAllMaSanPham();
@@ -141,7 +151,7 @@ namespace Smartphone_Management.GUI.Login
         }
         private void dtgKhuyenMai_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
+            btnThemKhuyenMai.Visible = false;
             if (e.RowIndex != -1)
             {
                 maKM = Convert.ToInt32(dtgKhuyenMai.Rows[e.RowIndex].Cells[0].Value);
@@ -165,10 +175,31 @@ namespace Smartphone_Management.GUI.Login
 
         private void btnThemKhuyenMai_Click(object sender, EventArgs e)
         {
-            khuyenmai km = new khuyenmai(txtTenKM.Text.Trim(), Convert.ToInt32(txtPTKM.Text.Trim()), cbTrangThai.Text);
-            qlkm_BUS.ThemKM_BUS(km);
-            LoadDataKM();
-            LoadDataChiTietKM();
+            bool flag = true;
+            if(txtTenKM.Text=="")
+            {
+                MessageBox.Show("Vui Lòng Nhập Tên Khuyến Mãi");
+                flag=false;
+            }
+            if (txtPTKM.Text == "")
+            {
+                MessageBox.Show("Vui Lòng Nhập Phần Trăm Khuyến Mãi");
+                flag = false;
+            }
+            int ptkm = 0;
+            if(int.TryParse(txtPTKM.Text,out ptkm)==false)
+            {
+                MessageBox.Show("Phần Trăm Khuyến Mãi Không Được Có Ký tự chữ");
+                flag = false;
+            }
+            if(flag==true)
+            {
+                khuyenmai km = new khuyenmai(txtTenKM.Text.Trim(), Convert.ToInt32(txtPTKM.Text.Trim()), cbTrangThai.Text);
+                qlkm_BUS.ThemKM_BUS(km);
+                LoadDataKM();
+                LoadDataChiTietKM();
+            }
+
         }
 
         private void btnXoaKhuyenMai_Click(object sender, EventArgs e)
@@ -184,6 +215,14 @@ namespace Smartphone_Management.GUI.Login
             qlkm_BUS.CapNhatKM_BUS(km, maKM);
             LoadDataKM();
             LoadDataChiTietKM();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtPTKM.Text = "";
+            txtTenKM.Text = "";
+            btnThemKhuyenMai.Visible = true;
+
         }
     }
 }

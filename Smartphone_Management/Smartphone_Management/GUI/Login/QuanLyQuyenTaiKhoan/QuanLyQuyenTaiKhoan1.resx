@@ -118,6 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnXoaQuyen.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGIAAAAfCAYAAAAcGRgRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVGhD7dGxCcAwEMDA3yM486YxZD9PEdy5cXgv8SpU
+        HKhXXM837ndv1ckHkRERKnQeOKKeIyAcAeEICEdAOALCERCOgHAEhCMgHAHhCAhHQDgCwhEQjoBwBIQj
+        IBwB4QgIR0A4AsIREI6AcASEIyAcAeEIiPOg9TUzVKf1NX+iwnvo9m7KZgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnThemQuyen.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGIAAAAfCAYAAAAcGRgRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVGhD7dGxCcAwEMDA3yM486YxZD9PEdy5cXgv8SpU
+        HKhXXM837ndv1ckHkRERKnQeOKKeIyAcAeEICEdAOALCERCOgHAEhCMgHAHhCAhHQDgCwhEQjoBwBIQj
+        IBwB4QgIR0A4AsIREI6AcASEIyAcAeEIiPOg9TUzVKf1NX+iwnvo9m7KZgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAAAlCAYAAACkj5ctAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -125,22 +141,6 @@
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
         QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAcgrCM/zfPdhZndu
         N+DkAGAb4w+nE+UJeFzTQQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnThemQuyen.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGIAAAAfCAYAAAAcGRgRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVGhD7dGhAYAwAMAwLtnL8B9n4Dc4AA0VEVGV3cYx
-        z3GsxZ/m+Yx4C3zNiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgj
-        IoyIMCLCiAgjIoyIMCJiG/u83gIf2ud1A6k4tpRasEqVAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnXoaQuyen.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGIAAAAfCAYAAAAcGRgRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVGhD7dGhAYAwAMAwLtnL8B9n4Dc4AA0VEVGV3cYx
-        z3GsxZ/m+Yx4C3zNiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgj
-        IoyIMCLCiAgjIoyIMCJiG/u83gIf2ud1A6k4tpRasEqVAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

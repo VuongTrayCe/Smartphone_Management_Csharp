@@ -4,6 +4,7 @@ using Smartphone_Management.DAO;
 using Smartphone_Management.DTO;
 using Smartphone_Management.GUI.Login;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -93,6 +94,37 @@ namespace Smartphone_Management.BUS
         public void DangNhap_BUS(taikhoan tk)
         {
             qltk_DAO.DangNhapTaiKhoan(tk);
+        }
+
+        internal int KiemTraDangNhap(string username, string password)
+        {
+            int check = 0;
+            Boolean checkUsername = false;
+            Boolean checkPwd = false;
+
+            List<List<String>> data = new List<List<string>>();
+            data = qltk_DAO.getALLAccount2();
+            foreach(List<String> object1 in data)
+            {
+                String username2 = object1.ElementAt(1).ToString();
+                String pass = object1.ElementAt(2).ToString();
+                if (username.Equals(username2) && password.Equals(pass))
+                {
+                    checkUsername = true;
+                    return int.Parse(object1.ElementAt(0).ToString());
+                }
+            }
+            return check;
+        }
+
+        internal string getTenNv(int l)
+        {
+            return qltk_DAO.getTenNv(l);
+        }
+
+        internal List<string> getALLQuyenTK(int manv1)
+        {
+            return qltk_DAO.getALLQuyenTK(manv1);
         }
     }
 }

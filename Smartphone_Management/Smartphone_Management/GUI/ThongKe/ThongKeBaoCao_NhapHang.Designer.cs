@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongKeBaoCao_NhapHang));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongKeBaoCao_NhapHang));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXuatExcel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbbLoai = new Bunifu.UI.WinForms.BunifuDropdown();
             this.dataGirdView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnXuatExcel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,6 +89,97 @@
             this.panel1.Size = new System.Drawing.Size(840, 63);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.AllowAnimations = true;
+            this.btnXuatExcel.AllowMouseEffects = true;
+            this.btnXuatExcel.AllowToggling = false;
+            this.btnXuatExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXuatExcel.AnimationSpeed = 200;
+            this.btnXuatExcel.AutoGenerateColors = false;
+            this.btnXuatExcel.AutoRoundBorders = false;
+            this.btnXuatExcel.AutoSizeLeftIcon = true;
+            this.btnXuatExcel.AutoSizeRightIcon = true;
+            this.btnXuatExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuatExcel.BackColor1 = System.Drawing.Color.DarkSlateGray;
+            this.btnXuatExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.BackgroundImage")));
+            this.btnXuatExcel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXuatExcel.ButtonText = "Xuất Excel";
+            this.btnXuatExcel.ButtonTextMarginLeft = 0;
+            this.btnXuatExcel.ColorContrastOnClick = 45;
+            this.btnXuatExcel.ColorContrastOnHover = 45;
+            this.btnXuatExcel.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnXuatExcel.CustomizableEdges = borderEdges1;
+            this.btnXuatExcel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXuatExcel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnXuatExcel.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnXuatExcel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnXuatExcel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnXuatExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExcel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatExcel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnXuatExcel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnXuatExcel.IconMarginLeft = 11;
+            this.btnXuatExcel.IconPadding = 10;
+            this.btnXuatExcel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXuatExcel.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnXuatExcel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnXuatExcel.IconSize = 30;
+            this.btnXuatExcel.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXuatExcel.IdleBorderRadius = 1;
+            this.btnXuatExcel.IdleBorderThickness = 1;
+            this.btnXuatExcel.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnXuatExcel.IdleIconLeftImage = global::Smartphone_Management.Properties.Resources.Logos_Excel_icon;
+            this.btnXuatExcel.IdleIconRightImage = null;
+            this.btnXuatExcel.IndicateFocus = false;
+            this.btnXuatExcel.Location = new System.Drawing.Point(689, 6);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnXuatExcel.OnDisabledState.BorderRadius = 1;
+            this.btnXuatExcel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXuatExcel.OnDisabledState.BorderThickness = 1;
+            this.btnXuatExcel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnXuatExcel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnXuatExcel.OnDisabledState.IconLeftImage = null;
+            this.btnXuatExcel.OnDisabledState.IconRightImage = null;
+            this.btnXuatExcel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnXuatExcel.onHoverState.BorderRadius = 1;
+            this.btnXuatExcel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXuatExcel.onHoverState.BorderThickness = 1;
+            this.btnXuatExcel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnXuatExcel.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExcel.onHoverState.IconLeftImage = null;
+            this.btnXuatExcel.onHoverState.IconRightImage = null;
+            this.btnXuatExcel.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXuatExcel.OnIdleState.BorderRadius = 1;
+            this.btnXuatExcel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXuatExcel.OnIdleState.BorderThickness = 1;
+            this.btnXuatExcel.OnIdleState.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnXuatExcel.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExcel.OnIdleState.IconLeftImage = global::Smartphone_Management.Properties.Resources.Logos_Excel_icon;
+            this.btnXuatExcel.OnIdleState.IconRightImage = null;
+            this.btnXuatExcel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnXuatExcel.OnPressedState.BorderRadius = 1;
+            this.btnXuatExcel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXuatExcel.OnPressedState.BorderThickness = 1;
+            this.btnXuatExcel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnXuatExcel.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExcel.OnPressedState.IconLeftImage = null;
+            this.btnXuatExcel.OnPressedState.IconRightImage = null;
+            this.btnXuatExcel.Size = new System.Drawing.Size(114, 41);
+            this.btnXuatExcel.TabIndex = 1;
+            this.btnXuatExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXuatExcel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXuatExcel.TextMarginLeft = 0;
+            this.btnXuatExcel.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnXuatExcel.UseDefaultRadiusAndThickness = true;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
             // 
             // label1
             // 
@@ -169,8 +260,8 @@
             this.dataGirdView1.AllowCustomTheming = false;
             this.dataGirdView1.AllowUserToAddRows = false;
             this.dataGirdView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dataGirdView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGirdView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -180,45 +271,45 @@
             this.dataGirdView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGirdView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGirdView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGirdView1.ColumnHeadersHeight = 40;
             this.dataGirdView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGirdView1.CurrentTheme.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGirdView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.dataGirdView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.dataGirdView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGirdView1.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            this.dataGirdView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.dataGirdView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.dataGirdView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dataGirdView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGirdView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.dataGirdView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.dataGirdView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataGirdView1.CurrentTheme.Name = null;
-            this.dataGirdView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.dataGirdView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.dataGirdView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dataGirdView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGirdView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.dataGirdView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGirdView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGirdView1.EnableHeadersVisualStyles = false;
-            this.dataGirdView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.dataGirdView1.HeaderBackColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGirdView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.dataGirdView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.dataGirdView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dataGirdView1.HeaderForeColor = System.Drawing.Color.White;
             this.dataGirdView1.Location = new System.Drawing.Point(9, 33);
@@ -229,8 +320,16 @@
             this.dataGirdView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGirdView1.Size = new System.Drawing.Size(822, 174);
             this.dataGirdView1.TabIndex = 3;
-            this.dataGirdView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.DarkSlateGray;
+            this.dataGirdView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.dataGirdView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGirdView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Xem";
+            this.Column1.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 48;
             // 
             // dateEnd
             // 
@@ -319,105 +418,6 @@
             this.dataGridViewImageColumn1.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 48;
-            // 
-            // btnXuatExcel
-            // 
-            this.btnXuatExcel.AllowAnimations = true;
-            this.btnXuatExcel.AllowMouseEffects = true;
-            this.btnXuatExcel.AllowToggling = false;
-            this.btnXuatExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXuatExcel.AnimationSpeed = 200;
-            this.btnXuatExcel.AutoGenerateColors = false;
-            this.btnXuatExcel.AutoRoundBorders = false;
-            this.btnXuatExcel.AutoSizeLeftIcon = true;
-            this.btnXuatExcel.AutoSizeRightIcon = true;
-            this.btnXuatExcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnXuatExcel.BackColor1 = System.Drawing.Color.Black;
-            this.btnXuatExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.BackgroundImage")));
-            this.btnXuatExcel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnXuatExcel.ButtonText = "Xuất Excel";
-            this.btnXuatExcel.ButtonTextMarginLeft = 0;
-            this.btnXuatExcel.ColorContrastOnClick = 45;
-            this.btnXuatExcel.ColorContrastOnHover = 45;
-            this.btnXuatExcel.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnXuatExcel.CustomizableEdges = borderEdges1;
-            this.btnXuatExcel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnXuatExcel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnXuatExcel.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnXuatExcel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnXuatExcel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnXuatExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.ForeColor = System.Drawing.Color.White;
-            this.btnXuatExcel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatExcel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnXuatExcel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnXuatExcel.IconMarginLeft = 11;
-            this.btnXuatExcel.IconPadding = 10;
-            this.btnXuatExcel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXuatExcel.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnXuatExcel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnXuatExcel.IconSize = 25;
-            this.btnXuatExcel.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnXuatExcel.IdleBorderRadius = 1;
-            this.btnXuatExcel.IdleBorderThickness = 1;
-            this.btnXuatExcel.IdleFillColor = System.Drawing.Color.Black;
-            this.btnXuatExcel.IdleIconLeftImage = null;
-            this.btnXuatExcel.IdleIconRightImage = null;
-            this.btnXuatExcel.IndicateFocus = false;
-            this.btnXuatExcel.Location = new System.Drawing.Point(727, 6);
-            this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnXuatExcel.OnDisabledState.BorderRadius = 1;
-            this.btnXuatExcel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnXuatExcel.OnDisabledState.BorderThickness = 1;
-            this.btnXuatExcel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnXuatExcel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnXuatExcel.OnDisabledState.IconLeftImage = null;
-            this.btnXuatExcel.OnDisabledState.IconRightImage = null;
-            this.btnXuatExcel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnXuatExcel.onHoverState.BorderRadius = 1;
-            this.btnXuatExcel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnXuatExcel.onHoverState.BorderThickness = 1;
-            this.btnXuatExcel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnXuatExcel.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnXuatExcel.onHoverState.IconLeftImage = null;
-            this.btnXuatExcel.onHoverState.IconRightImage = null;
-            this.btnXuatExcel.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnXuatExcel.OnIdleState.BorderRadius = 1;
-            this.btnXuatExcel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnXuatExcel.OnIdleState.BorderThickness = 1;
-            this.btnXuatExcel.OnIdleState.FillColor = System.Drawing.Color.Black;
-            this.btnXuatExcel.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnXuatExcel.OnIdleState.IconLeftImage = null;
-            this.btnXuatExcel.OnIdleState.IconRightImage = null;
-            this.btnXuatExcel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnXuatExcel.OnPressedState.BorderRadius = 1;
-            this.btnXuatExcel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnXuatExcel.OnPressedState.BorderThickness = 1;
-            this.btnXuatExcel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnXuatExcel.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnXuatExcel.OnPressedState.IconLeftImage = null;
-            this.btnXuatExcel.OnPressedState.IconRightImage = null;
-            this.btnXuatExcel.Size = new System.Drawing.Size(91, 34);
-            this.btnXuatExcel.TabIndex = 1;
-            this.btnXuatExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnXuatExcel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnXuatExcel.TextMarginLeft = 0;
-            this.btnXuatExcel.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnXuatExcel.UseDefaultRadiusAndThickness = true;
-            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Xem";
-            this.Column1.Image = global::Smartphone_Management.Properties.Resources.icon_eye2;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 48;
             // 
             // ThongKeBaoCao_NhapHang
             // 

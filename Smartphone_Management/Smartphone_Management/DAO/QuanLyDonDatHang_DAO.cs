@@ -78,6 +78,24 @@ namespace Smartphone_Management.DAO
             return diemhientai;
         }
 
+        internal int getDiemThuongDonHang(int madh)
+        {
+            sqla.openConnectToMySql();
+            int diemhientai = 0;
+            String query = "SELECT donhang.Diemthuong from donhang where donhang.Madh=@madh";
+            MySqlCommand command = sqla.getConnection().CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@madh",madh);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                diemhientai = reader.GetInt32("Diemthuong");
+            }
+            sqla.closeConnectToMySql();
+            return diemhientai;
+        }
+
         internal string getImageSanPham(int masp)
         {
             sqla.openConnectToMySql();

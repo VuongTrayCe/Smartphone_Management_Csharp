@@ -139,10 +139,11 @@
   </data>
   <data name="btnXuatEcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGwAAAAfCAYAAAAC0CiiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVGhD7dGxCYRAAADB60P8ek2E788qHjMTn7MKFyYY
-        2HzHsv2Oz/e+eb/5aswYYxDwvDKsw7AYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAYw2IMizEsxrAY
-        w2IMizEsxrAYw2IMizEsxrAYw2IMi3lerft1zuD91v06/3Dc0kX2jRaSAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAIYAAAAuCAYAAADtNmESAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACVSURBVHhe7dyxDYBAEANB+m+RMj4/EOgDkLaEmcgFbOxj
+        Zs4LPp4mjr3hRxgkYZCEQRIGSRgkYZCEQRIGSRgkYZCEQRIGSRgkYZCEQRIGSRgkYZCEQRIGSRgkYZCE
+        QRIGSRgkYZCEQRIGSRgkYZCEQRIGSRgkYZCEQRIGSRgkYZCEQRIGSRgkYZCEQXpO5tfe8JqZdQNrvfTW
+        +y4PQAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="Xem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

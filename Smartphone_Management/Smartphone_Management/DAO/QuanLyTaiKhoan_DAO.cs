@@ -231,5 +231,64 @@ namespace Smartphone_Management.DAO
 
         }
 
+        internal List<List<string>> getALLAccount2()
+        {
+
+            List<List<String>> list = new List<List<String>>();
+            sqla.openConnectToMySql();
+            string query = "select taikhoan.Manv,taikhoan.Tendangnhap, taikhoan.Matkhau from taikhoan where taikhoan.TrangThai='T'";
+            MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                List<String> list2 = new List<String>();
+                list2.Add(MyReader2.GetInt32("Manv").ToString());
+                list2.Add(MyReader2.GetString("Tendangnhap"));
+                list2.Add(MyReader2.GetString("Matkhau"));
+
+                list.Add(list2);
+            }
+            cmd2.Dispose();
+            sqla.closeConnectToMySql();
+            return list;
+        }
+
+        internal string getTenNv(int l)
+        {
+            sqla.openConnectToMySql();
+            string tennv = "";
+            String query = "select nhanvien.Tennv from nhanvien where nhanvien.Manv=@manv";
+            MySqlCommand cmd = new MySqlCommand(query, sqla.getConnection());
+            cmd.Parameters.AddWithValue("@manv",l);
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd.ExecuteReader();
+            while(MyReader2.Read())
+            {
+                tennv = MyReader2.GetString("Tennv");
+            }
+            cmd.Dispose();
+            sqla.closeConnectToMySql();
+            return tennv;
+        }
+
+        internal List<string> getALLQuyenTK(int manv1)
+        {
+
+            List<String> list = new List<String>();
+            sqla.openConnectToMySql();
+            String query = "select quyen.Tenquyen from quyen,taikhoan,quyen_tk,nhanvien where taikhoan.Matk = quyen_tk.Matk and quyen_tk.Maquyen=quyen.Maquyen and taikhoan.Manv=nhanvien.Manv and nhanvien.Manv=@manv";
+            MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
+            cmd2.Parameters.AddWithValue("@manv", manv1);
+            MySqlDataReader MyReader2;
+            MyReader2 = cmd2.ExecuteReader();
+            while (MyReader2.Read())
+            {
+                list.Add(MyReader2.GetString("Tenquyen"));
+            }
+            cmd2.Dispose();
+            sqla.closeConnectToMySql();
+            return list;
+        }
     }
 }
