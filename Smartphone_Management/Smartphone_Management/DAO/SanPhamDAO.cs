@@ -232,5 +232,27 @@ namespace Smartphone_Management.DAO
             connectToMySQL.closeConnectToMySql();
             return Masp;
         }
+
+        internal void insertKM(int v)
+        {
+            MySqlCommand command = connectToMySQL.getConnection().CreateCommand();
+            command.CommandText = "INSERT INTO chitietkhuyenmai(Masp,Makm,TrangThai) values(@masp,9,'T')" ;
+
+            connectToMySQL.openConnectToMySql();
+            command.Parameters.AddWithValue("@masp", v);
+            command.ExecuteNonQuery();
+            connectToMySQL.closeConnectToMySql();
+        }
+
+        internal void insertBH(int v)
+        {
+            MySqlCommand command = connectToMySQL.getConnection().CreateCommand();
+            command.CommandText = "INSERT INTO chitietbaohanh(Mabaohanh,Masp,TrangThai) values(110,@masp,'T')";
+
+            connectToMySQL.openConnectToMySql();
+            command.Parameters.AddWithValue("@masp", v);
+            command.ExecuteNonQuery();
+            connectToMySQL.closeConnectToMySql();
+        }
     }
 }

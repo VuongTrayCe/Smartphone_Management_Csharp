@@ -1,5 +1,7 @@
 ﻿using Smartphone_Management.BUS;
 using Smartphone_Management.DTO;
+using Smartphone_Management.GUI.GUI_SanPham.Dialog;
+using Smartphone_Management.GUI.GUI_SanPham.ValidateData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +53,43 @@ namespace Smartphone_Management.GUI
             dtgNCC.DataSource = dataKM;
 
         }
+        private void resetForm()
+        {
+            txtDienThoai.Text = "";
+            txtDiaChi.Text = "";
+            txtTenNCC.Text = "";
+        }
+        public bool checkLoi()
+        {
+            bool flag = true;
+            if (txtTenNCC.Text.Equals(""))
+            {
+                MessageBox.Show(" Vui lòng nhập tên nhân viên");
+                flag = false;
+            }
+            if (txtDiaChi.Text.Equals("")==true)
+            {
+                MessageBox.Show(" Vui lòng địa chỉ nhân viên");
+                flag = false;
+            }
 
+            if (txtDienThoai.Text.Equals("")==true)
+            {
+                MessageBox.Show(" Vui lòng số điện thoại");
+                flag = false;
+            }
+            else
+            {
+                ValidateData a = new ValidateData();
+                if(a.validatePhone(txtDienThoai.Text)==false)
+                {
+                    MessageBox.Show("Số điện thoại không đúng định dạng");
+                    flag = false;
+                }
+            }
+
+            return flag;
+        }
         private void QuanLyNhaCungCap_Load(object sender, EventArgs e)
         {
             LoadDataNCC();
@@ -65,13 +103,24 @@ namespace Smartphone_Management.GUI
 
         private void btnThemNCC_Click(object sender, EventArgs e)
         {
-            nhacungcap ncc = new nhacungcap(txtTenNCC.Text.Trim(), Convert.ToInt32(txtDienThoai.Text.Trim()), txtDiaChi.Text.Trim());
-            qlncc_BUS.ThemNCC_BUS(ncc);
-            LoadDataNCC();
+            if (checkLoi()==true)
+            {
+                WarningDialog warningDialog = new WarningDialog("Bạn có muốn thêm nhà cung cấp không ?");
+                DialogResult dialogResult = warningDialog.ShowDialog();
+                if (dialogResult == DialogResult.Cancel) { }
+                if (dialogResult == DialogResult.Yes)
+                {
+                    nhacungcap ncc = new nhacungcap(txtTenNCC.Text.Trim(),txtDienThoai.Text, txtDiaChi.Text.Trim());
+                    qlncc_BUS.ThemNCC_BUS(ncc);
+                    LoadDataNCC();
+                    resetForm();
+                }
+            }
         }
 
         private void dtgNCC_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            btnThemNCC.Visible = false;
             if (e.RowIndex != -1)
             {
                 maNCC = Convert.ToInt32(dtgNCC.Rows[e.RowIndex].Cells[0].Value);
@@ -84,7 +133,6 @@ namespace Smartphone_Management.GUI
                 txtDiaChi.Text = diaChi;
 
                 trangThai = Convert.ToString(dtgNCC.Rows[e.RowIndex].Cells[4].Value);
-                cbTrangThai.Text = trangThai;
 
 
 
@@ -93,16 +141,42 @@ namespace Smartphone_Management.GUI
 
         private void btnXoaNCC_Click(object sender, EventArgs e)
         {
-            qlncc_BUS.XoaNCC_BUS(maNCC);
-            LoadDataNCC();
+            WarningDialog warningDialog = new WarningDialog("Bạn có muốn xóa nhà cung cấp không ?");
+            DialogResult dialogResult = warningDialog.ShowDialog();
+            if (dialogResult == DialogResult.Cancel) { }
+            if (dialogResult == DialogResult.Yes)
+            {
+                qlncc_BUS.XoaNCC_BUS(maNCC);
+                LoadDataNCC();
+            }
         }
 
         private void btnSuaNCC_Click(object sender, EventArgs e)
         {
-            nhacungcap ncc = new nhacungcap(txtTenNCC.Text.Trim(), Convert.ToInt32(txtDienThoai.Text.Trim()), txtDiaChi.Text.Trim(), cbTrangThai.Text.Trim());
-            qlncc_BUS.CapNhatNCC_BUS(ncc, maNCC);
-            LoadDataNCC();
+            if (checkLoi() == true)
+            {
+                WarningDialog warningDialog = new WarningDialog("Bạn có muốn sửa nhà cung cấp không ?");
+                DialogResult dialogResult = warningDialog.ShowDialog();
+                if (dialogResult == DialogResult.Cancel) { }
+                if (dialogResult == DialogResult.Yes)
+                {
+                    nhacungcap ncc = new nhacungcap(txtTenNCC.Text.Trim(), txtDienThoai.Text.Trim(), txtDiaChi.Text.Trim());
+                    qlncc_BUS.CapNhatNCC_BUS(ncc, maNCC);
+                    LoadDataNCC();
+                }
+            }
 
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            btnThemNCC.Visible = true;
+            resetForm();
+        }
+
+        private void dtgNCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

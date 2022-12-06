@@ -29,7 +29,7 @@ namespace Smartphone_Management.DAO
             {
                 sqla.getConnection().Open();
 
-                MySqlCommand cmd = new MySqlCommand("UPDATE khachhang SET Trangthai = \"F\"\r WHERE khachhang.Makh=@Makh", sqla.getConnection());
+                MySqlCommand cmd = new MySqlCommand("UPDATE khachhang SET Trangthai = 'F' WHERE khachhang.Makh=@Makh", sqla.getConnection());
                 cmd.Parameters.AddWithValue("@Makh", makh);
                 MySqlDataReader MyReader2;
                 MyReader2 = cmd.ExecuteReader();
@@ -84,7 +84,7 @@ namespace Smartphone_Management.DAO
                 cmd.Parameters.AddWithValue("@sdt", model_kh.SDT);
                 cmd.Parameters.AddWithValue("@diachi", model_kh.DiaChi);
                 cmd.Parameters.AddWithValue("@email", model_kh.Email);
-                cmd.Parameters.AddWithValue("@ngaytao", model_kh.Ngaytao);
+                cmd.Parameters.AddWithValue("@ngaytao", String.Format("{0:yyyy-MM-dd}", model_kh.Ngaytao));
                 cmd.Parameters.AddWithValue("@diemso", model_kh.Diemso);
                 cmd.Parameters.AddWithValue("@trangthai", model_kh.Trangthai);
 
@@ -111,16 +111,15 @@ namespace Smartphone_Management.DAO
             try
             {
                 conn.getConnection().Open();
-                String query = "insert into khachhang(Makh,Tenkh,Cmnd,SDT,Diachi,Email,Ngaytao,Diemso,TrangThai) " + " values(@makh,@tenkh,@cmnd,@sdt,@diachi,@email,@ngaytao,@diemso,@trangthai)" ;
+                String query = "insert into khachhang(Tenkh,Cmnd,SDT,Diachi,Email,Ngaytao,Diemso,TrangThai) " + " values(@tenkh,@cmnd,@sdt,@diachi,@email,@ngaytao,@diemso,@trangthai)" ;
 
                 MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
-                cmd.Parameters.AddWithValue("@makh", model_kh.Makh);
                 cmd.Parameters.AddWithValue("@tenkh", model_kh.Tenkh);
                 cmd.Parameters.AddWithValue("@cmnd", model_kh.Cmnd);
                 cmd.Parameters.AddWithValue("@sdt", model_kh.SDT);
                 cmd.Parameters.AddWithValue("@diachi", model_kh.DiaChi);
                 cmd.Parameters.AddWithValue("@email", model_kh.Email);
-                cmd.Parameters.AddWithValue("@ngaytao", model_kh.Ngaytao);
+                cmd.Parameters.AddWithValue("@ngaytao", String.Format("{0:yyyy-MM-dd}", model_kh.Ngaytao));
                 cmd.Parameters.AddWithValue("@diemso", model_kh.Diemso);
                 cmd.Parameters.AddWithValue("@trangthai", model_kh.Trangthai);
 

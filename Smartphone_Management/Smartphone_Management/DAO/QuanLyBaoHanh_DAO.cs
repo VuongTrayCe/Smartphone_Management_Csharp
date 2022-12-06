@@ -133,6 +133,18 @@ namespace Smartphone_Management.DAO
             return dt;
         }
 
+        internal DataTable getThongTinBaoHanh()
+        {
+            sqla.openConnectToMySql();
+            string query = "select donhang.Madh,chitietdonhang.Masp, donhang.Makh, sanpham.Tensp,khachhang.Tenkh,donhang.Ngayban,baohanh.Thoigianbaohanh from baohanh,chitietbaohanh,sanpham,chitietdonhang,donhang,khachhang where chitietdonhang.Madh=donhang.Madh and chitietdonhang.Masp=sanpham.Masp and donhang.Makh=khachhang.Makh and chitietdonhang.Machitietbaohanh=chitietbaohanh.Machitietbaohanh and chitietbaohanh.Mabaohanh=baohanh.Mabaohanh and donhang.Trangthai='Hoàn Thành'";
+            MySqlCommand cmd = new MySqlCommand(query, sqla.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            sqla.closeConnectToMySql();
+            return dt;
+        }
+
         internal void UpdateBaoHanh(int mabh, string text1, string text2)
         {
             sqla.openConnectToMySql();

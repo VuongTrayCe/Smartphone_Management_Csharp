@@ -2,6 +2,7 @@
 using Smartphone_Management.BUS;
 using Smartphone_Management.DAO;
 using Smartphone_Management.DTO;
+using Smartphone_Management.GUI.GUI_SanPham.Dialog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Markup;
 using Application = System.Windows.Forms.Application;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Smartphone_Management.GUI.NhanVien
 {
@@ -27,11 +29,11 @@ namespace Smartphone_Management.GUI.NhanVien
         public QuanLyNhanVien()
         {
             InitializeComponent();
-           
+
             init();
         }
 
-       
+
         private void resetForm()
         {
             txtMaNV.Text = "";
@@ -45,10 +47,17 @@ namespace Smartphone_Management.GUI.NhanVien
 
         public void init()
         {
+            //btnThem.Visible = false;
             ConnectToMySQL conn = new ConnectToMySQL();
             data = qlnv_bus.getThongTinNhanVien();
             DSNhanVien.DataSource = data;
-           
+            DSNhanVien.Columns[0].HeaderText = "Mã Nhân Viên";
+            DSNhanVien.Columns[1].HeaderText = "Tên Nhân Viên";
+            DSNhanVien.Columns[2].HeaderText = "Số CCCD";
+            DSNhanVien.Columns[3].HeaderText = "Tuổi";
+            DSNhanVien.Columns[4].HeaderText = "Địa Chỉ";
+            DSNhanVien.Columns[5].HeaderText = "Chức Danh";
+
 
         }
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
@@ -63,11 +72,47 @@ namespace Smartphone_Management.GUI.NhanVien
             }
 
         }
+        public bool checkLoi()
+        {
+            bool flag = true;
+            if (txtTenNV.Equals(""))
+            {
+                MessageBox.Show(" Vui lòng nhập tên nhân viên");
+                flag = false;
+            }
+            if (txtDiaChi.Equals(""))
+            {
+                MessageBox.Show(" Vui lòng địa chỉ nhân viên");
+                flag = false;
+            }
+            if (txtCMND.Equals(""))
+            {
+                MessageBox.Show(" Vui lòng nhập số chứng minh nhân dân");
+                flag = false;
+            }
+            int result = 0;
+            if (int.TryParse(txtTuoi.Text, out result) == false)
+            {
+                MessageBox.Show("Số tuổi không chính xác");
+                flag=false;
+            }
+            if (txtChucDanh.Equals(""))
+            {
+                MessageBox.Show(" Vui lòng chức danh");
+                flag = false;
+            }
+            if (txtTuoi.Equals(""))
+            {
+                MessageBox.Show(" Vui lòng số tuổi");
+                flag = false;
+            }
 
+            return flag;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
 
-
+            
             /*if (!txtMaKH.Text.Equals(""))
             {
                 Console.WriteLine("Vui lòng \"Xóa Trắng\" để thêm sản phẩm mới!");
@@ -78,19 +123,28 @@ namespace Smartphone_Management.GUI.NhanVien
                 string errorMessage = qlkh_bus.checkInputKH(txtMaKH.Text, txtTenKH.Text, txtCMND.Text, txtSDT.Text, txtDiaChi.Text, txtEmail.Text);
                 if (errorMessage.Equals(""))
                 {*/
+            if(checkLoi())
+            {
+                WarningDialog warningDialog = new WarningDialog("Bạn có muốn thêm nhân viên không ?");
+                DialogResult dialogResult = warningDialog.ShowDialog();
+                if (dialogResult == DialogResult.Cancel) { }
+                if (dialogResult == DialogResult.Yes)
+                {
 
-            txtMaNV.Focus();
-            model_nv model_nv = new model_nv();
-            model_nv.Manv = Int32.Parse(txtMaNV.Text);
-            model_nv.Tennv = txtTenNV.Text;
-            model_nv.Cmnd = txtCMND.Text;
-            model_nv.Tuoi = Int32.Parse(txtTuoi.Text);
-            model_nv.DiaChi = txtDiaChi.Text;
-            model_nv.Chucdanh = txtChucDanh.Text;
-            model_nv.Trangthai = "T";
-            qlnv_bus.addNhanVien(model_nv);
-            resetForm();
-            init();
+                    txtMaNV.Focus();
+                    model_nv model_nv = new model_nv();
+                    model_nv.Tennv = txtTenNV.Text;
+                    model_nv.Cmnd = txtCMND.Text;
+                    model_nv.Tuoi = Int32.Parse(txtTuoi.Text);
+                    model_nv.DiaChi = txtDiaChi.Text;
+                    model_nv.Chucdanh = txtChucDanh.Text;
+                    model_nv.Trangthai = "T";
+                    qlnv_bus.addNhanVien(model_nv);
+                    resetForm();
+                    init();
+                }
+            }
+           
 
 
             /*  }
@@ -103,7 +157,7 @@ namespace Smartphone_Management.GUI.NhanVien
         }
         private void DSNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            btnThem.Visible = false;
             txtMaNV.Text = DSNhanVien.CurrentRow.Cells[0].Value.ToString();
             txtTenNV.Text = DSNhanVien.CurrentRow.Cells[1].Value.ToString();
             txtCMND.Text = DSNhanVien.CurrentRow.Cells[2].Value.ToString();
@@ -115,37 +169,45 @@ namespace Smartphone_Management.GUI.NhanVien
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int Makh = int.Parse(DSNhanVien.CurrentRow.Cells[0].Value.ToString());
-            qlnv_bus.updateTrangThaiKhachHangHuy(Makh);
-            resetForm();
-            init();
+            WarningDialog warningDialog = new WarningDialog("Bạn có muốn xóa nhân viên không ?");
+            DialogResult dialogResult = warningDialog.ShowDialog();
+            if (dialogResult == DialogResult.Cancel) { }
+            if (dialogResult == DialogResult.Yes)
+            {
+                int Makh = int.Parse(DSNhanVien.CurrentRow.Cells[0].Value.ToString());
+                qlnv_bus.updateTrangThaiKhachHangHuy(Makh);
+                resetForm();
+                init();
+            }
+
 
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            /*if (!MaSanPham.Text.Equals(""))
+            if(checkLoi())
             {
-                PanelLoiSanPham.Hide();
-                WarningDialog warningDialog = new WarningDialog("Bạn có muốn sửa sản phẩm này?");
+                WarningDialog warningDialog = new WarningDialog("Bạn có muốn thêm nhân viên không ?");
                 DialogResult dialogResult = warningDialog.ShowDialog();
-                if (dialogResult == DialogResult.Cancel) { MaSanPham.Focus(); }
+                if (dialogResult == DialogResult.Cancel) { }
                 if (dialogResult == DialogResult.Yes)
-                {*/
-            txtMaNV.Focus();
-            model_nv model_nv = new model_nv();
-            model_nv.Manv = Int32.Parse(txtMaNV.Text);
-            model_nv.Tennv = txtTenNV.Text;
-            model_nv.Cmnd = txtCMND.Text;
-            model_nv.DiaChi = txtDiaChi.Text;
-            model_nv.Tuoi = Int32.Parse(txtTuoi.Text);
-            model_nv.Chucdanh = txtChucDanh.Text;
+                {
+                    txtMaNV.Focus();
+                    model_nv model_nv = new model_nv();
+                    model_nv.Manv = int.Parse(txtMaNV.Text);
+                    model_nv.Tennv = txtTenNV.Text;
+                    model_nv.Cmnd = txtCMND.Text;
+                    model_nv.DiaChi = txtDiaChi.Text;
+                    model_nv.Tuoi = Int32.Parse(txtTuoi.Text);
+                    model_nv.Chucdanh = txtChucDanh.Text;
+                    model_nv.Trangthai = "T";
 
-            model_nv.Trangthai = "T";
+                    qlnv_bus.updateNhanVien(model_nv);
+                    resetForm();
+                    init();
 
-            qlnv_bus.updateNhanVien(model_nv);
-            resetForm();
-            init();
-
+                }
+            }
+            
             /*     }
 
              }
@@ -169,6 +231,18 @@ namespace Smartphone_Management.GUI.NhanVien
         private void QuanLyNhanVien_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            btnThem.Visible = true;
+            txtChucDanh.Text = "";
+            txtCMND.Text = "";
+            txtDiaChi.Text = "";
+            txtMaNV.Text = "";
+            txtTenNV.Text = "";
+            txtTuoi.Text = "";
+              
         }
     }
 }

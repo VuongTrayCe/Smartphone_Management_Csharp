@@ -29,7 +29,7 @@ namespace Smartphone_Management.DAO
             {
                 sqla.getConnection().Open();
 
-                MySqlCommand cmd = new MySqlCommand("UPDATE khachhang SET Trangthai = \"F\"\r WHERE nhanvien.Manv=@Manv", sqla.getConnection());
+                MySqlCommand cmd = new MySqlCommand("UPDATE nhanvien SET Trangthai = 'F' WHERE nhanvien.Manv=@Manv", sqla.getConnection());
                 cmd.Parameters.AddWithValue("@Manv", manv);
                 MySqlDataReader MyReader2;
                 MyReader2 = cmd.ExecuteReader();
@@ -38,7 +38,7 @@ namespace Smartphone_Management.DAO
                 }
                 //cmd.ExecuteNonQuery();
                 cmd.Dispose();
-                MessageBox.Show("Successfully deleted", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Successfully deleted", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
             {
@@ -75,7 +75,7 @@ namespace Smartphone_Management.DAO
             try
             {
                 conn.getConnection().Open();
-                String query = "UPDATE nhanvien SET @manv=Manv,@tennv=Tennv,@cccd=SoCCCD,@tuoi=Tuoi,@diachi=Diachi,@chucdanh=ChucDanh " + "WHERE nhanvien.Manv=@manv";
+                String query = "UPDATE nhanvien SET Tennv=@tennv,SoCCCD=@cccd,Tuoi=@tuoi,Diachi=@diachi,ChucDanh=@chucdanh,TrangThai=@trangthai " + "WHERE nhanvien.Manv=@manv";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
                 cmd.Parameters.AddWithValue("@manv", model_nv.Manv);
@@ -94,7 +94,7 @@ namespace Smartphone_Management.DAO
                 }
                 //cmd.ExecuteNonQuery();
                 cmd.Dispose();
-                MessageBox.Show("Successfully added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Successfully added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
             {
@@ -109,10 +109,9 @@ namespace Smartphone_Management.DAO
             try
             {
                 conn.getConnection().Open();
-                String query = "insert into nhanvien(Manv,Tennv,SoCCCD,Tuoi,Diachi,ChucDanh,TrangThai) " + " values(@manv,@tennv,@cccd,@tuoi,@diachi,@chucdanh,@trangthai)";
+                String query = "insert into nhanvien(Tennv,SoCCCD,Tuoi,Diachi,ChucDanh,TrangThai) " + " values(@tennv,@cccd,@tuoi,@diachi,@chucdanh,@trangthai)";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
-                cmd.Parameters.AddWithValue("@manv", model_nv.Manv);
                 cmd.Parameters.AddWithValue("@tennv", model_nv.Tennv);
                 cmd.Parameters.AddWithValue("@cccd", model_nv.Cmnd);
                 cmd.Parameters.AddWithValue("@tuoi", model_nv.Tuoi);
@@ -128,7 +127,7 @@ namespace Smartphone_Management.DAO
                 }
                 //cmd.ExecuteNonQuery();
                 cmd.Dispose();
-                MessageBox.Show("Successfully added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Successfully added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
             {

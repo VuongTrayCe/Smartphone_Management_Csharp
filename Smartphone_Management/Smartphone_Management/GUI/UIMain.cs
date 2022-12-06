@@ -3,6 +3,7 @@ using Smartphone_Management.BUS;
 using Smartphone_Management.GUI;
 using Smartphone_Management.GUI.BaoHanh;
 using Smartphone_Management.GUI.DonHang;
+using Smartphone_Management.GUI.GUI_BanHang;
 using Smartphone_Management.GUI.GUI_SanPham;
 using Smartphone_Management.GUI.KhachHang;
 using Smartphone_Management.GUI.Login;
@@ -313,7 +314,7 @@ namespace Smartphone_Management
 
         private void btnTaoDonHang_Click(object sender, EventArgs e)
         {
-            QuanLyQuyenTaiKhoan1 a = new QuanLyQuyenTaiKhoan1();
+            BanHang a = new BanHang();
             openChildForm(a);
         }
 
@@ -325,7 +326,7 @@ namespace Smartphone_Management
 
         private void btnKhohang_Click(object sender, EventArgs e)
         {
-            SanPham a = new SanPham();
+            SanPham1 a = new SanPham1();
             openChildForm(a);
             ////ChiTietDonHang a = new ChiTietDonHang();
         }

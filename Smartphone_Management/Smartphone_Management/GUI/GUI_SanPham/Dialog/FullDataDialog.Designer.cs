@@ -325,11 +325,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1126, 569);
+            this.ClientSize = new System.Drawing.Size(1040, 569);
             this.Controls.Add(this.ButtonClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridViewFullSanPham);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FullDataDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

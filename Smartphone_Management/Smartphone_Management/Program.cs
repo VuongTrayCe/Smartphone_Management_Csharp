@@ -26,7 +26,7 @@ namespace Smartphone_Management
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new UIMain(12, "Vuong", new DangNhap()));
-            //Application.Run(new QuanLyKhachHang());
+            //Application.Run(new ());
 
         }
     }

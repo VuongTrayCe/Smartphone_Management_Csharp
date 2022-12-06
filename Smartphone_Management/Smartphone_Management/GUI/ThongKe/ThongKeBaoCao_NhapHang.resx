@@ -121,10 +121,18 @@
   <data name="btnXuatExcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHIAAAApCAYAAADplH1JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACXSURBVHhe7dGxDYNAAMBAJmGFjMJiCGW/jIGoKEhemeKt
-        K05y72Xdr8/6fh4m9nu4jHhtGxMbD40MMDLCyAgjI4yMMDLCyAgjI4yMMDLCyAgjI4yMMDLCyAgjI4yM
-        MDLCyAgjI4yMMDLCyAgjI4yMMDLCyAgjI4yMMDLCyAgjI4yMMDLCyAgjI4yMMDLiP/K4zxFM7LjPL9Q7
-        28AVhKs3AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACXSURBVHhe7dGxDYMwAABB7xGRma1MlD2YIqKjIYIt/Lri
+        pO9/vD6//T2vi3XdD8cd4ztY2PPQyPUZGWFkhJERRkYYGWFkhJERRkYYGWFkhJERRkYYGWFkhJERRkYY
+        GWFkhJERRkYYGWFkhJERRkYYGWFkhJERRkYYGWFkhJERRkYYGWFkhJERRkYYGfE83OZ53MG6tnkef7ip
+        /d++MAGbAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnXem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEwAAAAYCAYAAABQiBvKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVFhH7dCxDcBADMNA779ipjC+U5PgvUDMngIIqL7q
+        7ud1q12ruqeqbNFYCbZPMJhgMMFggsEEgwkGEwwmGEwwmGAwwWCCwQSDCQYTDCYYTDCYYDDBYILBxirJ
+        med+l+R8pBJiSk8BPPAAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

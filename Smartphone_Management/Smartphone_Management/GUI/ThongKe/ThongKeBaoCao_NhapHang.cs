@@ -73,11 +73,12 @@ namespace Smartphone_Management.GUI.ThongKe
                 label4.Visible = false;
                 dateStart.Visible = false;
                 dateEnd.Visible = false;
-
+                btnXem.Visible = false;
 
             }
             else if (i == 1)
             {
+                btnXem.Visible = false;
 
                 label2.Visible = false;
                 label4.Visible = false;
@@ -125,6 +126,8 @@ namespace Smartphone_Management.GUI.ThongKe
             }
             else
             {
+                btnXem.Visible = true;
+
                 label2.Visible = true;
                 label4.Visible = true;
                 dateStart.Visible = true;

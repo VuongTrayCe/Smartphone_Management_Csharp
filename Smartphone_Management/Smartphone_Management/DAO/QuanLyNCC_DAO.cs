@@ -81,7 +81,7 @@ namespace Smartphone_Management.DAO
         public void CapNhatNCC_DAO(nhacungcap ncc, int maNCC)
         {
             sqla.openConnectToMySql();
-            string query = "UPDATE nhacungcap SET Tenncc = @Tenncc, SDT = @SDT, DiaChi = @DiaChi, TrangThai = @TrangThai WHERE Mancc = @Mancc "
+            string query = "UPDATE nhacungcap SET Tenncc = @Tenncc, SDT = @SDT, DiaChi = @DiaChi WHERE Mancc = @Mancc"
                            ;
             MySqlCommand cmd2 = new MySqlCommand(query, sqla.getConnection());
 
@@ -89,12 +89,11 @@ namespace Smartphone_Management.DAO
             cmd2.Parameters.AddWithValue("@Tenncc", ncc.TenNCC);
             cmd2.Parameters.AddWithValue("@SDT", ncc.Sdt);
             cmd2.Parameters.AddWithValue("@DiaChi", ncc.DiaChi);
-            cmd2.Parameters.AddWithValue("@TrangThai", ncc.TrangThai);
 
 
             MySqlDataReader MyReader2;
             MyReader2 = cmd2.ExecuteReader();
-            MessageBox.Show("Cập nhật Khuyến Mãi thành công");
+            MessageBox.Show("Cập nhật thành công");
 
             cmd2.Dispose();
             sqla.closeConnectToMySql();

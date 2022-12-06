@@ -121,9 +121,10 @@
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAAAjCAYAAABrVA/6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACESURBVGhD7dExDYRQAERBlGDhpGCMkPOHDEJFAfwg4jVT
-        TLL1vmlez33+3zeB9/tpjN+yEBjfCxASICZATICYADEBYgLEBIgJEBMgJkBMgJgAMQFiAsQEiAkQEyAm
-        QEyAmAAxAWICxASICRATICZATICYADEBYgLEBIh9AbbrGIPAdh0PtnZ4Ifz9Pq0AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVGhD7dGxDYNAAATB78PCNb9ckfugCouMBOspgk0m
+        GOni2/H6/Pb3vC6et74fa4zvIHB/L0BHgJgAMQFiAsQEiAkQEyAmQEyAmAAxAWICxASICRATICZATICY
+        ADEBYgLEBIgJEBMgJkBMgJgAMQFiAsQEiAkQEyB2f7/N81iD523zPP7OmNqK5Wu5UgAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
 </root>

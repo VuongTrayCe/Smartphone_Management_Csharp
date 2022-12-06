@@ -205,5 +205,11 @@ namespace Smartphone_Management.GUI.BaoHanh
             init();
 
         }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            ThongTinBaoHanh ttbh = new ThongTinBaoHanh();
+            ttbh.Show();
+        }
     }
 }

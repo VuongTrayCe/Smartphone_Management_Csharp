@@ -36,6 +36,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXuatExcel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -52,6 +53,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnXem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,7 +104,7 @@
             this.btnXuatExcel.AutoSizeLeftIcon = true;
             this.btnXuatExcel.AutoSizeRightIcon = true;
             this.btnXuatExcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnXuatExcel.BackColor1 = System.Drawing.Color.DarkSlateGray;
+            this.btnXuatExcel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnXuatExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.BackgroundImage")));
             this.btnXuatExcel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnXuatExcel.ButtonText = "Xuất Excel";
@@ -134,7 +136,7 @@
             this.btnXuatExcel.IdleBorderColor = System.Drawing.Color.DodgerBlue;
             this.btnXuatExcel.IdleBorderRadius = 1;
             this.btnXuatExcel.IdleBorderThickness = 1;
-            this.btnXuatExcel.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnXuatExcel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnXuatExcel.IdleIconLeftImage = global::Smartphone_Management.Properties.Resources.Logos_Excel_icon;
             this.btnXuatExcel.IdleIconRightImage = null;
             this.btnXuatExcel.IndicateFocus = false;
@@ -160,7 +162,7 @@
             this.btnXuatExcel.OnIdleState.BorderRadius = 1;
             this.btnXuatExcel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnXuatExcel.OnIdleState.BorderThickness = 1;
-            this.btnXuatExcel.OnIdleState.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnXuatExcel.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnXuatExcel.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnXuatExcel.OnIdleState.IconLeftImage = global::Smartphone_Management.Properties.Resources.Logos_Excel_icon;
             this.btnXuatExcel.OnIdleState.IconRightImage = null;
@@ -195,6 +197,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnXem);
             this.panel2.Controls.Add(this.cbbLoai);
             this.panel2.Controls.Add(this.dataGirdView1);
             this.panel2.Controls.Add(this.dateEnd);
@@ -333,12 +336,10 @@
             // 
             // dateEnd
             // 
-            this.dateEnd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateEnd.Location = new System.Drawing.Point(592, 4);
+            this.dateEnd.Location = new System.Drawing.Point(477, 5);
             this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Size = new System.Drawing.Size(159, 20);
+            this.dateEnd.Size = new System.Drawing.Size(100, 20);
             this.dateEnd.TabIndex = 2;
             // 
             // dateStart
@@ -346,18 +347,18 @@
             this.dateStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateStart.Location = new System.Drawing.Point(292, 3);
             this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(157, 20);
+            this.dateStart.Size = new System.Drawing.Size(98, 20);
             this.dateStart.TabIndex = 2;
             this.dateStart.Value = new System.DateTime(2010, 2, 2, 0, 0, 0, 0);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(486, 4);
+            this.label4.Location = new System.Drawing.Point(396, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
+            this.label4.Size = new System.Drawing.Size(75, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Đến Ngày";
             this.label4.Click += new System.EventHandler(this.label3_Click);
@@ -365,11 +366,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(212, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Từ Ngày";
             this.label2.Click += new System.EventHandler(this.label3_Click);
@@ -419,6 +420,95 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 48;
             // 
+            // btnXem
+            // 
+            this.btnXem.AllowAnimations = true;
+            this.btnXem.AllowMouseEffects = true;
+            this.btnXem.AllowToggling = false;
+            this.btnXem.AnimationSpeed = 200;
+            this.btnXem.AutoGenerateColors = false;
+            this.btnXem.AutoRoundBorders = false;
+            this.btnXem.AutoSizeLeftIcon = true;
+            this.btnXem.AutoSizeRightIcon = true;
+            this.btnXem.BackColor = System.Drawing.Color.Transparent;
+            this.btnXem.BackColor1 = System.Drawing.Color.Black;
+            this.btnXem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXem.BackgroundImage")));
+            this.btnXem.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXem.ButtonText = "Xem";
+            this.btnXem.ButtonTextMarginLeft = 0;
+            this.btnXem.ColorContrastOnClick = 45;
+            this.btnXem.ColorContrastOnHover = 45;
+            this.btnXem.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnXem.CustomizableEdges = borderEdges2;
+            this.btnXem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXem.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnXem.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnXem.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnXem.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXem.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXem.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnXem.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnXem.IconMarginLeft = 11;
+            this.btnXem.IconPadding = 10;
+            this.btnXem.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXem.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnXem.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnXem.IconSize = 25;
+            this.btnXem.IdleBorderColor = System.Drawing.Color.White;
+            this.btnXem.IdleBorderRadius = 1;
+            this.btnXem.IdleBorderThickness = 1;
+            this.btnXem.IdleFillColor = System.Drawing.Color.Black;
+            this.btnXem.IdleIconLeftImage = null;
+            this.btnXem.IdleIconRightImage = null;
+            this.btnXem.IndicateFocus = false;
+            this.btnXem.Location = new System.Drawing.Point(583, 0);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnXem.OnDisabledState.BorderRadius = 1;
+            this.btnXem.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXem.OnDisabledState.BorderThickness = 1;
+            this.btnXem.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnXem.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnXem.OnDisabledState.IconLeftImage = null;
+            this.btnXem.OnDisabledState.IconRightImage = null;
+            this.btnXem.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnXem.onHoverState.BorderRadius = 1;
+            this.btnXem.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXem.onHoverState.BorderThickness = 1;
+            this.btnXem.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnXem.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnXem.onHoverState.IconLeftImage = null;
+            this.btnXem.onHoverState.IconRightImage = null;
+            this.btnXem.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnXem.OnIdleState.BorderRadius = 1;
+            this.btnXem.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXem.OnIdleState.BorderThickness = 1;
+            this.btnXem.OnIdleState.FillColor = System.Drawing.Color.Black;
+            this.btnXem.OnIdleState.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXem.OnIdleState.IconLeftImage = null;
+            this.btnXem.OnIdleState.IconRightImage = null;
+            this.btnXem.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnXem.OnPressedState.BorderRadius = 1;
+            this.btnXem.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnXem.OnPressedState.BorderThickness = 1;
+            this.btnXem.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnXem.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnXem.OnPressedState.IconLeftImage = null;
+            this.btnXem.OnPressedState.IconRightImage = null;
+            this.btnXem.Size = new System.Drawing.Size(76, 24);
+            this.btnXem.TabIndex = 5;
+            this.btnXem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXem.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXem.TextMarginLeft = 0;
+            this.btnXem.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnXem.UseDefaultRadiusAndThickness = true;
+            // 
             // ThongKeBaoCao_NhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,5 +548,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnXuatExcel;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnXem;
     }
 }
