@@ -140,6 +140,7 @@ namespace Smartphone_Management.GUI.GUI_SanPham.Dialog
                     Bitmap bitmap = (Bitmap)Bitmap.FromFile(getImageStorePath() + sanphamDTO.Icon);
                     DataGridViewImageCell imageCell = new DataGridViewImageCell();
                     imageCell.Value = bitmap;
+                    imageCell.ImageLayout = DataGridViewImageCellLayout.Zoom;
                     DataGridViewFullSanPham.Rows[i].Cells[6] = imageCell;
                 }
                 else
@@ -147,6 +148,7 @@ namespace Smartphone_Management.GUI.GUI_SanPham.Dialog
                     Bitmap bitmap = (Bitmap)Bitmap.FromFile(getImageStorePath() + "no_image.png");
                     DataGridViewImageCell imageCell = new DataGridViewImageCell();
                     imageCell.Value = bitmap;
+                    imageCell.ImageLayout = DataGridViewImageCellLayout.Zoom;
                     DataGridViewFullSanPham.Rows[i].Cells[6] = imageCell;
                 }
                 DataGridViewFullSanPham.Rows[i].Cells[7].Value = sanphamDTO.ThongSo;

@@ -169,13 +169,12 @@ namespace Smartphone_Management.DAO
         internal void updateSanPham(SanPhamDTO sanphamDTO)
         {
             MySqlCommand command = connectToMySQL.getConnection().CreateCommand();
-            command.CommandText = "UPDATE sanpham SET Tensp = @Tensp, Loaisp = @Loaisp, soluong = @soluong, MauSac = @MauSac, " +
+            command.CommandText = "UPDATE sanpham SET Tensp = @Tensp, Loaisp = @Loaisp, MauSac = @MauSac, " +
                 "Namsx = @Namsx, TrangThai = @TrangThai, Icon = @Icon, ThongSo = @ThongSo, Mancc = @Mancc " +
                 "WHERE Masp = @Masp";
             command.Parameters.AddWithValue("@Masp", sanphamDTO.Masp);
             command.Parameters.AddWithValue("@Tensp", sanphamDTO.Tensp);
             command.Parameters.AddWithValue("@Loaisp", sanphamDTO.Loaisp);
-            command.Parameters.AddWithValue("@soluong", sanphamDTO.soluong);
             command.Parameters.AddWithValue("@MauSac", sanphamDTO.MauSac);
             command.Parameters.AddWithValue("@Namsx", sanphamDTO.Namsx);
             command.Parameters.AddWithValue("@TrangThai", sanphamDTO.TrangThai);

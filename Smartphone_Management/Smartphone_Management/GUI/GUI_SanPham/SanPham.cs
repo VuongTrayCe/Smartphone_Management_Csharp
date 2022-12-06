@@ -60,7 +60,6 @@ namespace Smartphone_Management.GUI.GUI_SanPham
             MaSanPham.Text = "";
             TenSanPham.Text = "";
             LoaiSanPham.Text = "";
-            SoLuongSanPham.Text = "";
             MauSacSanPham.Text = "";
             NamSanXuatSanPham.Text = "";
             ThongSoSanPham.Text = "";
@@ -88,7 +87,6 @@ namespace Smartphone_Management.GUI.GUI_SanPham
             MaSanPham.Text = sanphamDTOSelected.Masp.ToString();
             TenSanPham.Text = sanphamDTOSelected.Tensp;
             LoaiSanPham.Text = sanphamDTOSelected.Loaisp;
-            SoLuongSanPham.Text = sanphamDTOSelected.soluong.ToString();
             MauSacSanPham.Text = sanphamDTOSelected.MauSac;
             NamSanXuatSanPham.Text = sanphamDTOSelected.Namsx;
             ThongSoSanPham.Text = sanphamDTOSelected.ThongSo;
@@ -133,7 +131,7 @@ namespace Smartphone_Management.GUI.GUI_SanPham
             {
                 PanelLoiSanPham.Hide();
                 string errorMessage = sanphamBUS.checkInputSanPham(
-                TenSanPham.Text, LoaiSanPham.Text, SoLuongSanPham.Text, MauSacSanPham.Text, NamSanXuatSanPham.Text, ThongSoSanPham.Text, MaNhaCungCapSanPham.Text
+                TenSanPham.Text, LoaiSanPham.Text, MauSacSanPham.Text, NamSanXuatSanPham.Text, ThongSoSanPham.Text, MaNhaCungCapSanPham.Text
                 );
                 if (errorMessage.Equals(""))
                 {
@@ -148,7 +146,7 @@ namespace Smartphone_Management.GUI.GUI_SanPham
                         SanPhamDTO sanphamDTO = new SanPhamDTO();
                         sanphamDTO.Tensp = TenSanPham.Text;
                         sanphamDTO.Loaisp = LoaiSanPham.Text;
-                        sanphamDTO.soluong = Int32.Parse(SoLuongSanPham.Text);
+                        sanphamDTO.soluong = 0;
                         sanphamDTO.MauSac = MauSacSanPham.Text;
                         sanphamDTO.Namsx = NamSanXuatSanPham.Text;
                         sanphamDTO.TrangThai = "T";
@@ -199,7 +197,7 @@ namespace Smartphone_Management.GUI.GUI_SanPham
                     sanphamDTO.Masp = Int32.Parse(MaSanPham.Text);
                     sanphamDTO.Tensp = TenSanPham.Text;
                     sanphamDTO.Loaisp = LoaiSanPham.Text;
-                    sanphamDTO.soluong = Int32.Parse(SoLuongSanPham.Text);
+                    //sanphamDTO.soluong = Int32.Parse(SoLuongSanPham.Text);
                     sanphamDTO.MauSac = MauSacSanPham.Text;
                     sanphamDTO.Namsx = NamSanXuatSanPham.Text;
                     sanphamDTO.TrangThai = "T";
@@ -452,6 +450,11 @@ namespace Smartphone_Management.GUI.GUI_SanPham
                 LabelLoiSanPham.Text = "Vui lòng chọn sản phẩm để quản lý giá!";
             }
             
+        }
+
+        private void bunifuGroupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
