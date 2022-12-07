@@ -121,13 +121,14 @@ namespace Smartphone_Management.GUI.GUI_BanHang
         private void SelectedRowSanPhamClick(object sender, DataGridViewCellEventArgs e)
         {
             BunifuDataGridView dgv = sender as BunifuDataGridView;
-            selectedCartProductID = (int) dgv.SelectedCells[0].Value;
-        }
+            selectedCartProductID = (int)dgv.SelectedCells[0].Value;
 
+        }
         private void DeleteAllSanPham_Click(object sender, EventArgs e)
         {
             listMaSPGioHang.RemoveAll(item => item == selectedCartProductID);
             fetchGioHang(listMaSPGioHang);
+
         }
         private void DeleteOneSanPham_Click(object sender, EventArgs e)
         {

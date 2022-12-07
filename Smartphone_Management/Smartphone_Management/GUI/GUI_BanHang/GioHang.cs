@@ -89,7 +89,7 @@ namespace Smartphone_Management.GUI.GUI_BanHang
                     DataGridViewImageCell imageCell = new DataGridViewImageCell();
                     imageCell.Value = bitmap;
                     imageCell.ImageLayout = DataGridViewImageCellLayout.Zoom;
-                    GioHang_DanhSachSanPham.Rows[i].Cells[0] = imageCell;
+                    GioHang_DanhSachSanPham.Rows[i].Cells[1] = imageCell;
                 }
                 double Giaban = banHangBUS.getGiaBanByMaSP(cartItems[i].MaSP);
                 GioHang_DanhSachSanPham.Rows[i].Cells[2].Value = sanPhamDTO.Tensp;
