@@ -16,7 +16,6 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -37,12 +36,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.Licensing.5.0.0\lib\net40\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>C:\Users\Vuong\Desktop\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>C:\Users\Vuong\Desktop\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>C:\Users\Vuong\Desktop\BUNIFU TOOLS\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>C:\Users\Vuong\Desktop\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="ClosedXML, Version=0.95.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.95.0\lib\net46\ClosedXML.dll</HintPath>
     </Reference>
@@ -57,6 +82,12 @@
     <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
@@ -65,6 +96,9 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
@@ -138,6 +172,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
     </Reference>
@@ -255,6 +290,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -268,9 +304,67 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BanHangBUS.cs" />
+    <Compile Include="BUS\GiaSanPhamBUS.cs" />
+    <Compile Include="BUS\LoiNhuanBanHang_BUS.cs" />
+    <Compile Include="BUS\QuanLyBaoHanh_BUS.cs" />
     <Compile Include="BUS\QuanLyDonDatHang_BUS.cs" />
+    <Compile Include="BUS\QuanLyKhachHang_BUS.cs" />
+    <Compile Include="BUS\QuanLyKhuyenMai_BUS.cs" />
+    <Compile Include="BUS\QuanLyNCC_BUS.cs" />
+    <Compile Include="BUS\QuanLyNhanVien_BUS.cs" />
+    <Compile Include="BUS\QuanLyPhanQuyen_BUS.cs" />
+    <Compile Include="BUS\QuanLyTaiKhoan_BUS.cs" />
+    <Compile Include="BUS\SanPhamBUS.cs" />
+    <Compile Include="BUS\themPhieuNhap_BUS.cs" />
+    <Compile Include="BUS\themSanPhamPhieuNhap_BUS.cs" />
+    <Compile Include="BUS\ThongKeBaoCao_BUS.cs" />
+    <Compile Include="BUS\ThongKeBaoCao_NhapHang_BUS.cs" />
+    <Compile Include="BUS\thongTinPhieuNhap_BUS.cs" />
+    <Compile Include="DAO\BanHangDAO.cs" />
     <Compile Include="DAO\ConnectToMYSQL.cs" />
+    <Compile Include="DAO\GiaSanPhamDAO.cs" />
+    <Compile Include="DAO\LoiNhuanBanHang_DAO.cs" />
+    <Compile Include="DAO\QuanLyBaoHanh_DAO.cs" />
     <Compile Include="DAO\QuanLyDonDatHang_DAO.cs" />
+    <Compile Include="DAO\QuanLyKhachHang_DAO.cs" />
+    <Compile Include="DAO\QuanLyKhuyenMai_DAO.cs" />
+    <Compile Include="DAO\QuanLyNCC_DAO.cs" />
+    <Compile Include="DAO\QuanLyNhanVien_DAO.cs" />
+    <Compile Include="DAO\QuanLyPhanQuyen_DAO.cs" />
+    <Compile Include="DAO\QuanLyTaiKhoan_DAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\themPhieuNhap_DAO.cs" />
+    <Compile Include="DAO\themSanPhamPhieuNhap_DAO.cs" />
+    <Compile Include="DAO\ThongKeBaoCao_DAO.cs" />
+    <Compile Include="DAO\ThongKeBaoCao_NhapHang_DAO.cs" />
+    <Compile Include="DAO\thongTinPhieuNhap_DAO.cs" />
+    <Compile Include="DTO\chitietkhuyenmai.cs" />
+    <Compile Include="DTO\GiaSanPhamDTO.cs" />
+    <Compile Include="DTO\khuyenmai.cs" />
+    <Compile Include="DTO\Model_ChiTietPhieuNhap.cs" />
+    <Compile Include="DTO\Model_DonHang_ChiTietDonHang.cs" />
+    <Compile Include="DTO\model_kh.cs" />
+    <Compile Include="DTO\model_nv.cs" />
+    <Compile Include="DTO\Model_PhieuNhap.cs" />
+    <Compile Include="DTO\nhacungcap.cs" />
+    <Compile Include="DTO\nhanvien.cs" />
+    <Compile Include="DTO\quyen.cs" />
+    <Compile Include="DTO\quyen_taikhoan.cs" />
+    <Compile Include="DTO\SanPhamDTO.cs" />
+    <Compile Include="DTO\taikhoan.cs" />
+    <Compile Include="GUI\BaoHanh\QuanLyBaoHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoHanh\QuanLyBaoHanh.Designer.cs">
+      <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoHanh\ThongTinBaoHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoHanh\ThongTinBaoHanh.Designer.cs">
+      <DependentUpon>ThongTinBaoHanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DonHang\ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,12 +377,246 @@
     <Compile Include="GUI\DonHang\FormExport_PreView.Designer.cs">
       <DependentUpon>FormExport_PreView.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DonHang\Print.cs" />
     <Compile Include="GUI\DonHang\PrintDataGirdView.cs" />
     <Compile Include="GUI\DonHang\QuanLyDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\DonHang\QuanLyDonHang.Designer.cs">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang.Designer.cs">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_DonHang.Designer.cs">
+      <DependentUpon>BanHang_DonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\BanHang_ThemKhachHang.Designer.cs">
+      <DependentUpon>BanHang_ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\CartItem.cs" />
+    <Compile Include="GUI\GUI_BanHang\ChiTietSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\ChiTietSanPham.Designer.cs">
+      <DependentUpon>ChiTietSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\GioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BanHang\GioHang.Designer.cs">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\FullDataDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\FullDataDialog.Designer.cs">
+      <DependentUpon>FullDataDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\PriceManagementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\PriceManagementDialog.Designer.cs">
+      <DependentUpon>PriceManagementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\SelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\SelectDialog.Designer.cs">
+      <DependentUpon>SelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\WarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\Dialog\WarningDialog.Designer.cs">
+      <DependentUpon>WarningDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\SanPham.Designer.cs">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_SanPham\ValidateData\ValidateData.cs" />
+    <Compile Include="GUI\KhachHang\QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHang\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyKhuyenMai.Designer.cs">
+      <DependentUpon>QuanLyKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\QuanLyNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\QuanLyNhaCungCap.Designer.cs">
+      <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.Designer.cs">
+      <DependentUpon>QuanLyQuyenTaiKhoan1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenMoi.Designer.cs">
+      <DependentUpon>ThemQuyenMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\ThayDoiQuyenTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\ThayDoiQuyenTaiKhoan.Designer.cs">
+      <DependentUpon>ThayDoiQuyenTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\ThemQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\ThemQuyen.Designer.cs">
+      <DependentUpon>ThemQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenTaiKhoan.Designer.cs">
+      <DependentUpon>ThemQuyenTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\ThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\QuanLyTaiKhoan\ThemTaiKhoan.Designer.cs">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\ThemTaiKhoanPhu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\ThemTaiKhoanPhu.Designer.cs">
+      <DependentUpon>ThemTaiKhoanPhu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\VBButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\XoaTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\XoaTaiKhoan.Designer.cs">
+      <DependentUpon>XoaTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\chiTietPhieuNhap.Designer.cs">
+      <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themNcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themNcc.Designer.cs">
+      <DependentUpon>themNcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themPhieuNhap.Designer.cs">
+      <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPham.Designer.cs">
+      <DependentUpon>themSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPhamPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\themSanPhamPhieuNhap.Designer.cs">
+      <DependentUpon>themSanPhamPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuNhap\thongTinPhieuNhap.Designer.cs">
+      <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\BanHang\ChiTietBanHang_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\BanHang\ChiTietBanHang_KhachHang.Designer.cs">
+      <DependentUpon>ChiTietBanHang_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\BanHang\ChiTietBanHang_NgayBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\BanHang\ChiTietBanHang_NgayBan.Designer.cs">
+      <DependentUpon>ChiTietBanHang_NgayBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\LoiNhuanBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\LoiNhuanBanHang.Designer.cs">
+      <DependentUpon>LoiNhuanBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\NhapHang\ChiTietNhapHang_NgayNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\NhapHang\ChiTietNhapHang_NgayNhap.Designer.cs">
+      <DependentUpon>ChiTietNhapHang_NgayNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\NhapHang\ChiTietNhapHang_NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\NhapHang\ChiTietNhapHang_NhaCungCap.Designer.cs">
+      <DependentUpon>ChiTietNhapHang_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_BanHang.Designer.cs">
+      <DependentUpon>ThongKeBaoCao_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ThongKeBaoCao_NhapHang.Designer.cs">
+      <DependentUpon>ThongKeBaoCao_NhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UIMain.cs">
       <SubType>Form</SubType>
@@ -300,6 +628,12 @@
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BaoHanh\QuanLyBaoHanh.resx">
+      <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoHanh\ThongTinBaoHanh.resx">
+      <DependentUpon>ThongTinBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DonHang\ChiTietDonHang.resx">
       <DependentUpon>ChiTietDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +642,120 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DonHang\QuanLyDonHang.resx">
       <DependentUpon>QuanLyDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\BanHang.resx">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\BanHang_DonHang.resx">
+      <DependentUpon>BanHang_DonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\BanHang_ThemKhachHang.resx">
+      <DependentUpon>BanHang_ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\ChiTietSanPham.resx">
+      <DependentUpon>ChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BanHang\GioHang.resx">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\FullDataDialog.resx">
+      <DependentUpon>FullDataDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\PriceManagementDialog.resx">
+      <DependentUpon>PriceManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\SelectDialog.resx">
+      <DependentUpon>SelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\Dialog\WarningDialog.resx">
+      <DependentUpon>WarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_SanPham\SanPham.resx">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHang\QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyKhuyenMai.resx">
+      <DependentUpon>QuanLyKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaCungCap\QuanLyNhaCungCap.resx">
+      <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\QuanLyQuyenTaiKhoan1.resx">
+      <DependentUpon>QuanLyQuyenTaiKhoan1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenMoi.resx">
+      <DependentUpon>ThemQuyenMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyTaiKhoan\QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\ThayDoiQuyenTaiKhoan.resx">
+      <DependentUpon>ThayDoiQuyenTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\ThemQuyen.resx">
+      <DependentUpon>ThemQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyQuyenTaiKhoan\ThemQuyenTaiKhoan.resx">
+      <DependentUpon>ThemQuyenTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\QuanLyTaiKhoan\ThemTaiKhoan.resx">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\ThemTaiKhoanPhu.resx">
+      <DependentUpon>ThemTaiKhoanPhu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\XoaTaiKhoan.resx">
+      <DependentUpon>XoaTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhanVien\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\chiTietPhieuNhap.resx">
+      <DependentUpon>chiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themNcc.resx">
+      <DependentUpon>themNcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themPhieuNhap.resx">
+      <DependentUpon>themPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themSanPham.resx">
+      <DependentUpon>themSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\themSanPhamPhieuNhap.resx">
+      <DependentUpon>themSanPhamPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuNhap\thongTinPhieuNhap.resx">
+      <DependentUpon>thongTinPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\BanHang\ChiTietBanHang_KhachHang.resx">
+      <DependentUpon>ChiTietBanHang_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\BanHang\ChiTietBanHang_NgayBan.resx">
+      <DependentUpon>ChiTietBanHang_NgayBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\LoiNhuanBanHang.resx">
+      <DependentUpon>LoiNhuanBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\NhapHang\ChiTietNhapHang_NgayNhap.resx">
+      <DependentUpon>ChiTietNhapHang_NgayNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\NhapHang\ChiTietNhapHang_NhaCungCap.resx">
+      <DependentUpon>ChiTietNhapHang_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ThongKeBaoCao_BanHang.resx">
+      <DependentUpon>ThongKeBaoCao_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ThongKeBaoCao_NhapHang.resx">
+      <DependentUpon>ThongKeBaoCao_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UIMain.resx">
       <DependentUpon>UIMain.cs</DependentUpon>
@@ -318,6 +766,7 @@
     <EmbeddedResource Include="obj\Debug\Smartphone_Management.GUI.DonHang.QuanLyDonHang.resources" />
     <EmbeddedResource Include="obj\Debug\Smartphone_Management.Properties.Resources.resources" />
     <EmbeddedResource Include="obj\Debug\Smartphone_Management.UIMain.resources" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -430,6 +879,65 @@
     <None Include="GUI\Icon\icon_eye2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icon-cart.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icon-search.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-available-updates-100.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-checkmark-150.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-search-64 %281%29.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-shopping-bag-100 %281%29.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-u-turn-to-left-100.png" />
+    <Content Include="GUI\GUI_BanHang\HinhAnh\icons8-update-left-rotation-100 %281%29.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669536103441.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669541150017.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669541151674.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554360524.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554375894.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554381464.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554507711.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554538538.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554546458.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554551267.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554659623.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669554662415.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559373562.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559387927.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559424588.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559571613.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669559987574.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669560000509.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669560151222.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669602592655.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669602660486.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\1669602734367.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon-dots.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_close.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_coin.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_delete.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_edit.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_error.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_excel.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_eye.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_left.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_plus.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_question.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_refresh.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_right.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_save.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_to_end.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_to_start.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\icon_upload_image.png" />
+    <Content Include="GUI\GUI_SanPham\HinhAnh\no_image.png" />
+    <None Include="GUI\Icon\Add - Copy.png" />
+    <None Include="GUI\Icon\Add.png" />
+    <Content Include="GUI\Icon\background_welcome.jpg" />
+    <Content Include="GUI\Icon\bg_user.png" />
+    <None Include="GUI\Icon\Refresh.png" />
+    <None Include="GUI\Icon\Logos-Excel-icon.png" />
+    <None Include="GUI\Icon\Very-Basic-Print-icon.png" />
+    <None Include="GUI\Icon\search.png" />
+    <None Include="GUI\Icon\check.png" />
+    <None Include="GUI\Icon\Delete.png" />
+    <None Include="GUI\Icon\fix.png" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.Licensing.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll" />
     <Content Include="lib\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll" />
@@ -442,6 +950,9 @@
     <Content Include="obj\Debug\TempPE\quanlybanhangDataSet1.Designer.cs.dll" />
     <Content Include="obj\Debug\TempPE\smartphonemanagementDataSet.Designer.cs.dll" />
     <Content Include="obj\Debug\TempPE\smartphonemanagementDataSet1.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\Login\QuanLyQuyen\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

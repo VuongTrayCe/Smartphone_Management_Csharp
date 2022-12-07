@@ -23,7 +23,7 @@ namespace Smartphone_Management.DAO
 
         public  ConnectToMySQL()
         {
-            string connStr = "server=localhost;user=root;database=smartphonemanagement;port=3306;password=123456789lop11b2";
+            string connStr = "server=localhost;user=root;database=smartphonejava;port=3306;password=123456789lop11b2";
             //this.constring = "SERVER=" + this.server + ";" + "DATABASE=" + this.database + ";" + "UID=" + this.username + ";" + "PASSWORD=" + this.password + ";";
             this.conn = new MySqlConnection(connStr);
         }
@@ -32,11 +32,9 @@ namespace Smartphone_Management.DAO
             if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
-                MessageBox.Show("Kết nối thành công");
             }
             else
             {
-                MessageBox.Show("Đã kết nối");
 
             }
 
@@ -46,11 +44,9 @@ namespace Smartphone_Management.DAO
             if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
-                MessageBox.Show("Đóng thành công");
             }
             else
             {
-                MessageBox.Show("Đã Đóng ");
 
             }
 

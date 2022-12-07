@@ -20,15 +20,16 @@ namespace Smartphone_Management.BUS
         {
             DataTable data = new DataTable();
             DataTable data2 = qlddh_dao.getThongTinDonDatHang(status);
+
             data.Columns.Add("STT");
-            data.Columns.Add("NgayDat", Type.GetType("System.DateTime"));
-            data.Columns.Add("Madh");
-            data.Columns.Add("Tenkh");
-            data.Columns.Add("SoLuong");
-            data.Columns.Add("Diemapdung");
-            data.Columns.Add("Diemthuong");
-            data.Columns.Add("TongTien");
-            data.Columns.Add("Tennv");
+            data.Columns.Add("Ngày Đặt", Type.GetType("System.DateTime"));
+            data.Columns.Add("Mã đơn Hàng");
+            data.Columns.Add("Tên Khách Hàng");
+            data.Columns.Add("Số Lượng");
+            data.Columns.Add("Điểm Áp Dụng");
+            data.Columns.Add("Điểm Thưởng");
+            data.Columns.Add("Tổng Tiền");
+            data.Columns.Add("Tên Nhân Viên");
             // Kiểm tra đơn hàng có đúng với từ khóa/ngày/ trạng thái tìm kiếm hay không 
             for (int i = 0; i < data2.Rows.Count; i++)
             {
@@ -38,20 +39,28 @@ namespace Smartphone_Management.BUS
                 {
                     //dataGridView1.Rows.Add(1) ;
                     DataRow row = data.NewRow();
-                    foreach (DataColumn col in data2.Columns)
-                    {
-                        row[col.ColumnName] = data2.Rows[i][col.ColumnName];
+                    //foreach (DataColumn col in data2.Columns)
+                    //{
+                    //    row[col.ColumnName] = data2.Rows[i][col.ColumnName];
 
+                    //}
+                    for (int j = 0; j < data2.Columns.Count; j++)
+                    {
+                        row[j+1] = data2.Rows[i][j];
                     }
                     data.Rows.Add(row);
                 }
                else if( dateDat > dateStart && dateDat < DateEnd && madh.Equals(strKeyWord))
                 {
                     DataRow row = data.NewRow();
-                    foreach (DataColumn col in data2.Columns)
-                    {
-                        row[col.ColumnName] = data2.Rows[i][col.ColumnName];
+                    //foreach (DataColumn col in data2.Columns)
+                    //{
+                    //    row[col.ColumnName] = data2.Rows[i][col.ColumnName];
 
+                    //}
+                       for (int j = 0; j < data2.Columns.Count; j++)
+                    {
+                        row[j+1] = data2.Rows[i][j];
                     }
                     data.Rows.Add(row);
                 }
@@ -67,6 +76,10 @@ namespace Smartphone_Management.BUS
         // Update lại trạng thái đơn hàng
         internal void updateDonHang(int madh)
         {
+            int diemthuong = qlddh_dao.getDiemThuongDonHang(madh);
+            int makh = qlddh_dao.getMaKhachHang(madh);
+            int diemhientai = qlddh_dao.getDiemHienTaiKhachHang(makh);
+            qlddh_dao.UpdateDiemKhachHang(makh, diemhientai + diemthuong);
             qlddh_dao.updateTrangThaiDonHang(madh);
         }
 
@@ -106,16 +119,13 @@ namespace Smartphone_Management.BUS
             {
                 data.Rows[i][0] = i + 1;
             }
-
-            DataRow row4 = data.NewRow();
-            data.Rows.Add(row4);
             DataRow row2 = data.NewRow();
 
             row2["Tensp"] = "Tổng Hàng";
             row2["Soluong"] = tongsl;
             row2["ThanhTien"] = tongtien;
 
-            data.Rows.Add(row2);
+            data.Rows.InsertAt(row2,0);
 
             return data;
         }
@@ -136,6 +146,23 @@ namespace Smartphone_Management.BUS
             return dateTimeObj;
         }
 
-      
+        internal string getImageSanPham(int masp)
+        {
+            return qlddh_dao.getImageSanPham(masp);
+        }
+
+        internal void UpdateSoLuongSanPham(int masp, int soluong)
+        {
+            int soluonghientai = qlddh_dao.getSoLuongHienTai(masp);
+            qlddh_dao.UpdateSoluongSanPham(masp, soluong+soluonghientai);
+        }
+
+        internal void updateDiemKhachHang(int madh)
+        {
+            int makhachhang = qlddh_dao.getMaKhachHang(madh);
+            int sodiemhientai = qlddh_dao.getDiemHienTaiKhachHang(makhachhang);
+            int diemdadung = qlddh_dao.getDiemDaDung(madh);
+            qlddh_dao.UpdateDiemKhachHang(makhachhang, diemdadung + sodiemhientai);
+        }
     }
 }
